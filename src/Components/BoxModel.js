@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export default function Home(props) {
+export default function BoxModel(props) {
 
     const [paddingLeft, setPaddingLeft] = useState()
     const [paddingRight, setPaddingRight] = useState()    

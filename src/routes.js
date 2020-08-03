@@ -1,11 +1,13 @@
 import React from 'react'
 import {Switch, Route} from 'react-router-dom'
 import Auth from './Components/Auth'
-import Home from './Components/Home'
+import BoxModel from './Components/BoxModel'
+import FloatDisplay from './Components/FloatDisplay'
 
 export default (
     <Switch>
         <Route exact path="/" component={Auth}/>
-        <Route path="/Home" component={Home}/>
+        <Route path="/BoxModel" component={BoxModel}/>
+        <Route path="/FloatDisplay" component={FloatDisplay}/>
     </Switch>
 )
