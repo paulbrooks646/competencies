@@ -5,6 +5,7 @@ import BoxModel from './Components/BoxModel'
 import FloatDisplay from './Components/FloatDisplay'
 import Flexbox from './Components/Flexbox'
 import Grid from './Components/Grid'
+import Color from './Components/Color'
 
 export default (
     <Switch>
@@ -13,5 +14,6 @@ export default (
         <Route path="/FloatDisplay" component={FloatDisplay}/>
         <Route path="/Flexbox" component={Flexbox}/>
         <Route path="/Grid" component={Grid}/>
+        <Route path="/Color" component={Color}/>
     </Switch>
 )
