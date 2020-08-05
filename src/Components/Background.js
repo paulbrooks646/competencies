@@ -2,14 +2,35 @@ import React, { useState } from 'react'
 
 export default function Background() {
 
+    const [repeat, setRepeat] = useState()
+    const [position, setPosition] = useState()
+    const [size, setSize] = useState()
+    const [xaxis, setXaxis] = useState()
+    const [yaxis, setYaxis] = useState()
+    const [xpixel, setXpixel] = useState()
+    const [ypixel, setYpixel] = useState()
+    const [xsize, setXsize] = useState()
+    const [ysize, setYsize] = useState()
+    const [sizexpixel, setSizexpixel] = useState()
+    const [sizeypixel, setSizeypixel] = useState()
+    const [colorone, setColorone] = useState('red')
+    const [colortwo, setColortwo] = useState('blue')
+    const [colorthree, setColorthree] = useState('green')
+    const [percentone, setPercentone] = useState(0)
+    const [percenttwo, setPercenttwo] = useState(33)
+    const [percentthree, setPercentthree] = useState(66)
+    const [direction, setDirection] = useState(0)
+    const [endone, setEndone] = useState(20)
+    const [endtwo, setEndtwo] = useState(50)
+    const [endthree, setEndthree] = useState(80)
 
     return (
         <div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '25px', borderBottom: 'solid 1px black' }}>
                 <h1>Background</h1>
-                <p style={{ width: '80%' }}>In CSS their are more options than a simple color for your elements. We are going to talk about Background Images, Linear Gradients, and Radial Gradients.</p>
+                <p style={{ width: '80%' }}>In CSS their are more options than a simple color for the background of your elements. We are going to talk about Background Images, Linear Gradients, and Radial Gradients.</p>
             </div>
-            <div style={{ display: 'flex', width: '100%', marginBottom: '50px', borderBottom: 'solid 1px black' }}>
+            <div style={{ display: 'flex', width: '100%', marginBottom: '50px'}}>
                 <div style={{ width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <h2>Background Image</h2>
                     <p style={{ width: '80%' }}>The background-image property sets one or more background images for an element. There are properties to help make sure you image appears precisely how you like.</p>
@@ -21,32 +42,282 @@ export default function Background() {
                     <h2>Background Position</h2>
                     <p style={{ width: '80%' }}> The background-position property sets the starting position of the background image. This can be done with set values (see the dropdown below), units of measurement such as pixels, or a percentage on the containing element. These accept two values the first being width and the second height.</p>
                     <h2>Background Size</h2>
-                    <p style={{ width: '80%' }}>The default value for background-size is auto heich displays its original size. The length and percentage values both take in two parameters, the first being width and the second being height. They set a speicfic length and width to the image. Cover resize the image to cover the container even if it has to stretch or cut of a little bit of the image. Contain resizes the image to make sure it is fully visible</p>
+                    <p style={{ width: '80%' }}>The default value for background-size is auto which displays its original size. The length and percentage values both take in two parameters, the first being width and the second being height. They set a speicfic length and width to the image. Cover resize the image to cover the container even if it has to stretch or cut of a little bit of the image. Contain resizes the image to make sure it is fully visible</p>
                 </div>
             </div>
-            <div style={{ width: '100%', display: 'flex', height: '500px', borderBottom: 'solid 1px black', marginBottom: '50px'}}>
+            <div style={{ width: '100%', display: 'flex', height: '700px', borderBottom: 'solid 1px black', marginBottom: '50px'}}>
                 <div style={{ width: '40%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <h2>Blah blah blah!</h2>
-                    <p style={{width: '90%'}}>adslkfj hadlfkjhsda;flkjdsa;flkasdjf;lkajsdf;lasdkj f;alsdkjfas;ldkfjads;lkfj;dlkfj</p>
-                </div>
-                <div style={{ backgroundImage: 'url("https://images.theconversation.com/files/220291/original/file-20180524-90281-1qovmkh.jpg?ixlib=rb-1.1.0&rect=0%2C177%2C3567%2C2101&q=45&auto=format&w=496&fit=clip")', width: '55%', height: '90%' }}>
-                </div>
-            </div>
-            <div style={{ display: 'flex', marginBottom: '50px' }}>
-                <div style={{ width: '40%' }}>
-                    <h2>Linear Gradient</h2>
-                    <p></p>
-                </div>
-                <div style={{ backgroundImage: 'linear-gradient(45deg, red, blue, green)', width: '55%', height: '500px', backgroundPosition: 'top left' }}>
 
+                    <label>Backgorund Repeat:</label>
+                    <select
+                        value={repeat}
+                        onChange={e => setRepeat(e.target.value)}
+                        style={{ marginBottom: "50px" }}>
+                        <option value="repeat">Repeat</option>
+                        <option value="no-repeat">No Repeat</option>
+                        <option value="repeat-x">Repeat X</option>
+                        <option value="repeat-y">Repeat Y</option>
+                        <option value="space">Space</option>
+                        <option value="round">Round</option>
+                    </select>
+                    <label>Background Position:</label>
+                    <select
+                        value={position}
+                        onChange={e => setPosition(e.target.value)}
+                        style={{marginBottom: '-10px'}}>
+                        <option value='Left Top'>Left Top</option>
+                        <option value='Left Center'>Left Center</option>
+                        <option value='Left Bottom'>Left Bottom</option>
+                        <option value='Right Top'>Right Top</option>
+                        <option value='Right Center'>Right Center</option>
+                        <option value='Right Bottom'>Right Bottom</option>
+                        <option value='Center Top'>Center Top</option>
+                        <option value='Center Center'>Center Center</option>
+                        <option value='Center Bottom'>Center Bottom</option>
+                    </select>
+                    <h4 style={{marginBottom: '0px'}}>Or</h4>
+                    <div style={{display: 'flex', justifyContent: 'center', width: '100%'}}>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '20px'}}>
+                            <label>X-Axis %</label>
+                            <input
+                                style={{width: '80px'}}
+                                placeholder='Enter % here'
+                                onChange={e => setXaxis(e.target.value)}/>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                            <label>Y-Axis %</label>
+                            <input
+                                style={{width: '80px'}}
+                                placeholder='Enter % here'
+                                onChange={e => setYaxis(e.target.value)}/>
+                        </div>
+                    </div>
+                    <button onClick={() => setPosition(`${xaxis}% ${yaxis}%`)}
+                    style={{marginBottom: '-10px'}}>Submit</button>
+                    <h4 style={{marginBottom: '0px'}}>Or</h4>
+                    <div style={{display: 'flex', justifyContent: 'center', width: '100%'}}>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '20px'}}>
+                            <label>X-Axis Pixels</label>
+                            <input
+                                style={{width: '80px'}}
+                                placeholder='Enter px here'
+                                onChange={e => setXpixel(e.target.value)}/>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                            <label>Y-Axis Pixels</label>
+                            <input
+                                style={{width: '80px'}}
+                                placeholder='Enter px here'
+                                onChange={e => setYpixel(e.target.value)}/>
+                        </div>
+                    </div>
+                        <button onClick={() => setPosition(`${xpixel}px ${ypixel}px`)}
+                        style={{marginBottom: '50px'}}>Submit</button>
+                        <label>Background Size:</label>
+                    <select
+                        value={size}
+                        onChange={e => setSize(e.target.value)}
+                        style={{marginBottom: '-10px'}}>
+                        <option value='Cover'>Cover</option>
+                        <option value='Contain'>Contain</option>
+                    </select>
+                    <h4 style={{marginBottom: '0px'}}>Or</h4>
+                    <div style={{display: 'flex', justifyContent: 'center', width: '100%'}}>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '20px'}}>
+                            <label>Width Percent</label>
+                            <input
+                                style={{width: '80px'}}
+                                placeholder='Enter % here'
+                                onChange={e => setXsize(e.target.value)}/>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                            <label>Height Percent</label>
+                            <input
+                                style={{width: '80px'}}
+                                placeholder='Enter % here'
+                                onChange={e => setYsize(e.target.value)}/>
+                        </div>
+                    </div>
+                    <button 
+                        onClick={() => setSize(`${xsize}% ${ysize}%`)}
+                        style={{marginBottom: '-10px'}}>Submit</button>
+                    <h4 style={{marginBottom: '0px'}}>Or</h4>
+                    <div style={{display: 'flex', justifyContent: 'center', width: '100%'}}>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '20px'}}>
+                            <label>X-Axis Pixels</label>
+                            <input
+                                style={{width: '80px'}}
+                                placeholder='Enter px here'
+                                onChange={e => setSizexpixel(e.target.value)}/>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                            <label>Y-Axis Pixels</label>
+                            <input
+                                style={{width: '80px'}}
+                                placeholder='Enter px here'
+                                onChange={e => setSizeypixel(e.target.value)}/>
+                        </div>
+                    </div>
+                        <button onClick={() => setSize(`${sizexpixel}px ${sizeypixel}px`)}>Submit</button>
+                </div>
+                <div style={{width: '55%', height: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center'}}>
+                    <div style={{ backgroundImage: 'url("https://images.theconversation.com/files/220291/original/file-20180524-90281-1qovmkh.jpg?ixlib=rb-1.1.0&rect=0%2C177%2C3567%2C2101&q=45&auto=format&w=496&fit=clip")', width: '100%', height: '50%', backgroundRepeat: repeat, backgroundPosition: position, backgroundSize: size}}>
+                </div>
                 </div>
             </div>
-            <div style={{ display: 'flex' }}>
-                <div style={{ width: '40%' }}>
-                    <h2>Radial Gradient</h2>
-                    <p></p>
+            <div style={{ display: 'flex', marginBottom: '50px', borderBottom: 'solid 1px black', width: '100%', height: '850px' }}>
+                <div style={{ width: '40%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <h2 style={{color: ''}}>Linear Gradient</h2>
+                    <p style={{width: '90%'}}>A linear gradient is an image consisting of a progressive transition between two or more colors along a straight line. In addition to choosing which colors and how many colors to use, you can specify where you want a color to stop and define a starting point with a direction or angle.</p>
+                    <h4>Choose three colors:</h4>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color One:</label>
+                    <input
+                        placeholder='Enter color here'
+                        onChange={e => setColorone(e.target.value)}/>
+                    </div>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color Two:</label>
+                    <input
+                        placeholder='Enter color here'
+                        onChange={e => setColortwo(e.target.value)}/>
+                    </div>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color Three:</label>
+                    <input
+                        placeholder='Enter color here'
+                        onChange={e => setColorthree(e.target.value)}/>
+                    </div>
+                    <h4>Give the colors start and stop points:</h4>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color One:</label>
+                    <input
+                        placeholder='Start %'
+                        onChange={e => setPercentone(e.target.value)}
+                        style={{width: '50px', marginRight: '10px'}}
+                        />
+                    <input
+                        placeholder='Stop %'
+                        onChange={e => setEndone(e.target.value)}
+                        style={{width: '50px'}}/>
+                    </div>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color Two:</label>
+                    <input
+                        placeholder='Start %'
+                        onChange={e => setPercenttwo(e.target.value)}
+                        style={{width: '50px', marginRight: '10px'}}
+                        />
+                    <input
+                        placeholder='Stop %'
+                        onChange={e => setEndtwo(e.target.value)}
+                        style={{width: '50px'}}/>
+                    </div>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color Three:</label>
+                    <input
+                        placeholder='Start %'
+                        onChange={e => setPercentthree(e.target.value)}
+                        style={{width: '50px', marginRight: '10px'}}/>
+                    <input
+                        placeholder='Stop %'
+                        onChange={e => setEndthree(e.target.value)}
+                        style={{width: '50px'}}/>
+                    </div>
+                    <h4 style={{width: '90%'}}>Choose a direction or angle. When typing an angle remember to type 'deg' after your number.</h4>
+                    <label>Direction:</label>
+                    <select
+                        value={direction}
+                        onChange={e => setDirection(e.target.value)}>
+                        <option value="To Top Right">To Top Right</option>
+                        <option value="To Right">To Right</option>
+                        <option value="To Bottom Right">To Bottom Right</option>
+                        <option value="To Bottom">To Bottom</option>
+                        <option value="To Bottom Left">To Bottom Left</option>
+                        <option value="To Left">To Left</option>
+                        <option value="To Top Left">To Top Left</option>
+                        <option value="To Top">To Top</option>
+                    </select>
+                    <h4>Or</h4>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Angle:</label>
+                    <input
+                        placeholder='Enter angle here'
+                        onChange={e => setDirection(e.target.value)}/>
+                    </div>
                 </div>
-                <div style={{ backgroundImage: 'radial-gradient(ellipse, red, blue 20%, green 60%)', width: '55%', height: '500px' }}>
+                <div style={{width: '60%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <div style={{ backgroundImage: `linear-gradient(${direction}, ${colorone} ${percentone}% ${endone}%, ${colortwo} ${percenttwo}% ${endtwo}%, ${colorthree} ${percentthree}% ${endthree}%)`, width: '70%', height: '60%', backgroundPosition: 'center' }}>
+                </div>
+                </div>
+            </div>
+            <div style={{ display: 'flex', marginBottom: '50px', borderBottom: 'solid 1px black', width: '100%', height: '850px' }}>
+                <div style={{ width: '40%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <h2 style={{color: ''}}>Radial Gradient</h2>
+                    <p style={{width: '90%'}}>A radial gradient is an image consisting of a progressive transition between two or more colors from an origin. It can either be an ellipse or a circle. In addition to choosing which colors and how many colors to use, you can specify where you want a color to stop and define a starting point with a direction or angle.</p>
+                    <h4>Choose three colors:</h4>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color One:</label>
+                    <input
+                        placeholder='Enter color here'
+                        onChange={e => setColorone(e.target.value)}/>
+                    </div>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color Two:</label>
+                    <input
+                        placeholder='Enter color here'
+                        onChange={e => setColortwo(e.target.value)}/>
+                    </div>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color Three:</label>
+                    <input
+                        placeholder='Enter color here'
+                        onChange={e => setColorthree(e.target.value)}/>
+                    </div>
+                    <h4>Enter three stop points:</h4>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color Stop One:</label>
+                    <input
+                        placeholder='Enter % here'
+                        onChange={e => setPercentone(e.target.value)}/>
+                    </div>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color Stop Two:</label>
+                    <input
+                        placeholder='Enter % here'
+                        onChange={e => setPercenttwo(e.target.value)}/>
+                    </div>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Color Stop Three:</label>
+                    <input
+                        placeholder='Enter % here'
+                        onChange={e => setPercentthree(e.target.value)}/>
+                    </div>
+                    <h4 style={{width: '90%'}}>Choose a direction or angle. When typing an angle remember to type 'deg' after your number.</h4>
+                    <label>Direction:</label>
+                    <select
+                        value={direction}
+                        onChange={e => setDirection(e.target.value)}>
+                        <option value="To Top Right">To Top Right</option>
+                        <option value="To Right">To Right</option>
+                        <option value="To Bottom Right">To Bottom Right</option>
+                        <option value="To Bottom">To Bottom</option>
+                        <option value="To Bottom Left">To Bottom Left</option>
+                        <option value="To Left">To Left</option>
+                        <option value="To Top Left">To Top Left</option>
+                        <option value="To Top">To Top</option>
+                    </select>
+                    <h4>Or</h4>
+                    <div>
+                    <label style={{marginRight: '10px'}}>Angle:</label>
+                    <input
+                        placeholder='Enter angle here'
+                        onChange={e => setDirection(e.target.value)}/>
+                    </div>
+                </div>
+                <div style={{width: '60%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <div style={{ backgroundImage: `linear-gradient(${direction}, ${colorone} ${percentone}% ${endone}%, ${colortwo} ${percenttwo}% ${endtwo}%, ${colorthree} ${percentthree}% ${endthree}%)`, width: '70%', height: '60%', backgroundPosition: 'center' }}>
+                </div>
                 </div>
             </div>
         </div>
