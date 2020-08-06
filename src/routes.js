@@ -8,6 +8,7 @@ import Grid from './Components/Grid'
 import Color from './Components/Color'
 import Font from './Components/Font'
 import Background from './Components/Background'
+import Position from './Components/Position'
 
 export default (
     <Switch>
@@ -19,5 +20,6 @@ export default (
         <Route path="/Color" component={Color}/>
         <Route path='/Font' component={Font}/>
         <Route path='/Background' component={Background}/>
+        <Route path='/Position' component={Position}/>
     </Switch>
 )
