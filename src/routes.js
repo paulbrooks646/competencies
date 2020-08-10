@@ -10,6 +10,7 @@ import Font from './Components/Font'
 import Background from './Components/Background'
 import Position from './Components/Position'
 import Animation from './Components/Animation'
+import Pseudo from './Components/Pseudo'
 
 export default (
     <Switch>
@@ -23,5 +24,6 @@ export default (
         <Route path='/Background' component={Background}/>
         <Route path='/Position' component={Position}/>
         <Route path='/Animation' component={Animation}/>
+        <Route path='/Pseudo' component={Pseudo}/>
     </Switch>
 )

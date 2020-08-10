@@ -76,3 +76,30 @@ input {
   animation-direction: alternate;
   animation-timing-function: linear;
 }
+
+.pseudo:hover {
+  transform: scale(1.5)
+}
+.scale:focus {
+  border-radius: 50%;
+}
+li:nth-child(odd) {
+  border: solid 10px red;
+}
+input:disabled {
+  opacity: .5;
+  border: solid 1px rgba(0,0,0,.5);
+}
+.border:focus {
+  border: solid 5px green;
+}
+
+.skew:focus {
+  transform: skew(30deg)
+}
+.rotate:focus {
+  transform: rotate(90deg)
+}
+.translate:focus {
+  transform: translate(-200px)
+}
