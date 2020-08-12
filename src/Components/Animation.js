@@ -2,27 +2,34 @@ import React, { useState } from 'react'
 
 export default function Animation() {
 
-    const [delay, setDelay] = useState()
+    const [delay, setDelay] = useState(0)
     const [direction, setDirection] = useState()
-    const [duration, setDuration] = useState()
+    const [duration, setDuration] = useState(8)
     const [fill, setFill] = useState()
     const [iteration, setIteration] = useState('infinite')
-    const [timing, setTiming] = useState()
+    const [timing, setTiming] = useState('linear')
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <main className='flex'>
+            <section className='flex'>
                 <h1 style={{ color: 'tomato' }}>Animation</h1>
-                <h4 style={{ width: '80%' }}>CSS allows the animation of HTML elements without the using of other coding languages. This is done with @keyframes in your CSS. You give your @keyframes an animation name that elements can access to apply the contained animation. Within your @keyframes, you give the element attributes at different junctures based on the percentage of the way through the animation they are. Watch the animation below and see how different style attributes change at different points. You can change any property you want throughout the animation.
+                <h4 className='animationh4'>CSS allows the animation of HTML elements without the using of other coding languages. This is done with @keyframes in your CSS. You give your @keyframes an animation name that elements can access to apply the contained animation. Within your @keyframes, you give the element attributes at different junctures based on the percentage of the way through the animation they are. Watch the animation below and see how different style attributes change at different points. You can change any property you want throughout the animation.
                 </h4>
-            </div>
-            <div style={{ border: 'solid 1px transparent', height: '200px', width: '848px', borderBottom: 'solid' }}>
+            </section>
+            <div className='animationBox'>
                 <div
-                    className="animation"
-                    style={{ backgroundColor: 'blue', height: '100px', width: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', WebkitAnimationIterationCount: iteration, WebkitAnimationDirection: direction, WebkitAnimationFillMode: fill, WebkitAnimationTimingFunction: timing, WebkitAnimationDelay: `${delay}s`, WebkitAnimationDuration: `${duration}s` }}>
+                    style={{
+                        backgroundColor: 'blue',
+                        height: '100px',
+                        width: '100px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        position: 'relative', WebkitAnimationIterationCount: iteration, WebkitAnimationDirection: direction, WebkitAnimationFillMode: fill, WebkitAnimationTimingFunction: timing, WebkitAnimationDelay: `${delay}s`, WebkitAnimationDuration: `${duration}s`, WebkitAnimationName: 'test'
+                    }}>
                     @keyframes
             </div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div className='animationPercents'>
                     <h2>0%</h2>
                     <h2>25%</h2>
                     <h2>50%</h2>
@@ -30,11 +37,11 @@ export default function Animation() {
                     <h2>100%</h2>
                 </div>
             </div>
-            <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <h4 style={{ width: '80%' }}>There are other properties whose values can be assigned to an element undergoing and animation, that help define how the animation actually happens. You can see descriptions of these properties below.</h4>
+            <div className='hundred'>
+                <h4 className='animationh4'>There are other properties whose values can be assigned to an element undergoing and animation, that help define how the animation actually happens. You can see descriptions of these properties below.</h4>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly', width: '100%' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div className='animationInputField'>
+                <div className='flex'>
                     <label>Animation Direction:</label>
                     <select
                         value={direction}
@@ -45,7 +52,7 @@ export default function Animation() {
                         <option value='alternate-reverse'>Alternate Reverse</option>
                     </select>
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div className='flex'>
                     <label>Animation Fill Mode:</label>
                     <select
                         value={fill}
@@ -56,7 +63,7 @@ export default function Animation() {
                         <option value='both'>Both</option>
                     </select>
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                <div className='flex'>
                     <label>Animation Timing Function:</label>
                     <select
                         value={timing}
@@ -69,15 +76,15 @@ export default function Animation() {
                     </select>
                 </div>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'flex-start', width: '100%', marginTop: '25px', borderBottom: 'solid' }}>
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div className='animationDescriptions'>
+                <div className='flex'>
                     <label>Animation Delay:</label>
                     <input
                         value={delay}
                         onChange={e => setDelay(e.target.value)}
                         placeholder='Enter number here' />
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div className='flex'>
                     <label>Animation Iteration Count:</label>
                     <input
                         onChange={e => setIteration(e.target.value)}
@@ -87,7 +94,7 @@ export default function Animation() {
                         style={{ width: '100px', marginTop: '-15px', marginBottom: '20px' }}
                         onClick={() => setIteration('infinite')}>Infinite</button>
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <div className='flex'>
                     <label>Animation Duration:</label>
                     <input
                         value={duration}
@@ -95,38 +102,36 @@ export default function Animation() {
                         placeholder='Enter number here' />
                 </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'flex-start', width: '100%' }}>
-            <div style={{ width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div className='animationDescriptionRow'>
+                <div className='fifty'>
                     <h2>Animation Iteration Count</h2>
-                    <p style={{ width: '90%' }}>The animation-iteration-count property specifies how many times an animation should run. This can be any number or 'infinite'.</p>
+                    <p>The animation-iteration-count property specifies how many times an animation should run. This can be any number or 'infinite'.</p>
                 </div>
-
-                
-                <div style={{ width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div className='fifty'>
                     <h2>Animation Delay</h2>
-                    <p style={{ width: '90%' }}>The animation-delay property specifies an amount of time for the animation to delay before starting. This time is in seconds (s) or milliseconds (ms).</p>
+                    <p>The animation-delay property specifies an amount of time for the animation to delay before starting. This time is in seconds (s) or milliseconds (ms).</p>
                 </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'flex-start', width: '100%' }}>
-            <div style={{ width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div className='animationDescriptionRow'>
+                <div className='fifty'>
                     <h2>Animation Direction</h2>
-                    <p style={{ width: '90%' }}>The animation-direction property defines whether an animation should be played forwards (normal), backwards (reverse), forward than backward (alternate) or backward than forward (alternate-reverse).</p>
+                    <p>The animation-direction property defines whether an animation should be played forwards (normal), backwards (reverse), forward than backward (alternate) or backward than forward (alternate-reverse).</p>
                 </div>
-                <div style={{ width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div className='fifty'>
                     <h2>Animation Duration</h2>
-                    <p style={{ width: '90%' }}>The animation-duration property how long it takes the animation to complete a cycle, by so doing it determines the speed of the animation. The value for animation duration is defined in seconds (s) or milliseconds (ms).</p>
+                    <p>The animation-duration property how long it takes the animation to complete a cycle, by so doing it determines the speed of the animation. The value for animation duration is defined in seconds (s) or milliseconds (ms).</p>
                 </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'flex-start', width: '100%' }}>
-                <div style={{ width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div className='animationDescriptionRow'>
+                <div className='fifty'>
                     <h2>Animation Timing Function</h2>
-                    <p style={{ width: '90%' }}>The animation-timing-function specifies the speed curve of an animation. The speed curve defines the time an animation uses to change from one style to another and helps to make these changes smoothly. Ease: This is the default value. It gives the animation a slow start, then fast, and ends slowly. Linear: The animation will have the same speed from start to end. Ease-in: The animation has a slow start. Ease-out: The animation has a slow end.Ease-in-out: The animation has a slow start and a slow end. You can also customize speeds with steps or cubic-bezier.</p>
+                    <p>The animation-timing-function specifies the speed curve of an animation. The speed curve defines the time an animation uses to change from one style to another and helps to make these changes smoothly. Ease: This is the default value. It gives the animation a slow start, then fast, and ends slowly. Linear: The animation will have the same speed from start to end. Ease-in: The animation has a slow start. Ease-out: The animation has a slow end.Ease-in-out: The animation has a slow start and a slow end. You can also customize speeds with steps or cubic-bezier.</p>
                 </div>
-                <div style={{ width: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div className='fifty'>
                     <h2>Animation Fill Mode</h2>
-                    <p style={{ width: '90%' }}>The animation-fill-mode designates which properties the animated element will retain, after the animation is completed. None: The element will not retain any styles added during the animation. Forwards: The element will retain any stlye set by the last keyframe. Backwards: The element will get the style values set by the first keyframe. Both: The element will receive the styles set in both the first and last keyframe.</p>
+                    <p>The animation-fill-mode designates which properties the animated element will retain, after the animation is completed. None: The element will not retain any styles added during the animation. Forwards: The element will retain any stlye set by the last keyframe. Backwards: The element will get the style values set by the first keyframe. Both: The element will receive the styles set in both the first and last keyframe.</p>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }

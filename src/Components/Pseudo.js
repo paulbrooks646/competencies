@@ -94,13 +94,24 @@ return (
                 </div>
             </div>
         </div>
-        <ul>
-            <li>Pig</li>
-            <li>Sheep</li>
-            <li>Dog</li>
-            <li>Weasel</li>
-            <li>Bunny</li>
+        <div style={{display: 'flex', border: 'solid', width: '100%'}}>
+        <div style={{width: '40%'}}>
+            <h2>Nth Child</h2>
+            <p>The nth-child() pseudo class targets elements based on their position in a group of siblings. This can be done using keywords like odd and even, using a number or using a formula.</p>
+        <select>
+
+        </select>
+        </div>
+        <div style={{width: '60%'}}>
+        <ul style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <li style={{width: '100px'}}>Pig</li>
+            <li style={{width: '100px'}}>Sheep</li>
+            <li style={{width: '100px'}}>Dog</li>
+            <li style={{width: '100px'}}>Weasel</li>
+            <li style={{width: '100px'}}>Bunny</li>
         </ul>
+        </div>
+        </div>
     </div>
 
 )

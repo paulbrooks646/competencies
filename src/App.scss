@@ -1,10 +1,110 @@
+@import './Components/mixins';
+@import './Components/variables';
+
+
+h1 {
+  color: $red;
+}
+
+h2 {
+  color: $blue;
+}
+
+h3 {
+  color: $purple
+}
+
+h4 {
+  color: $brown
+}
+p {
+  width: 90%
+}
+
+.flex {
+  @include flex;
+}
 .App {
   text-align: center;
 }
 
-// div {
-//   border: solid 1px black;
-// }
+.hundred {
+  @include flex;
+  width: 100%;
+}
+
+//Animation
+
+.animationBox {
+  border: solid 1px transparent;
+  height: 200px;
+  width: 848px;
+  border-bottom: solid;
+}
+
+.animationh4 {
+  width: 80%;
+  color: black;
+}
+
+.animationPercents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.animationInputField {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.animationDescriptions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 25px;
+  border-bottom: solid;
+}
+
+.animationDescriptionRow {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.fifty {
+  @include flex;
+  width: 50%;
+}
+
+.forty {
+  @include flex;
+  width: 40%;
+}
+
+//Background
+
+.backgroundTopSection {
+  @include flex;
+  margin-bottom: 25px;
+  border-bottom: solid;
+}
+
+.backgroundDescriptions {
+  display: flex;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.backgroundSection {
+  width: 100%;
+  display: flex;
+  height: 700px;
+  border-bottom: solid;
+  margin-bottom: 50px;
+}
 
 label {
   margin-bottom: 5px;
@@ -69,14 +169,6 @@ input {
   }
 }
 
-.animation {
-  animation-name: test;
-  animation-duration: 8s;
-  // animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
 .pseudo:hover {
   transform: scale(1.5)
 }
@@ -84,7 +176,11 @@ input {
   border-radius: 50%;
 }
 li:nth-child(odd) {
-  border: solid 10px red;
+  border: dotted 5px red;
+}
+li:nth-child(even) {
+  border: solid 5px transparent;
+  color: blue;
 }
 input:disabled {
   opacity: .5;
