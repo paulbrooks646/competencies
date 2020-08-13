@@ -12,6 +12,8 @@ import Position from './Components/Position'
 import Animation from './Components/Animation'
 import Pseudo from './Components/Pseudo'
 import Book from './Components/Book'
+import Heroes from './Components/Heroes'
+import Lily from './Components/Lily'
 
 export default (
     <Switch>
@@ -27,5 +29,7 @@ export default (
         <Route path='/Animation' component={Animation}/>
         <Route path='/Pseudo' component={Pseudo}/>
         <Route path='/Book' component={Book}/>
+        <Route path='/Heroes' component={Heroes}/>
+        <Route path='/Lily' component={Lily}/>
     </Switch>
 )

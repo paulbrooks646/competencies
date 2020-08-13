@@ -10,8 +10,8 @@ export default function Nav() {
     const [book, setBook] = useState()
 
     return (
-        <div style={{width: '10px'}}>
-            <img src={pic} style={{width: '100px'}}/>
+        <div style={{display: 'none'}}>
+            {/* <img src={pic} style={{width: '100px'}}/> */}
         </div>
     )
 }
