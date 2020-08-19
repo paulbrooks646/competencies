@@ -14,6 +14,9 @@ import Pseudo from './Components/Pseudo'
 import Book from './Components/Book'
 import Heroes from './Components/Heroes'
 import Lily from './Components/Lily'
+import TextEffects from './Components/TextEffects'
+import Transform from './Components/Transform'
+import Transition from './Components/Transition'
 
 export default (
     <Switch>
@@ -31,5 +34,8 @@ export default (
         <Route path='/Book' component={Book}/>
         <Route path='/Heroes' component={Heroes}/>
         <Route path='/Lily' component={Lily}/>
+        <Route path='/TextEffects' component={TextEffects}/>
+        <Route path='/Transform' component={Transform}/>
+        <Route path='/Transition' component={Transition}/>
     </Switch>
 )

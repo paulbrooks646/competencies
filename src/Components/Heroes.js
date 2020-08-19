@@ -60,9 +60,13 @@ return (
             </div>
         </div> */}
         <div style={{marginTop: '200px'}}>
-            <img className='wolf' src='http://www.heroesofmightandmagic.com/heroes1/creatures/phoenix.gif'/>
+            <img className='wolf' src='http://www.heroesofmightandmagic.com/heroes1/creatures/wolf.gif'/>
             <div className='melvin'>
-                <img src='http://www.heroesofmightandmagic.com/heroes1/creatures/ghost.gif'/>
+                <img 
+                    src='http://www.heroesofmightandmagic.com/heroes1/creatures/peasant.gif'
+                    style={{transform: 'rotateY(180deg)'}}
+                />
+                <h4>Ethan</h4>
             </div>
         </div>
     </div>
