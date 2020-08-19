@@ -2,14 +2,22 @@ import React, {useState} from 'react'
 
 export default function Font() {
 
+    const [color, setColor] = useState()
+    const [style, setStyle] = useState()
+    const [variant, setVariant] = useState()
+    const [weight, setWeight] = useState()
+    const [size, setSize] = useState()
+    const [height, setHeight] = useState()
+    const [family, setFamily] = useState()
+
 
     return (
-        <div>
-            <div className='flex' style={{borderBottom: 'solid 1px black'}}>
+        <div style={{marginBottom: '50px'}}>
+            <div className='flex' style={{borderBottom: 'solid'}}>
                 <h1>Font</h1>
                 <p style={{width: '80%'}}>The font attributes affect the text of a given element. These attributes are color, font-style, font-variant, font-weight, font-size, line-height and font-family.</p>
             </div>
-            <div>
+            <div style={{borderBottom: 'solid'}}>
                 <div className='animationDescriptionRow'>
                     <div className='fifty'>
                         <h2>Color</h2>
@@ -43,7 +51,96 @@ export default function Font() {
                 <div className='flex'>
                     <div className='fifty'>
                         <h2>Font Family</h2>
-                        <p>The font-family property specifies the font for the text of an element. This can be the name of a font-family or the name of a generic family. You may assign multiple values to this property. A value will only be applied if any preceding values are not supported by the browser. A popular place to find free fonts is <a href='fonts.google.com'>fonts.google.com</a></p>
+                        <p>The font-family property specifies the font for the text of an element. This can be the name of a font-family or the name of a generic family. You may assign multiple values to this property. A value will only be applied if any preceding values are not supported by the browser. A popular place to find free fonts is <a href="fonts.google.com">fonts.google.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div className='flex'>
+                    <h1 style={{
+                            color: color,
+                            fontStyle: style,
+                            fontVariant: variant,
+                            fontWeight: weight,
+                            fontSize: `${size}px`,
+                            lineHeight: height,
+                           fontFamily: family,
+                           width: '80%' 
+                    }}>
+                        This Seems Like A Good Place To Do Some Font Practice. Change The Attributes Below And See What Happens To This Little Paragraph. 
+                    </h1>
+                </div>
+                <div className='animationInputField'>
+                    <div style={{marginBottom: '20px'}}>
+                        <label style={{marginRight: '10px'}}>Color:</label>
+                        <input
+                            placeholder='Enter color here'
+                            onChange={e => setColor(e.target.value)}
+                            style={{width: '150px'}}/>
+                    </div>
+                    <div>
+                        <label style={{marginRight: '10px'}}>Font Style:</label>
+                        <select
+                            onChange={e => setStyle(e.target.value)}>
+                            <option value='normal'>Normal</option>
+                            <option value='italic'>Italic</option>
+                            <option value='oblique'>Oblique</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style={{marginRight: '10px'}}>Font Variant:</label>
+                        <select
+                            onChange={e => setVariant(e.target.value)}>
+                            <option value='normal'>Normal</option>
+                            <option value='small-caps'>Small Caps</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label  style={{marginRight: '10px'}}>Font Size:</label>
+                        <input
+                            onChange={e => setSize(e.target.value)}
+                            placeholder='Enter # in pixels here'
+                            style={{width: '150px'}}/>
+                    </div>
+                </div>
+                <div className='animationInputField' style={{marginBottom: '50px'}}>
+                    <div>
+                        <label style={{marginRight: '10px'}}>Font Weight:</label>
+                        <select
+                            onChange={e => setWeight(e.target.value)}>
+                                <option value='normal'>Normal</option>
+                                <option value='Lighter'>Lighter</option>
+                                <option value='Bold'>Bold</option>
+                                <option value='bolder'>Bolder</option>
+                               <option value='100'>100</option>
+                               <option value='200'>200</option>
+                               <option value='300'>300</option>
+                               <option value='400'>400</option>
+                               <option value='500'>500</option>
+                               <option value='600'>600</option>
+                               <option value='700'>700</option>
+                               <option value='800'>800</option>
+                               <option value='900'>900</option> 
+                            </select>
+                    </div>
+                    <div>
+                      <label style={{marginRight: '10px'}}>Line Height:</label>
+                      <input
+                        onChange={e => setHeight(e.target.value)}
+                        placeholder='Enter # relative to font-size here'
+                        style={{width: '200px'}}/>  
+                    </div>
+                    <div>
+                        <label style={{marginRight: '10px'}}
+                        >Font Family:</label>
+                        <select onChange={e => setFamily(e.target.value)}>
+                            <option value='serif'>Serif</option>
+                            <option value='sans-serif'>Sans Serif</option>
+                            <option value='monospace'>Monospace</option>
+                            <option value='cursive'>Cursive</option>
+                            <option value='fantasy'>Fantasy</option>
+                            <option value='math'>Math</option>
+                        </select>
                     </div>
                 </div>
             </div>
