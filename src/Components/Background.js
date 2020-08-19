@@ -38,10 +38,10 @@ export default function Background() {
 
     return (
         <div>
-            <div className='backgroundTopSection'>
+            <section className='backgroundTopSection'>
                 <h1>Background</h1>
                 <p style={{ width: '80%' }}>In CSS their are more options than a simple color for the background of your elements. We are going to talk about Background Images, Linear Gradients, and Radial Gradients.</p>
-            </div>
+            </section>
             <div className='backgroundDescriptions'>
                 <div className='fifty'>
                     <h2>Background Image</h2>
