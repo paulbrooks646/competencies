@@ -95,12 +95,9 @@ return (
             </div>
         </div>
         <div style={{display: 'flex', border: 'solid', width: '100%'}}>
-        <div style={{width: '40%'}}>
+        <div className='flex' style={{width: '40%'}}>
             <h2>Nth Child</h2>
-            <p>The nth-child() pseudo class targets elements based on their position in a group of siblings. This can be done using keywords like odd and even, using a number or using a formula.</p>
-        <select>
-
-        </select>
+            <p style={{width: '90%'}}>The nth-child() pseudo class targets elements based on their position in a group of siblings. This can be done using keywords like odd and even, using a number or using a formula.</p>
         </div>
         <div style={{width: '60%'}}>
         <ul style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>

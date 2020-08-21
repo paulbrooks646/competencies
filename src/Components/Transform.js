@@ -15,7 +15,7 @@ export default function Transform() {
         <div style={{}}>
             <div className='flex' style={{ borderBottom: 'solid', marginBottom: '20px' }}>
                 <h1>Transform</h1>
-                <p>The transform property applies a transformation to an element. It allows you to rotate, scale, translate or skew an element.</p>
+                <p style={{width: '80%'}}>The transform property applies a transformation to an element. It allows you to rotate, scale, translate or skew an element.</p>
             </div>
             <div className='animationDescriptionRow'>
                 <div className='fifty'>
