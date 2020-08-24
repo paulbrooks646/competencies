@@ -17,6 +17,7 @@ import Lily from './Components/Lily'
 import TextEffects from './Components/TextEffects'
 import Transform from './Components/Transform'
 import Transition from './Components/Transition'
+import Styling from './Components/Styling'
 
 export default (
     <Switch>
@@ -37,5 +38,6 @@ export default (
         <Route path='/TextEffects' component={TextEffects}/>
         <Route path='/Transform' component={Transform}/>
         <Route path='/Transition' component={Transition}/>
+        <Route path='/Styling' component={Styling}/>
     </Switch>
 )
