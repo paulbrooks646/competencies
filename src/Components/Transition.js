@@ -28,6 +28,9 @@ export default function Transition() {
                     <p>The transition-timing-functionspecifies the speed curve for a transition.</p>
                 </div>
             </div>
+            <div className='flex'>
+                <h1></h1>
+            </div>
         </div>
     )
 }

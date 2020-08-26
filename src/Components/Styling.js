@@ -9,6 +9,7 @@ export default function Styling() {
             </nav>
             <main>
                 <h1></h1>
+                
             </main>
             <footer>
 
