@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { connect } from "react-redux"
+import {loginUser, registerUser } from "../redux/userReducer"
 
-export default function Auth(props) {
+function Auth(props) {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [newUsername, setNewusername] = useState();
@@ -69,8 +71,14 @@ export default function Auth(props) {
         </div>
       </div>
       <div>
-        <button>Register</button>
+        <button onClick={() => register()}>Register</button>
       </div>
     </div>
   );
 }
+
+const mapStateToProps = reduxState => reduxState
+
+const mapDispatchToProps = { loginUser, registerUser }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Auth)
