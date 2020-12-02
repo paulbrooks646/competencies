@@ -275,5 +275,28 @@ input:disabled {
 }
 
 .dashboard-link {
-  width: 100px;
+  color: blue;
+  width: 150px;
+  height: 75px;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px black;
+  border-radius: 5%;
+  font-size: 20px;
+}
+
+.dashboard-link:hover {
+transform: scale(1.1);
+cursor: pointer;
+}
+
+.dashboard-links-main {
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+height: 90vh;
+}
+
+.dashboard-links-row {
+display: flex;
+justify-content: space-evenly;
 }
