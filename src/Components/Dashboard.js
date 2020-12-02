@@ -7,7 +7,8 @@ function Dashboard(props) {
   return (
     <div>
       <div>
-        <h1>Welcome {props.user.user.username}</h1>
+              <h1>Welcome {props.user.user.username}</h1>
+              <h2>What would you like to learn about today?</h2>
       </div>
       <div className="dashboard-links-main">
         <div className="dashboard-links-row">

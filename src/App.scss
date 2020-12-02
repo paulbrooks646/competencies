@@ -293,10 +293,26 @@ cursor: pointer;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
-height: 90vh;
+height: 70vh;
 }
 
 .dashboard-links-row {
 display: flex;
 justify-content: space-evenly;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  position: relative;
+  top: 5px;
+}
+
+.logout-button {
+color: pink
+}
+
+.dashboard-button {
+color: purple
 }
