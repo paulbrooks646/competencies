@@ -30,6 +30,8 @@ p {
 }
 .App {
   text-align: center;
+  background-color: #f8f8ff;
+  overflow: hidden;
 }
 
 .hundred {
@@ -315,4 +317,26 @@ color: pink
 
 .dashboard-button {
 color: purple
+}
+
+.dashboard-logout {
+display: flex;
+justify-content: flex-end;
+}
+
+.dashboard-logout-button {
+position: relative;
+right: 50px;
+bottom: 50px;
+border-radius: 50%;
+height: 100px;
+width: 100px;
+color: green;
+font-size: 25px;
+background-color: white;
+}
+
+.dashboard-logout-button:hover {
+transform: scale(1.1);
+cursor: pointer;
 }

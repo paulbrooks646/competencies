@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getUser } from "../redux/userReducer";
+import { getUser, logoutUser } from "../redux/userReducer";
 import { Link } from "react-router-dom";
 
 function Dashboard(props) {
   return (
     <div>
       <div>
-              <h1>Welcome {props.user.user.username}</h1>
-              <h2>What would you like to learn about today?</h2>
+        <h1>Welcome {props.user.user.username}</h1>
+        <h2>What would you like to learn about today?</h2>
       </div>
       <div className="dashboard-links-main">
         <div className="dashboard-links-row">
@@ -61,10 +61,13 @@ function Dashboard(props) {
           </Link>
         </div>
       </div>
+      <div className="dashboard-logout">
+        <button className="dashboard-logout-button">Logout</button>
+      </div>
     </div>
   );
 }
 
 const mapStateToProps = (reduxState) => reduxState;
 
-export default connect(mapStateToProps, { getUser })(Dashboard);
+export default connect(mapStateToProps, { getUser, logoutUser })(Dashboard);
