@@ -4,7 +4,8 @@ module.exports = {
 
     register: async (req, res) => {
         const db = req.app.get('db')
-        const {newUsername, newPassword, newEmail} = req.body
+        console.log(req.body)
+        const {newUsername, newPassword} = req.body
 
         const existingUser = await db.check_user(newUsername)
         if (existingUser[0]) {
@@ -13,12 +14,11 @@ module.exports = {
         const salt = bycrypt.genSaltSync(10)
         const hash = bycrypt.hashSync(newPassword, salt)
 
-        const newUser = await db.register_user([newUsername, hash, newEmail])
+        const newUser = await db.register_user([newUsername, hash])
 
         req.session.user = {
             user_id : newUser[0].user_id,
-            username: newUser[0].username,
-            email: newUser[0].email
+            username: newUser[0].username
         }
         res.status(200).send(req.session.user)
     },
