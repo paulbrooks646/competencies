@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { connect } from "react-redux"
-import {loginUser, registerUser } from "../redux/userReducer"
+import { connect } from "react-redux";
+import { loginUser, registerUser } from "../redux/userReducer";
 
 function Auth(props) {
   const [username, setUsername] = useState();
@@ -10,7 +10,15 @@ function Auth(props) {
   const [newPassword, setNewPassword] = useState();
 
   function login() {
-    axios.post("/api/login");
+    axios
+      .post("/api/login", { username, password })
+      .then((res) => {
+        props.loginUser(res.data);
+        props.history.push("/Dashboard");
+      })
+      .catch((err) => {
+        alert("Username or password incorrect");
+      });
   }
 
   function register() {
@@ -77,8 +85,8 @@ function Auth(props) {
   );
 }
 
-const mapStateToProps = reduxState => reduxState
+const mapStateToProps = (reduxState) => reduxState;
 
-const mapDispatchToProps = { loginUser, registerUser }
+const mapDispatchToProps = { loginUser, registerUser };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Auth)
+export default connect(mapStateToProps, mapDispatchToProps)(Auth);

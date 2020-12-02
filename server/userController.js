@@ -1,4 +1,4 @@
-const bycrypt = require('bcrypt')
+const bcrypt = require('bcrypt')
 
 module.exports = {
 
@@ -11,8 +11,8 @@ module.exports = {
         if (existingUser[0]) {
             return res.status(409).send("User already exists!")
         }
-        const salt = bycrypt.genSaltSync(10)
-        const hash = bycrypt.hashSync(newPassword, salt)
+        const salt = bcrypt.genSaltSync(10)
+        const hash = bcrypt.hashSync(newPassword, salt)
 
         const newUser = await db.register_user([newUsername, hash])
 
@@ -24,7 +24,7 @@ module.exports = {
     },
 
     login: async (req, res) => {
-        const db =req.app.get('db')
+        const db = req.app.get('db')
         const { username, password} = req.body
         const user = await db.check_user(username)
 
@@ -38,7 +38,6 @@ module.exports = {
                 req.session.user = {
                     user_id : user[0].user_id,
                     username: user[0].username,
-                    email: user[0].email
                 }
                 res.status(200).send(req.session.user)
             }
