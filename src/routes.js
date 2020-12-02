@@ -18,6 +18,7 @@ import TextEffects from './Components/TextEffects'
 import Transform from './Components/Transform'
 import Transition from './Components/Transition'
 import Styling from './Components/Styling'
+import Dashboard from './Components/Dashboard'
 
 export default (
     <Switch>
@@ -38,6 +39,7 @@ export default (
         <Route path='/TextEffects' component={TextEffects}/>
         <Route path='/Transform' component={Transform}/>
         <Route path='/Transition' component={Transition}/>
-        <Route path='/Styling' component={Styling}/>
+        <Route path='/Styling' component={Styling} />
+        <Route path='/Dashboard' component={Dashboard}/>
     </Switch>
 )
