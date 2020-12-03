@@ -1,6 +1,6 @@
 import React from 'react'
 import {Switch, Route} from 'react-router-dom'
-import Auth from './Components/Auth'
+import Auth from './Components/Auth/Auth'
 import BoxModel from './Components/BoxModel'
 import FloatDisplay from './Components/FloatDisplay'
 import Flexbox from './Components/Flexbox'

@@ -1,0 +1,19 @@
+.auth-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-title {
+    color: green
+}
+
+.auth-card {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5%;
+    box-shadow: 2px 2px 2px 2px black;
+}

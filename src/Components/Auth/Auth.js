@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
-import { loginUser, registerUser } from "../redux/userReducer";
+import { loginUser, registerUser } from "../../redux/userReducer";
+import "./Auth.scss";
 
 function Auth(props) {
   const [username, setUsername] = useState();
@@ -34,11 +35,10 @@ function Auth(props) {
   }
 
   return (
-    <div>
-      <div classname="flex">
-        <h1>CSS Tutorials</h1>
-      </div>
-      <div style={{ width: "100%" }}>
+    <div className="auth-main">
+      <h1 className="auth-title">CSS Tutorials</h1>
+
+      <div className="auth-card">
         <h2>Login</h2>
         <div>
           <label style={{ marginRight: "10px" }}>Username:</label>
@@ -49,7 +49,8 @@ function Auth(props) {
         </div>
         <div>
           <label style={{ marginRight: "10px" }}>Password:</label>
-          <input type="password"
+          <input
+            type="password"
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter password here"
           />
@@ -58,28 +59,31 @@ function Auth(props) {
           <button onClick={() => login()}>Login</button>
         </div>
       </div>
-      <div>
-        <h3>New to CSS Tutorials?</h3>
-      </div>
-      <div>
-        <h2>Register</h2>
+      <div className="auth-card">
         <div>
-          <label style={{ marginRight: "10px" }}>Username:</label>
-          <input
-            onChange={(e) => setNewusername(e.target.value)}
-            placeholder="Enter username here"
-          />
+          <h3>New to CSS Tutorials?</h3>
         </div>
         <div>
-          <label style={{ marginRight: "10px" }}>Password:</label>
-          <input type="password"
-            onChange={(e) => setNewPassword(e.target.value)}
-            placeholder="Enter password here"
-          />
+          <h2>Register</h2>
+          <div>
+            <label style={{ marginRight: "10px" }}>Username:</label>
+            <input
+              onChange={(e) => setNewusername(e.target.value)}
+              placeholder="Enter username here"
+            />
+          </div>
+          <div>
+            <label style={{ marginRight: "10px" }}>Password:</label>
+            <input
+              type="password"
+              onChange={(e) => setNewPassword(e.target.value)}
+              placeholder="Enter password here"
+            />
+          </div>
         </div>
-      </div>
-      <div>
-        <button onClick={() => register()}>Register</button>
+        <div>
+          <button onClick={() => register()}>Register</button>
+        </div>
       </div>
     </div>
   );
