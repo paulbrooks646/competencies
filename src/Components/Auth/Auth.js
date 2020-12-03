@@ -9,8 +9,13 @@ function Auth(props) {
   const [password, setPassword] = useState();
   const [newUsername, setNewusername] = useState();
   const [newPassword, setNewPassword] = useState();
+  const [authCard, setAuthCard] = useState(true)
 
   function login() {
+
+    function toggleCard() {
+      setAuthCard(!authCard)
+    }
     axios
       .post("/api/login", { username, password })
       .then((res) => {
@@ -38,7 +43,7 @@ function Auth(props) {
     <div className="auth-main">
       <h1 className="auth-title">CSS Tutorials</h1>
 
-      <div className="auth-card">
+      <div className={`${authCard ? "auth-card" : "auth-card-open"}`}>
         <h2>Login</h2>
         <div>
           <label style={{ marginRight: "10px" }}>Username:</label>
@@ -59,7 +64,7 @@ function Auth(props) {
           <button onClick={() => login()}>Login</button>
         </div>
       </div>
-      <div className="auth-card">
+      <div className={`${authCard ? "auth-card-open" : "auth-card"}`}>
         <div>
           <h3>New to CSS Tutorials?</h3>
         </div>
