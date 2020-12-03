@@ -3,19 +3,20 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { loginUser, registerUser } from "../../redux/userReducer";
 import "./Auth.scss";
+import { Link } from "react-router-dom";
 
 function Auth(props) {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [newUsername, setNewusername] = useState();
   const [newPassword, setNewPassword] = useState();
-  const [authCard, setAuthCard] = useState(true)
+  const [authCard, setAuthCard] = useState(true);
+
+  function toggleCard() {
+    setAuthCard(!authCard);
+  }
 
   function login() {
-
-    function toggleCard() {
-      setAuthCard(!authCard)
-    }
     axios
       .post("/api/login", { username, password })
       .then((res) => {
@@ -63,11 +64,12 @@ function Auth(props) {
         <div>
           <button onClick={() => login()}>Login</button>
         </div>
+        <div>
+          <label className="auth-toggle">New to CSS Tutorials?</label>
+          <Link onClick={() => toggleCard()}>Register</Link>
+        </div>
       </div>
       <div className={`${authCard ? "auth-card-open" : "auth-card"}`}>
-        <div>
-          <h3>New to CSS Tutorials?</h3>
-        </div>
         <div>
           <h2>Register</h2>
           <div>
@@ -88,6 +90,10 @@ function Auth(props) {
         </div>
         <div>
           <button onClick={() => register()}>Register</button>
+        </div>
+        <div>
+          <label className="auth-toggle">Already have an account?</label>
+          <Link onClick={() => toggleCard()}>Login</Link>
         </div>
       </div>
     </div>
