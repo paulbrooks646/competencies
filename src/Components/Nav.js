@@ -14,7 +14,7 @@ function Nav(props) {
     const [author, setAuthor] = useState()
     const [book, setBook] = useState()
 
-    if (props.location.pathname === "/Dashboard") {
+    if (props.location.pathname === "/Dashboard" || props.location.pathname === "/") {
     return (<div></div>)
     }
     else

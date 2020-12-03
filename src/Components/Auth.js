@@ -49,7 +49,7 @@ function Auth(props) {
         </div>
         <div>
           <label style={{ marginRight: "10px" }}>Password:</label>
-          <input
+          <input type="password"
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter password here"
           />
@@ -72,7 +72,7 @@ function Auth(props) {
         </div>
         <div>
           <label style={{ marginRight: "10px" }}>Password:</label>
-          <input
+          <input type="password"
             onChange={(e) => setNewPassword(e.target.value)}
             placeholder="Enter password here"
           />
