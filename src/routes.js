@@ -18,7 +18,7 @@ import TextEffects from './Components/TextEffects'
 import Transform from './Components/Transform'
 import Transition from './Components/Transition'
 import Styling from './Components/Styling'
-import Dashboard from './Components/Dashboard'
+import Dashboard from './Components/Dashboard/Dashboard'
 
 export default (
     <Switch>

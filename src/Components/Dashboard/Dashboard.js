@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getUser, logoutUser } from "../redux/userReducer";
+import { getUser, logoutUser } from "../../redux/userReducer";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "./Dashboard.scss"
 
 function Dashboard(props) {
   function logout() {
@@ -63,7 +64,7 @@ function Dashboard(props) {
             <button className="dashboard-link">Transform</button>
           </Link>
         </div>
-        <div>
+        <div className="dashboard-links-row">
           <Link to="Transition">
             <button className="dashboard-link">Transition</button>
           </Link>
