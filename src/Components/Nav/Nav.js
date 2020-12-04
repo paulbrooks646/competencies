@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Link, withRouter } from "react-router-dom"
 import { connect } from "react-redux"
-import { logoutUser, getUser } from "../redux/userReducer"
+import { logoutUser, getUser } from "../../redux/userReducer"
 import axios from "axios"
+import "./Nav.scss"
 
 
 
@@ -29,9 +30,9 @@ function Nav(props) {
     return (
       <div className="navbar">
         <Link to="/Dashboard">
-          <button className="dashboard-button">Return to Dashboard</button>
+          <button className="nav-button">Return to Dashboard</button>
         </Link>
-        <button className="logout-button" onClick={() => logout()}>Logout</button>
+        <button className="nav-button" onClick={() => logout()}>Logout</button>
       </div>
     );
 }
