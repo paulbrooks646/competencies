@@ -5,6 +5,10 @@
 //   border: solid;
 // }
 
+* {
+  font-family: monospace;
+}
+
 
 h1 {
   color: $red;
@@ -278,7 +282,7 @@ input:disabled {
 
 .dashboard-link {
   color: blue;
-  width: 150px;
+  width: 175px;
   height: 75px;
   background-color: white;
   box-shadow: 2px 2px 2px 2px black;
@@ -342,7 +346,3 @@ transform: scale(1.1);
 cursor: pointer;
 }
 
-.auth-card {
-  width: 500px;
-  border: solid;
-}

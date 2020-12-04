@@ -43,57 +43,67 @@ function Auth(props) {
   return (
     <div className="auth-main">
       <h1 className="auth-title">CSS Tutorials</h1>
-
       <div className={`${authCard ? "auth-card" : "auth-card-open"}`}>
-        <h2>Login</h2>
+        <h2 className="auth-card-title">Login</h2>
         <div>
-          <label style={{ marginRight: "10px" }}>Username:</label>
+          <label className="auth-card-label">Username:</label>
           <input
+            className="auth-card-input"
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Enter username here"
           />
         </div>
         <div>
-          <label style={{ marginRight: "10px" }}>Password:</label>
+          <label className="auth-card-label">Password:</label>
           <input
+            className="auth-card-input"
             type="password"
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter password here"
           />
         </div>
         <div>
-          <button onClick={() => login()}>Login</button>
+          <button className="auth-card-button" onClick={() => login()}>
+            Submit
+          </button>
         </div>
         <div>
-          <label className="auth-toggle">New to CSS Tutorials?</label>
-          <Link onClick={() => toggleCard()}>Register</Link>
+          <label className="auth-card-label">New to CSS Tutorials?</label>
+          <Link className="auth-card-link" onClick={() => toggleCard()}>
+            Register
+          </Link>
         </div>
       </div>
       <div className={`${authCard ? "auth-card-open" : "auth-card"}`}>
+        <h2 className="auth-card-title">Register</h2>
         <div>
-          <h2>Register</h2>
-          <div>
-            <label style={{ marginRight: "10px" }}>Username:</label>
-            <input
-              onChange={(e) => setNewusername(e.target.value)}
-              placeholder="Enter username here"
-            />
-          </div>
-          <div>
-            <label style={{ marginRight: "10px" }}>Password:</label>
-            <input
-              type="password"
-              onChange={(e) => setNewPassword(e.target.value)}
-              placeholder="Enter password here"
-            />
-          </div>
+          <label className="auth-card-label">Username:</label>
+          <input
+            className="auth-card-input"
+            onChange={(e) => setNewusername(e.target.value)}
+            placeholder="Enter username here"
+          />
         </div>
         <div>
-          <button onClick={() => register()}>Register</button>
+          <label className="auth-card-label">Password:</label>
+          <input
+            className="auth-card-input"
+            type="password"
+            onChange={(e) => setNewPassword(e.target.value)}
+            placeholder="Enter password here"
+          />
+        </div>
+
+        <div>
+          <button className="auth-card-button" onClick={() => register()}>
+            Submit
+          </button>
         </div>
         <div>
-          <label className="auth-toggle">Already have an account?</label>
-          <Link onClick={() => toggleCard()}>Login</Link>
+          <label className="auth-card-label">Already have an account?</label>
+          <Link className="auth-card-link" onClick={() => toggleCard()}>
+            Login
+          </Link>
         </div>
       </div>
     </div>

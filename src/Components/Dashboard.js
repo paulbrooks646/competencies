@@ -4,16 +4,13 @@ import { getUser, logoutUser } from "../redux/userReducer";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-
 function Dashboard(props) {
-
-    function logout() {
-        axios.delete("/api/logout").then(() => {
-            props.logoutUser()
-            props.history.push("/")
-        })
-
-    }
+  function logout() {
+    axios.delete("/api/logout").then(() => {
+      props.logoutUser();
+      props.history.push("/");
+    });
+  }
 
   return (
     <div>
@@ -73,7 +70,9 @@ function Dashboard(props) {
         </div>
       </div>
       <div className="dashboard-logout">
-        <button className="dashboard-logout-button" onClick={() => logout()}>Logout</button>
+        <button className="dashboard-logout-button" onClick={() => logout()}>
+          Logout
+        </button>
       </div>
     </div>
   );
