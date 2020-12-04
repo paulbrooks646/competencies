@@ -1,15 +1,13 @@
-import React from 'react';
-import './App.scss';
-import Routes from './routes'
-import Nav from './Components/Nav/Nav'
+import React from "react";
+import "./App.scss";
+import Routes from "./routes";
+import Nav from "./Components/Nav/Nav";
 
 function App() {
   return (
-    <div className="App" style={{width: `100vw`, height: `100vh`, display: 'flex', flexDirection: "column", alignItems: "center"}}>
-<Nav/>
-      <div style={{width: '100%'}}>
-      {Routes}
-      </div>
+    <div className="app-main">
+      <Nav />
+      <div style={{ width: "100%" }}>{Routes}</div>
     </div>
   );
 }
