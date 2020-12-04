@@ -5,6 +5,7 @@ import { logoutUser, getUser } from "../redux/userReducer"
 import axios from "axios"
 
 
+
 function Nav(props) {
 
     const [pic, setPic] = useState('https://urbaned.tcnj.edu/wp-content/uploads/sites/85/2019/10/placeholder-profile-1.png')
@@ -13,6 +14,13 @@ function Nav(props) {
     const [genre, setGenre] = useState()
     const [author, setAuthor] = useState()
     const [book, setBook] = useState()
+
+    function logout() {
+      axios.delete("/api/logout").then(() => {
+        props.logoutUser();
+        props.history.push("/");
+      });
+    }
 
     if (props.location.pathname === "/Dashboard" || props.location.pathname === "/") {
     return (<div></div>)
@@ -23,7 +31,7 @@ function Nav(props) {
         <Link to="/Dashboard">
           <button className="dashboard-button">Return to Dashboard</button>
         </Link>
-        <button className="logout-button">Logout</button>
+        <button className="logout-button" onClick={() => logout()}>Logout</button>
       </div>
     );
 }
