@@ -24,7 +24,7 @@ export default function Animation() {
           any property you want throughout the animation.
         </h4>
       </section>
-      <div className="animationBox">
+      <div className="animation-box">
         <div
           style={{
             backgroundColor: "blue",
