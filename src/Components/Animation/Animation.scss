@@ -54,10 +54,35 @@
 
     .animation-practice-property {
       @include flex;
-      color: $blue;
-      font-size: 20px;
+
+      .animation-practice-label {
+        color: $blue;
+        font-size: 20px;
+      }
     }
   }
+  .animation-card {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      bottom: 600px;
+      z-index: 2;
+      background-color: white;
+      @include flex;
+      justify-content: space-evenly;
+      box-shadow: 2px 2px 2px 2px black;
+  }
+
+  .animation-card-closed {
+    display: none;
+}
+}
+
+
+
+.animation-practice-label:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .animationDescriptions {
