@@ -8,6 +8,12 @@ export default function Animation() {
   const [fill, setFill] = useState();
   const [iteration, setIteration] = useState("infinite");
   const [timing, setTiming] = useState("linear");
+  const [delayCard, setDelayCard] = useState(true);
+  const [directionCard, setDirectionCard] = useState(false);
+  const [durationCard, setDurationCard] = useState(false);
+  const [fillCard, setFillCard] = useState(false);
+  const [iterationCard, setIterationCard] = useState(false);
+  const [timingCard, setTimingCard] = useState(false);
 
   return (
     <main className="animation-main">
@@ -26,14 +32,8 @@ export default function Animation() {
       </section>
       <div className="animation-box">
         <div
+          className="animation"
           style={{
-            backgroundColor: "blue",
-            height: "100px",
-            width: "100px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            position: "relative",
             WebkitAnimationIterationCount: iteration,
             WebkitAnimationDirection: direction,
             WebkitAnimationFillMode: fill,
@@ -53,11 +53,11 @@ export default function Animation() {
           <h2>100%</h2>
         </div>
       </div>
-      <div className="hundred">
-        <h4 className="animationh4">
+      <div className="animation-practice">
+        <h4 className="animation-description">
           There are other properties whose values can be assigned to an element
           undergoing an animation, that help define how the animation actually
-          happens. You can see descriptions of these properties below.
+          happens. Click on a property name to see a description.
         </h4>
       </div>
       <div className="animationInputField">

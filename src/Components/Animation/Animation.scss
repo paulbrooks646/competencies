@@ -18,25 +18,37 @@
   }
 
   .animation-box {
-  border: solid 1px transparent;
-  height: 200px;
-  width: 848px;
-  border-bottom: solid;
-}
+    border: solid 1px transparent;
+    height: 200px;
+    width: 848px;
+    border-bottom: solid;
+
+    .animation {
+      background-color: blue;
+      height: 100px;
+      width: 100px;
+      @include flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .animationPercents {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .animation-practice {
+      @include flex;
+      width: 100%;
+
+      .animation-description {
+        width: 80%;  
+      }
+  }
 }
 
 
-
-.animationh4 {
-  width: 80%;
-  color: black;
-}
-
-.animationPercents {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 .animationInputField {
   display: flex;
