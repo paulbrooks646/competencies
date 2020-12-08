@@ -186,70 +186,106 @@ export default function Animation() {
         <div
           className={iterationCard ? "animation-card" : "animation-card-closed"}
         >
-          <h2>Animation Iteration Count</h2>
-          <p>
+          <h2 className="animation-card-title">Animation Iteration Count</h2>
+          <p className="animation-card-description">
             The animation-iteration-count property specifies how many times an
             animation should run. This can be any number or 'infinite'.
           </p>
+          <button
+            className="animation-card-button"
+            onClick={() => toggleIterationCard()}
+          >
+            CLOSE
+          </button>
         </div>
-        <div className="animationDescriptionRow">
-          <div className="fifty"></div>
-          <div className="fifty">
-            <h2>Animation Delay</h2>
-            <p>
-              The animation-delay property specifies an amount of time for the
-              animation to delay before starting. This time is in seconds (s) or
-              milliseconds (ms).
-            </p>
-          </div>
+        <div className={delayCard ? "animation-card" : "animation-card-closed"}>
+          <h2 className="animation-card-title">Animation Delay</h2>
+          <p className="animation-card-description">
+            The animation-delay property specifies an amount of time for the
+            animation to delay before starting. This time is in seconds (s) or
+            milliseconds (ms).
+          </p>
+          <button
+            className="animation-card-button"
+            onClick={() => toggleDelayCard()}
+          >
+            CLOSE
+          </button>
         </div>
-        <div className="animationDescriptionRow">
-          <div className="fifty">
-            <h2>Animation Direction</h2>
-            <p>
-              The animation-direction property defines whether an animation
-              should be played forwards (normal), backwards (reverse), forward
-              than backward (alternate) or backward than forward
-              (alternate-reverse).
-            </p>
-          </div>
-          <div className="fifty">
-            <h2>Animation Duration</h2>
-            <p>
-              The animation-duration property how long it takes the animation to
-              complete a cycle, by so doing it determines the speed of the
-              animation. The value for animation duration is defined in seconds
-              (s) or milliseconds (ms).
-            </p>
-          </div>
+        <div
+          className={directionCard ? "animation-card" : "animation-card-closed"}
+        >
+          <h2 className="animation-card-title">Animation Direction</h2>
+          <p className="animation-card-description">
+            The animation-direction property defines whether an animation should
+            be played forwards (normal), backwards (reverse), forward than
+            backward (alternate) or backward than forward (alternate-reverse).
+          </p>
+          <button
+            className="animation-card-button"
+            onClick={() => toggleDirectionCard()}
+          >
+            CLOSE
+          </button>
         </div>
-        <div className="animationDescriptionRow">
-          <div className="fifty">
-            <h2>Animation Timing Function</h2>
-            <p>
-              The animation-timing-function specifies the speed curve of an
-              animation. The speed curve defines the time an animation uses to
-              change from one style to another and helps to make these changes
-              smoothly. Ease: This is the default value. It gives the animation
-              a slow start, then fast, and ends slowly. Linear: The animation
-              will have the same speed from start to end. Ease-in: The animation
-              has a slow start. Ease-out: The animation has a slow
-              end.Ease-in-out: The animation has a slow start and a slow end.
-              You can also customize speeds with steps or cubic-bezier.
-            </p>
-          </div>
-          <div className="fifty">
-            <h2>Animation Fill Mode</h2>
-            <p>
-              The animation-fill-mode designates which properties the animated
-              element will retain, after the animation is completed. None: The
-              element will not retain any styles added during the animation.
-              Forwards: The element will retain any stlye set by the last
-              keyframe. Backwards: The element will get the style values set by
-              the first keyframe. Both: The element will receive the styles set
-              in both the first and last keyframe.
-            </p>
-          </div>
+        <div
+          className={durationCard ? "animation-card" : "animation-card-closed"}
+        >
+          <h2 className="animation-card-title">Animation Duration</h2>
+          <p className="animation-card-description">
+            The animation-duration property how long it takes the animation to
+            complete a cycle, by so doing it determines the speed of the
+            animation. The value for animation duration is defined in seconds
+            (s) or milliseconds (ms).
+          </p>
+          <button
+            className="animation-card-button"
+            onClick={() => toggleDurationCard()}
+          >
+            CLOSE
+          </button>
+        </div>
+        <div
+          className={timingCard ? "animation-card" : "animation-card-closed"}
+        >
+          <h2 className="animation-card-title">Animation Timing Function</h2>
+          <p className="animation-card-description">
+            The animation-timing-function specifies the speed curve of an
+            animation. The speed curve defines the time an animation uses to
+            change from one style to another and helps to make these changes
+            smoothly. Ease: This is the default value. It gives the animation a
+            slow start, then fast, and ends slowly. Linear: The animation will
+            have the same speed from start to end. Ease-in: The animation has a
+            slow start. Ease-out: The animation has a slow end.Ease-in-out: The
+            animation has a slow start and a slow end. You can also customize
+            speeds with steps or cubic-bezier.
+          </p>
+          <button
+            className="animation-card-button"
+            onClick={() => toggleTimingCard()}
+          >
+            CLOSE
+          </button>
+        </div>
+        <div
+          className={fillCard ? "animation-card" : "animation-card-closed"}
+        >
+          <h2 className="animation-card-title">Animation Fill Mode</h2>
+          <p className="animation-card-description">
+            The animation-fill-mode designates which properties the animated
+            element will retain, after the animation is completed. None: The
+            element will not retain any styles added during the animation.
+            Forwards: The element will retain any stlye set by the last
+            keyframe. Backwards: The element will get the style values set by
+            the first keyframe. Both: The element will receive the styles set in
+            both the first and last keyframe.
+          </p>
+          <button
+            className="animation-card-button"
+            onClick={() => toggleFillCard()}
+          >
+            CLOSE
+          </button>
         </div>
       </main>
     );
