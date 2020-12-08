@@ -39,21 +39,25 @@
     }
   }
   .animation-practice {
-      @include flex;
-      width: 100%;
+    @include flex;
+    width: 100%;
 
-      .animation-description {
-        width: 80%;  
-      }
+    .animation-description {
+      width: 80%;
+    }
   }
-}
+  .animation-practice-row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 20px;
 
-
-
-.animationInputField {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+    .animation-practice-property {
+      @include flex;
+      color: $blue;
+      font-size: 20px;
+    }
+  }
 }
 
 .animationDescriptions {

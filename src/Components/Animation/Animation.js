@@ -13,9 +13,36 @@ export default function Animation() {
   const [durationCard, setDurationCard] = useState(false);
   const [fillCard, setFillCard] = useState(false);
   const [iterationCard, setIterationCard] = useState(false);
-  const [timingCard, setTimingCard] = useState(false);
+    const [timingCard, setTimingCard] = useState(false);
+    
+            function toggleDelayCard() {
+              setDelayCard(!delayCard);
+    }
+    
+            function toggleDirectionCard() {
+              setDirectionCard(!directionCard);
+    }
+    
+            function toggleDurationCard() {
+              setDurationCard(!durationCard);
+    }
+            function toggleFillCard() {
+              setFillCard(!fillCard);
+    }
+            function toggleIterationCard() {
+              setIterationCard(!iterationCard);
+    }
+    
+            function toggleTimingCard() {
+              setTimingCard(!timingCard);
+            }
+    
 
-  return (
+
+    return (
+      
+
+
     <main className="animation-main">
       <section className="animation-section">
         <h1 className="animation-title">Animation</h1>
@@ -60,8 +87,8 @@ export default function Animation() {
           happens. Click on a property name to see a description.
         </h4>
       </div>
-      <div className="animationInputField">
-        <div className="flex">
+      <div className="animation-practice-row">
+        <div className="animation-practice-property">
           <label>Animation Direction:</label>
           <select
             value={direction}
@@ -73,7 +100,7 @@ export default function Animation() {
             <option value="alternate-reverse">Alternate Reverse</option>
           </select>
         </div>
-        <div className="flex">
+        <div className="animation-practice-property">
           <label>Animation Fill Mode:</label>
           <select value={fill} onChange={(e) => setFill(e.target.value)}>
             <option value="none">None</option>
@@ -82,7 +109,7 @@ export default function Animation() {
             <option value="both">Both</option>
           </select>
         </div>
-        <div className="flex">
+        <div className="animation-practice-property">
           <label>Animation Timing Function:</label>
           <select value={timing} onChange={(e) => setTiming(e.target.value)}>
             <option value="ease">Ease</option>
@@ -93,8 +120,8 @@ export default function Animation() {
           </select>
         </div>
       </div>
-      <div className="animationDescriptions">
-        <div className="flex">
+      <div className="animation-practice-row">
+        <div className="animation-practice-property">
           <label>Animation Delay:</label>
           <input
             value={delay}
@@ -102,7 +129,7 @@ export default function Animation() {
             placeholder="Enter number here"
           />
         </div>
-        <div className="flex">
+        <div className="animation-practice-property">
           <label>Animation Iteration Count:</label>
           <input
             onChange={(e) => setIteration(e.target.value)}
@@ -116,7 +143,7 @@ export default function Animation() {
             Infinite
           </button>
         </div>
-        <div className="flex">
+        <div className="animation-practice-property">
           <label>Animation Duration:</label>
           <input
             value={duration}
