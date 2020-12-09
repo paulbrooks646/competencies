@@ -43,20 +43,20 @@ export default function Background() {
   const [sizeCard, setSizeCard] = useState(false);
 
   function toggleBackgroundImage() {
-      setBackgroundImage(true);
-      setLinearGradient(false)
-      setRadialGradient(false)
+    setBackgroundImage(true);
+    setLinearGradient(false);
+    setRadialGradient(false);
   }
 
-    function toggleLinearGradient() {
-      setBackgroundImage(false)
-        setLinearGradient(true);
-        setRadialGradient(false)
+  function toggleLinearGradient() {
+    setBackgroundImage(false);
+    setLinearGradient(true);
+    setRadialGradient(false);
   }
 
-    function toggleRadialGradient() {
-        setBackgroundImage(false)
-        setLinearGradient(false)
+  function toggleRadialGradient() {
+    setBackgroundImage(false);
+    setLinearGradient(false);
     setRadialGradient(true);
   }
 
@@ -83,259 +83,200 @@ export default function Background() {
           first?
         </p>
         <div className="background-introduction-buttons">
-          <button className="background-introduction-button">Background Images</button><button className="background-introduction-button">Linear Gradients</button><button className="background-introduction-button">Radial Gradients</button>
+          <button
+            className="background-introduction-button"
+            onClick={() => toggleBackgroundImage()}
+          >
+            Background Images
+          </button>
+          <button
+            className="background-introduction-button"
+            onClick={() => toggleLinearGradient()}
+          >
+            Linear Gradients
+          </button>
+          <button
+            className="background-introduction-button"
+            onClick={() => toggleRadialGradient()}
+          >
+            Radial Gradients
+          </button>
         </div>
       </section>
-      <div className="background-image-section"></div>
-      <div className="backgroundSection">
-        <div className="forty">
-          <label
-            className="background-label"
-            onClick={() => toggleRepeatCard()}
-          >
-            Background Repeat:
-          </label>
-          <select
-            value={repeat}
-            onChange={(e) => setRepeat(e.target.value)}
-            style={{ marginBottom: "50px" }}
-          >
-            <option value="repeat">Repeat</option>
-            <option value="no-repeat">No Repeat</option>
-            <option value="repeat-x">Repeat X</option>
-            <option value="repeat-y">Repeat Y</option>
-            <option value="space">Space</option>
-            <option value="round">Round</option>
-          </select>
-          <label>Background Position:</label>
-          <select
-            value={position}
-            onChange={(e) => setPosition(e.target.value)}
-            style={{ marginBottom: "-10px" }}
-          >
-            <option value="Left Top">Left Top</option>
-            <option value="Left Center">Left Center</option>
-            <option value="Left Bottom">Left Bottom</option>
-            <option value="Right Top">Right Top</option>
-            <option value="Right Center">Right Center</option>
-            <option value="Right Bottom">Right Bottom</option>
-            <option value="Center Top">Center Top</option>
-            <option value="Center Center">Center Center</option>
-            <option value="Center Bottom">Center Bottom</option>
-          </select>
-          <h4 style={{ marginBottom: "0px" }}>Or</h4>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              width: "100%",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                marginRight: "20px",
-              }}
-            >
-              <label>X-Axis %</label>
-              <input
-                style={{ width: "80px" }}
-                placeholder="Enter % here"
-                onChange={(e) => setXaxis(e.target.value)}
-              />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <label>Y-Axis %</label>
-              <input
-                style={{ width: "80px" }}
-                placeholder="Enter % here"
-                onChange={(e) => setYaxis(e.target.value)}
-              />
-            </div>
-          </div>
-          <button
-            onClick={() => setPosition(`${xaxis}% ${yaxis}%`)}
-            style={{ marginBottom: "-10px" }}
-          >
-            Submit
-          </button>
-          <h4 style={{ marginBottom: "0px" }}>Or</h4>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              width: "100%",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                marginRight: "20px",
-              }}
-            >
-              <label>X-Axis Pixels</label>
-              <input
-                style={{ width: "80px" }}
-                placeholder="Enter px here"
-                onChange={(e) => setXpixel(e.target.value)}
-              />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <label>Y-Axis Pixels</label>
-              <input
-                style={{ width: "80px" }}
-                placeholder="Enter px here"
-                onChange={(e) => setYpixel(e.target.value)}
-              />
-            </div>
-          </div>
-          <button
-            onClick={() => setPosition(`${xpixel}px ${ypixel}px`)}
-            style={{ marginBottom: "50px" }}
-          >
-            Submit
-          </button>
-          <label>Background Size:</label>
-          <select
-            value={size}
-            onChange={(e) => setSize(e.target.value)}
-            style={{ marginBottom: "-10px" }}
-          >
-            <option value="Cover">Cover</option>
-            <option value="Contain">Contain</option>
-          </select>
-          <h4 style={{ marginBottom: "0px" }}>Or</h4>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              width: "100%",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                marginRight: "20px",
-              }}
-            >
-              <label>Width Percent</label>
-              <input
-                style={{ width: "80px" }}
-                placeholder="Enter % here"
-                onChange={(e) => setXsize(e.target.value)}
-              />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <label>Height Percent</label>
-              <input
-                style={{ width: "80px" }}
-                placeholder="Enter % here"
-                onChange={(e) => setYsize(e.target.value)}
-              />
-            </div>
-          </div>
-          <button
-            onClick={() => setSize(`${xsize}% ${ysize}%`)}
-            style={{ marginBottom: "-10px" }}
-          >
-            Submit
-          </button>
-          <h4 style={{ marginBottom: "0px" }}>Or</h4>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              width: "100%",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                marginRight: "20px",
-              }}
-            >
-              <label>X-Axis Pixels</label>
-              <input
-                style={{ width: "80px" }}
-                placeholder="Enter px here"
-                onChange={(e) => setSizexpixel(e.target.value)}
-              />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <label>Y-Axis Pixels</label>
-              <input
-                style={{ width: "80px" }}
-                placeholder="Enter px here"
-                onChange={(e) => setSizeypixel(e.target.value)}
-              />
-            </div>
-          </div>
-          <button onClick={() => setSize(`${sizexpixel}px ${sizeypixel}px`)}>
-            Submit
-          </button>
+      <section
+        className={`${
+          backgroundImage
+            ? "background-image-section"
+            : "background-image-section-closed"
+        }`}
+      >
+        <div className="background-image-introduction">
+          <h2>Background Image</h2>
+          <p>
+            The background-image property sets one or more background images for
+            an element. There are properties to help make sure you image appears
+            precisely how you like. Click on a property name to get more details.
+          </p>
         </div>
-        <div
-          style={{
-            width: "55%",
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            style={{
-              backgroundImage:
-                'url("https://images.theconversation.com/files/220291/original/file-20180524-90281-1qovmkh.jpg?ixlib=rb-1.1.0&rect=0%2C177%2C3567%2C2101&q=45&auto=format&w=496&fit=clip")',
-              width: "100%",
-              height: "50%",
-              backgroundRepeat: repeat,
-              backgroundPosition: position,
-              backgroundSize: size,
-            }}
-          ></div>
+        <div className="background-image-properties">
+          <div className="background-image-property">
+            <label
+              className="background-label"
+              onClick={() => toggleRepeatCard()}
+            >
+              Background Repeat:
+            </label>
+            <select
+              value={repeat}
+              onChange={(e) => setRepeat(e.target.value)}
+              style={{ marginBottom: "50px" }}
+            >
+              <option value="repeat">Repeat</option>
+              <option value="no-repeat">No Repeat</option>
+              <option value="repeat-x">Repeat X</option>
+              <option value="repeat-y">Repeat Y</option>
+              <option value="space">Space</option>
+              <option value="round">Round</option>
+            </select>
+          </div>
+          <div className="background-image-property">
+            <label className="background-label">Background Position:</label>
+            <select
+              value={position}
+              onChange={(e) => setPosition(e.target.value)}
+            >
+              <option value="Left Top">Left Top</option>
+              <option value="Left Center">Left Center</option>
+              <option value="Left Bottom">Left Bottom</option>
+              <option value="Right Top">Right Top</option>
+              <option value="Right Center">Right Center</option>
+              <option value="Right Bottom">Right Bottom</option>
+              <option value="Center Top">Center Top</option>
+              <option value="Center Center">Center Center</option>
+              <option value="Center Bottom">Center Bottom</option>
+            </select>
+            <h4 className="background-conjunction">Or</h4>
+            <div className="background-property-section">
+              <div className="background-property-subsection">
+                <label>X-Axis %</label>
+                <input
+                  className="background-property-input"
+                  placeholder="Enter % here"
+                  onChange={(e) => setXaxis(e.target.value)}
+                />
+              </div>
+              <div className="background-property-subsection">
+                <label>Y-Axis %</label>
+                <input
+                  className="background-property-input"
+                  placeholder="Enter % here"
+                  onChange={(e) => setYaxis(e.target.value)}
+                />
+              </div>
+            </div>
+            <button
+              className="background-property-button"
+              onClick={() => setPosition(`${xaxis}% ${yaxis}%`)}
+            >
+              Submit
+            </button>
+            <h4 className="background-conjunction">Or</h4>
+            <div className="background-property-section">
+              <div className="background-property-subsection">
+                <label>X-Axis Pixels</label>
+                <input
+                  className="background-property-input"
+                  placeholder="Enter px here"
+                  onChange={(e) => setXpixel(e.target.value)}
+                />
+              </div>
+              <div className="background-property-subsection">
+                <label>Y-Axis Pixels</label>
+                <input
+                  className="background-property-input"
+                  placeholder="Enter px here"
+                  onChange={(e) => setYpixel(e.target.value)}
+                />
+              </div>
+            </div>
+            <button
+              className="background-property-button"
+              onClick={() => setPosition(`${xpixel}px ${ypixel}px`)}
+            >
+              Submit
+            </button>
+          </div>
+          <div className="background-image-property">
+            <label className="background-label">Background Size:</label>
+            <select value={size} onChange={(e) => setSize(e.target.value)}>
+              <option value="Cover">Cover</option>
+              <option value="Contain">Contain</option>
+            </select>
+            <h4 className="background-conjunction">Or</h4>
+            <div className="background-property-section">
+              <div className="background-property-subsection">
+                <label>Width Percent</label>
+                <input
+                  className="background-property-input"
+                  placeholder="Enter % here"
+                  onChange={(e) => setXsize(e.target.value)}
+                />
+              </div>
+              <div className="background-property-subsection">
+                <label>Height Percent</label>
+                <input
+                  className="background-property-input"
+                  placeholder="Enter % here"
+                  onChange={(e) => setYsize(e.target.value)}
+                />
+              </div>
+            </div>
+            <button
+              className="background-property-button"
+              onClick={() => setSize(`${xsize}% ${ysize}%`)}
+            >
+              Submit
+            </button>
+            <h4 className="background-conjunction">Or</h4>
+            <div className="background-property-section">
+              <div className="background-property-subsection">
+                <label>X-Axis Pixels</label>
+                <input
+                  className="background-property-input"
+                  placeholder="Enter px here"
+                  onChange={(e) => setSizexpixel(e.target.value)}
+                />
+              </div>
+              <div className="background-property-subsection">
+                <label>Y-Axis Pixels</label>
+                <input
+                  className="background-property-input"
+                  placeholder="Enter px here"
+                  onChange={(e) => setSizeypixel(e.target.value)}
+                />
+              </div>
+            </div>
+            <button
+              className="background-property-button"
+              onClick={() => setSize(`${sizexpixel}px ${sizeypixel}px`)}
+            >
+              Submit
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
+      <div
+        style={{
+          backgroundImage:
+            'url("https://upload.wikimedia.org/wikipedia/commons/e/e3/Mustela_nivalis_-British_Wildlife_Centre-4.jpg")',
+          width: "500px",
+          height: "50%",
+          backgroundRepeat: repeat,
+          backgroundPosition: position,
+          backgroundSize: size,
+        }}
+      ></div>
       <div className="fifty">
-        <h2>Background Image</h2>
-        <p>
-          The background-image property sets one or more background images for
-          an element. There are properties to help make sure you image appears
-          precisely how you like.
-        </p>
         <div
           className={`${
             repeatCard ? "background-card" : "background-card-closed"
