@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="app-main">
       <Nav />
-      <div style={{ width: "100%", position: "relative", top: "30px" }}>{Routes}</div>
+      <div style={{width: "100%"}}>{Routes}</div>
     </div>
   );
 }

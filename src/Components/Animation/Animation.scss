@@ -3,7 +3,9 @@
 
 .animation-main {
   @include flex;
-  margin-top: 20px;
+    position: relative;
+  top: 70px;
+  overflow: hidden;
 
   .animation-section {
     @include flex;
@@ -59,61 +61,97 @@
         color: $blue;
         font-size: 20px;
       }
+
+      .animation-conjunction {
+        margin-top: -5px;
+      }
+
+      .animation-button {
+        width: 100px;
+        height: 25px;
+        margin-top: -10px;
+        background-color: white;
+        border-radius: 5%;
+        color: $blue;
+      }
+
+      .animation-button:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+      }
     }
   }
   .animation-card {
-      width: 500px;
-      height: 500px;
-      position: relative;
-      bottom: 600px;
-      z-index: 2;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom: 600px;
+    z-index: 2;
+    background-color: white;
+    @include flex;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 5%;
+
+    .animation-card-title {
+      font-size: 25px;
+    }
+
+    .animation-card-description {
+      font-size: 15px;
+    }
+
+    .animation-card-button {
+      width: 100px;
+      height: 40px;
       background-color: white;
-      @include flex;
-      justify-content: space-evenly;
-      box-shadow: 2px 2px 2px 2px black;
+      color: $blue;
+      font-size: 20px;
       border-radius: 5%;
-
-      .animation-card-title {
-          font-size: 25px;
-      }
-
-      .animation-card-description {
-          font-size: 15px;
-      }
-
-      .animation-card-button {
-          width: 100px;
-          height: 40px;
-          background-color: white;
-          color: $blue;
-          font-size: 20px;
-          border-radius: 5%;
-      }
+    }
   }
 
   .animation-card-closed {
     display: none;
+  }
 }
-}
-
-
 
 .animation-practice-label:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
-.animationDescriptions {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  width: 100%;
-  margin-top: 25px;
-  border-bottom: solid;
-}
-
-.animationDescriptionRow {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
+@keyframes test {
+  0% {
+    left: 0px;
+    background-color: orange;
+    height: 100px;
+    transform: rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    background-color: pink;
+    height: 150px;
+    transform: rotate(90deg) scale(1.5);
+    border-radius: 50%;
+  }
+  50% {
+    background-color: blue;
+    opacity: .1;
+    height: 100px;
+    transform: rotate(0deg);
+  }
+  75% {
+    width: 100px;
+    opacity: 1;
+    background-color: yellow;
+    font-size: 20px;
+    transform: skewY(180deg);
+  }
+  100% {
+    width: 150px;
+    left: 700px;
+    background-color: green;
+    color: red;
+  }
 }

@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import "./Background.scss"
+
 
 export default function Background() {
 
@@ -37,7 +39,7 @@ export default function Background() {
     const [radialPosition, setRadialPosition] = useState('center center')
 
     return (
-        <div>
+        <div className="background-main">
             <section className='backgroundTopSection'>
                 <h1>Background</h1>
                 <p style={{ width: '80%' }}>In CSS their are more options than a simple color for the background of your elements. We are going to talk about Background Images, Linear Gradients, and Radial Gradients.</p>

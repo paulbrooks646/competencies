@@ -103,40 +103,7 @@ input {
   height: 20px;
 }
 
-@keyframes test {
-  0% {
-    left: 0px;
-    background-color: orange;
-    height: 100px;
-    transform: rotate(0deg);
-  }
-  25% {
-    opacity: 1;
-    background-color: pink;
-    height: 150px;
-    transform: rotate(90deg) scale(1.5);
-    border-radius: 50%;
-  }
-  50% {
-    background-color: blue;
-    opacity: .1;
-    height: 100px;
-    transform: rotate(0deg);
-  }
-  75% {
-    width: 100px;
-    opacity: 1;
-    background-color: yellow;
-    font-size: 20px;
-    transform: skewY(180deg);
-  }
-  100% {
-    width: 150px;
-    left: 700px;
-    background-color: green;
-    color: red;
-  }
-}
+
 
 .pseudo:hover {
   transform: scale(1.5)
