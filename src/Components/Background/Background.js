@@ -75,12 +75,10 @@ export default function Background() {
   return (
     <div className="background-main">
       <section className="background-introduction-section">
-        <h1>Background</h1>
+        <h1 className="background-title">Background</h1>
         <p className="background-description">
           In CSS their are more options than a simple color for the background
-          of your elements. We are going to talk about Background Images, Linear
-          Gradients, and Radial Gradients. Which would you like to learn about
-          first?
+          of your elements. Which would you like to learn about first?
         </p>
         <div className="background-introduction-buttons">
           <button
@@ -111,179 +109,189 @@ export default function Background() {
         }`}
       >
         <div className="background-image-introduction">
-          <h2>Background Image</h2>
-          <p>
+          <h2 className="background-image-title">Background Image</h2>
+          <p className="background-image-description">
             The background-image property sets one or more background images for
             an element. There are properties to help make sure you image appears
-            precisely how you like. Click on a property name to get more details.
+            precisely how you like. Click on a property name to get more
+            details. Adjust the properties and see how it effects the image
+            below.
           </p>
         </div>
-        <div className="background-image-properties">
-          <div className="background-image-property">
-            <label
-              className="background-label"
-              onClick={() => toggleRepeatCard()}
-            >
-              Background Repeat:
-            </label>
-            <select
-              value={repeat}
-              onChange={(e) => setRepeat(e.target.value)}
-              style={{ marginBottom: "50px" }}
-            >
-              <option value="repeat">Repeat</option>
-              <option value="no-repeat">No Repeat</option>
-              <option value="repeat-x">Repeat X</option>
-              <option value="repeat-y">Repeat Y</option>
-              <option value="space">Space</option>
-              <option value="round">Round</option>
-            </select>
+        <div className="background-image-main">
+          <div className="background-image-properties">
+            <div className="background-image-property">
+              <label
+                className="background-label"
+                onClick={() => toggleRepeatCard()}
+              >
+                Background Repeat:
+              </label>
+              <select
+                value={repeat}
+                onChange={(e) => setRepeat(e.target.value)}
+              >
+                <option value="repeat">Repeat</option>
+                <option value="no-repeat">No Repeat</option>
+                <option value="repeat-x">Repeat X</option>
+                <option value="repeat-y">Repeat Y</option>
+                <option value="space">Space</option>
+                <option value="round">Round</option>
+              </select>
+            </div>
+            <div className="background-image-property">
+              <label
+                className="background-label"
+                onClick={() => togglePositionCard()}
+              >
+                Background Position:
+              </label>
+              <select
+                value={position}
+                onChange={(e) => setPosition(e.target.value)}
+              >
+                <option value="Left Top">Left Top</option>
+                <option value="Left Center">Left Center</option>
+                <option value="Left Bottom">Left Bottom</option>
+                <option value="Right Top">Right Top</option>
+                <option value="Right Center">Right Center</option>
+                <option value="Right Bottom">Right Bottom</option>
+                <option value="Center Top">Center Top</option>
+                <option value="Center Center">Center Center</option>
+                <option value="Center Bottom">Center Bottom</option>
+              </select>
+              <h4 className="background-conjunction">Or</h4>
+              <div className="background-property-section">
+                <div className="background-property-subsection">
+                  <label>X-Axis %</label>
+                  <input
+                    className="background-property-input"
+                    placeholder="Enter % here"
+                    onChange={(e) => setXaxis(e.target.value)}
+                  />
+                </div>
+                <div className="background-property-subsection">
+                  <label>Y-Axis %</label>
+                  <input
+                    className="background-property-input"
+                    placeholder="Enter % here"
+                    onChange={(e) => setYaxis(e.target.value)}
+                  />
+                </div>
+              </div>
+              <button
+                className="background-property-button"
+                onClick={() => setPosition(`${xaxis}% ${yaxis}%`)}
+              >
+                Submit
+              </button>
+              <h4 className="background-conjunction">Or</h4>
+              <div className="background-property-section">
+                <div className="background-property-subsection">
+                  <label>X-Axis Pixels</label>
+                  <input
+                    className="background-property-input"
+                    placeholder="Enter px here"
+                    onChange={(e) => setXpixel(e.target.value)}
+                  />
+                </div>
+                <div className="background-property-subsection">
+                  <label>Y-Axis Pixels</label>
+                  <input
+                    className="background-property-input"
+                    placeholder="Enter px here"
+                    onChange={(e) => setYpixel(e.target.value)}
+                  />
+                </div>
+              </div>
+              <button
+                className="background-property-button"
+                onClick={() => setPosition(`${xpixel}px ${ypixel}px`)}
+              >
+                Submit
+              </button>
+            </div>
+            <div className="background-image-property">
+              <label
+                className="background-label"
+                onClick={() => toggleSizeCard()}
+              >
+                Background Size:
+              </label>
+              <select value={size} onChange={(e) => setSize(e.target.value)}>
+                <option value="Cover">Cover</option>
+                <option value="Contain">Contain</option>
+              </select>
+              <h4 className="background-conjunction">Or</h4>
+              <div className="background-property-section">
+                <div className="background-property-subsection">
+                  <label>Width Percent</label>
+                  <input
+                    className="background-property-input"
+                    placeholder="Enter % here"
+                    onChange={(e) => setXsize(e.target.value)}
+                  />
+                </div>
+                <div className="background-property-subsection">
+                  <label>Height Percent</label>
+                  <input
+                    className="background-property-input"
+                    placeholder="Enter % here"
+                    onChange={(e) => setYsize(e.target.value)}
+                  />
+                </div>
+              </div>
+              <button
+                className="background-property-button"
+                onClick={() => setSize(`${xsize}% ${ysize}%`)}
+              >
+                Submit
+              </button>
+              <h4 className="background-conjunction">Or</h4>
+              <div className="background-property-section">
+                <div className="background-property-subsection">
+                  <label>X-Axis Pixels</label>
+                  <input
+                    className="background-property-input"
+                    placeholder="Enter px here"
+                    onChange={(e) => setSizexpixel(e.target.value)}
+                  />
+                </div>
+                <div className="background-property-subsection">
+                  <label>Y-Axis Pixels</label>
+                  <input
+                    className="background-property-input"
+                    placeholder="Enter px here"
+                    onChange={(e) => setSizeypixel(e.target.value)}
+                  />
+                </div>
+              </div>
+              <button
+                className="background-property-button"
+                onClick={() => setSize(`${sizexpixel}px ${sizeypixel}px`)}
+              >
+                Submit
+              </button>
+            </div>
           </div>
-          <div className="background-image-property">
-            <label className="background-label">Background Position:</label>
-            <select
-              value={position}
-              onChange={(e) => setPosition(e.target.value)}
-            >
-              <option value="Left Top">Left Top</option>
-              <option value="Left Center">Left Center</option>
-              <option value="Left Bottom">Left Bottom</option>
-              <option value="Right Top">Right Top</option>
-              <option value="Right Center">Right Center</option>
-              <option value="Right Bottom">Right Bottom</option>
-              <option value="Center Top">Center Top</option>
-              <option value="Center Center">Center Center</option>
-              <option value="Center Bottom">Center Bottom</option>
-            </select>
-            <h4 className="background-conjunction">Or</h4>
-            <div className="background-property-section">
-              <div className="background-property-subsection">
-                <label>X-Axis %</label>
-                <input
-                  className="background-property-input"
-                  placeholder="Enter % here"
-                  onChange={(e) => setXaxis(e.target.value)}
-                />
-              </div>
-              <div className="background-property-subsection">
-                <label>Y-Axis %</label>
-                <input
-                  className="background-property-input"
-                  placeholder="Enter % here"
-                  onChange={(e) => setYaxis(e.target.value)}
-                />
-              </div>
-            </div>
-            <button
-              className="background-property-button"
-              onClick={() => setPosition(`${xaxis}% ${yaxis}%`)}
-            >
-              Submit
-            </button>
-            <h4 className="background-conjunction">Or</h4>
-            <div className="background-property-section">
-              <div className="background-property-subsection">
-                <label>X-Axis Pixels</label>
-                <input
-                  className="background-property-input"
-                  placeholder="Enter px here"
-                  onChange={(e) => setXpixel(e.target.value)}
-                />
-              </div>
-              <div className="background-property-subsection">
-                <label>Y-Axis Pixels</label>
-                <input
-                  className="background-property-input"
-                  placeholder="Enter px here"
-                  onChange={(e) => setYpixel(e.target.value)}
-                />
-              </div>
-            </div>
-            <button
-              className="background-property-button"
-              onClick={() => setPosition(`${xpixel}px ${ypixel}px`)}
-            >
-              Submit
-            </button>
-          </div>
-          <div className="background-image-property">
-            <label className="background-label">Background Size:</label>
-            <select value={size} onChange={(e) => setSize(e.target.value)}>
-              <option value="Cover">Cover</option>
-              <option value="Contain">Contain</option>
-            </select>
-            <h4 className="background-conjunction">Or</h4>
-            <div className="background-property-section">
-              <div className="background-property-subsection">
-                <label>Width Percent</label>
-                <input
-                  className="background-property-input"
-                  placeholder="Enter % here"
-                  onChange={(e) => setXsize(e.target.value)}
-                />
-              </div>
-              <div className="background-property-subsection">
-                <label>Height Percent</label>
-                <input
-                  className="background-property-input"
-                  placeholder="Enter % here"
-                  onChange={(e) => setYsize(e.target.value)}
-                />
-              </div>
-            </div>
-            <button
-              className="background-property-button"
-              onClick={() => setSize(`${xsize}% ${ysize}%`)}
-            >
-              Submit
-            </button>
-            <h4 className="background-conjunction">Or</h4>
-            <div className="background-property-section">
-              <div className="background-property-subsection">
-                <label>X-Axis Pixels</label>
-                <input
-                  className="background-property-input"
-                  placeholder="Enter px here"
-                  onChange={(e) => setSizexpixel(e.target.value)}
-                />
-              </div>
-              <div className="background-property-subsection">
-                <label>Y-Axis Pixels</label>
-                <input
-                  className="background-property-input"
-                  placeholder="Enter px here"
-                  onChange={(e) => setSizeypixel(e.target.value)}
-                />
-              </div>
-            </div>
-            <button
-              className="background-property-button"
-              onClick={() => setSize(`${sizexpixel}px ${sizeypixel}px`)}
-            >
-              Submit
-            </button>
-          </div>
+          <div
+            className="background-image"
+            style={{
+              backgroundImage:
+                'url("https://images.theconversation.com/files/220291/original/file-20180524-90281-1qovmkh.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop")',
+              backgroundRepeat: repeat,
+              backgroundPosition: position,
+              backgroundSize: size,
+            }}
+          ></div>
         </div>
-      </section>
-      <div
-        style={{
-          backgroundImage:
-            'url("https://upload.wikimedia.org/wikipedia/commons/e/e3/Mustela_nivalis_-British_Wildlife_Centre-4.jpg")',
-          width: "500px",
-          height: "50%",
-          backgroundRepeat: repeat,
-          backgroundPosition: position,
-          backgroundSize: size,
-        }}
-      ></div>
-      <div className="fifty">
         <div
           className={`${
             repeatCard ? "background-card" : "background-card-closed"
           }`}
         >
-          <h2>Background Repeat</h2>
-          <p>
+          <h2 className="background-card-title">Background Repeat</h2>
+          <p className="background-card-description">
             By default your background image will repeat if it doen't fill its
             container. If this isn't what you want, you can use the
             background-repeat property. The values associated with the property
@@ -294,30 +302,40 @@ export default function Background() {
             any whitespace evenly between repititions, and round (the image is
             repeated and squished or stretched so there will be no whitespace).
           </p>
+          <button
+            className="background-card-button"
+            onClick={() => toggleRepeatCard()}
+          >
+            CLOSE
+          </button>
         </div>
-      </div>
-      <div className="fifty">
         <div
           className={`${
             positionCard ? "background-card" : "background-card-closed"
           }`}
         >
-          <h2>Background Position</h2>
-          <p>
+          <h2 className="background-card-title">Background Position</h2>
+          <p className="background-card-description">
             The background-position property sets the starting position of the
             background image. This can be done with set values (see the dropdown
             below), units of measurement such as pixels, or a percentage on the
             containing element. These accept two values the first being width
             and the second height.
           </p>
+          <button
+            className="background-card-button"
+            onClick={() => togglePositionCard()}
+          >
+            CLOSE
+          </button>
         </div>
         <div
           className={`${
             sizeCard ? "background-card" : "background-card-closed"
           }`}
         >
-          <h2>Background Size</h2>
-          <p>
+          <h2 className="background-card-title">Background Size</h2>
+          <p className="background-card-description">
             The default value for background-size is auto which displays its
             original size. The length and percentage values both take in two
             parameters, the first being width and the second being height. They
@@ -326,16 +344,27 @@ export default function Background() {
             bit of the image. Contain resizes the image to make sure it is fully
             visible
           </p>
+          <button
+            className="background-card-button"
+            onClick={() => toggleSizeCard()}
+          >
+            CLOSE
+          </button>
         </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          marginBottom: "50px",
-          borderBottom: "solid 1px black",
-          width: "100%",
-          height: "850px",
-        }}
+      </section>
+      <section
+        className={`${
+          linearGradient
+            ? "linear-gradient-section"
+            : "linear-gradient-section-closed"
+        }`}
+        // style={{
+        //   display: "flex",
+        //   marginBottom: "50px",
+        //   borderBottom: "solid 1px black",
+        //   width: "100%",
+        //   height: "850px",
+        // }}
       >
         <div
           style={{
@@ -460,15 +489,20 @@ export default function Background() {
             }}
           ></div>
         </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          marginBottom: "50px",
-          borderBottom: "solid 1px black",
-          width: "100%",
-          height: "950px",
-        }}
+      </section>
+      <section
+        className={`${
+          radialGradient
+            ? "radial-gradient-section"
+            : "radial-gradient-section-closed"
+        }`}
+        // style={{
+        //   display: "flex",
+        //   marginBottom: "50px",
+        //   borderBottom: "solid 1px black",
+        //   width: "100%",
+        //   height: "950px",
+        // }}
       >
         <div
           style={{
@@ -600,7 +634,7 @@ export default function Background() {
             }}
           ></div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
