@@ -1,0 +1,79 @@
+@import "../variables";
+@import "../mixins";
+
+.color-main {
+  margin-top: 27px;
+
+  .color-introduction {
+    @include flex;
+    justify-content: center;
+    width: 100%;
+
+    .color-title {
+      margin-bottom: -5px;
+    }
+
+    .color-description {
+      width: 80%;
+    }
+
+    .color-buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 15px;
+      margin-bottom: 5px;
+
+      .color-button {
+        background-color: white;
+        color: $purple;
+      }
+
+      .color-button:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .predefined-color-section {
+    .predefined-introduction {
+      display: flex;
+      justify-content: space-evenly;
+
+      .predefined-description-div {
+        @include flex;
+        justify-content: center;
+        width: 40%;
+
+        .predefined-description {
+        }
+      }
+      .predefined-color-chart-div {
+        .predefined-color-chart {
+          width: 90%;
+        }
+      }
+    }
+
+    .predefined-practice {
+
+        display: flex;
+
+
+        .predefined-properties {
+@include flex;
+width: 40%;
+justify-content: center;
+        }
+
+        .predefined-example {
+
+        }
+    }
+  }
+
+  .predefined-color-section-closed {
+    display: none;
+  }
+}
