@@ -4,7 +4,7 @@ import "./Background.scss";
 export default function Background() {
   const [repeat, setRepeat] = useState();
   const [position, setPosition] = useState();
-  const [size, setSize] = useState();
+  const [size, setSize] = useState("contain");
   const [xaxis, setXaxis] = useState();
   const [yaxis, setYaxis] = useState();
   const [xpixel, setXpixel] = useState();
@@ -277,8 +277,6 @@ export default function Background() {
           <div
             className="background-image"
             style={{
-              backgroundImage:
-                'url("https://lh3.googleusercontent.com/proxy/LPvoZD1ltpysBQ813txWp2jzLzEsUXaF2tqdJKZRWCtk1qUmdDEcJ82dsECICQKLlEQt0NqOhg0d-MDREDzq1dBlpkBZ4LmqVZN_om3oCMJdw8bF")',
               backgroundRepeat: repeat,
               backgroundPosition: position,
               backgroundSize: size,
@@ -500,64 +498,66 @@ export default function Background() {
             </select>
             <h2 className="radial-gradient-subtitle">Choose three colors:</h2>
             <div>
-              <label className="radial-gradient-label" >Color One:</label>
-              <input 
+              <label className="radial-gradient-label">Color One:</label>
+              <input
                 placeholder="Enter color here"
                 onChange={(e) => setRadialOne(e.target.value)}
               />
             </div>
             <div>
-              <label className="radial-gradient-label" >Color Two:</label>
-              <input 
+              <label className="radial-gradient-label">Color Two:</label>
+              <input
                 placeholder="Enter color here"
                 onChange={(e) => setRadialTwo(e.target.value)}
               />
             </div>
             <div>
-              <label className="radial-gradient-label" >Color Three:</label>
-              <input 
+              <label className="radial-gradient-label">Color Three:</label>
+              <input
                 placeholder="Enter color here"
                 onChange={(e) => setRadialThree(e.target.value)}
               />
             </div>
-            <h2 className="radial-gradient-subtitle">Give the colors start and stop points:</h2>
+            <h2 className="radial-gradient-subtitle">
+              Give the colors start and stop points:
+            </h2>
             <div>
-              <label className="radial-gradient-label" >Color One:</label>
-              <input className="radial-gradient-input"
+              <label className="radial-gradient-label">Color One:</label>
+              <input
+                className="radial-gradient-input"
                 placeholder="Start %"
                 onChange={(e) => setRadialStartOne(e.target.value)}
-                
               />
-              <input className="radial-gradient-input"
+              <input
+                className="radial-gradient-input"
                 placeholder="Stop %"
                 onChange={(e) => setRadialStopOne(e.target.value)}
-                
               />
             </div>
             <div>
-              <label className="radial-gradient-label" >Color Two:</label>
-              <input className="radial-gradient-input"
+              <label className="radial-gradient-label">Color Two:</label>
+              <input
+                className="radial-gradient-input"
                 placeholder="Start %"
                 onChange={(e) => setRadialStartTwo(e.target.value)}
-                
               />
-              <input className="radial-gradient-input"
+              <input
+                className="radial-gradient-input"
                 placeholder="Stop %"
                 onChange={(e) => setRadialStopTwo(e.target.value)}
-                
               />
             </div>
             <div>
-              <label className="radial-gradient-label" >Color Three:</label>
-              <input className="radial-gradient-input"
+              <label className="radial-gradient-label">Color Three:</label>
+              <input
+                className="radial-gradient-input"
                 placeholder="Start %"
                 onChange={(e) => setRadialStartThree(e.target.value)}
-                
               />
-              <input className="radial-gradient-input"
+              <input
+                className="radial-gradient-input"
                 placeholder="Stop %"
                 onChange={(e) => setRadialStopThree(e.target.value)}
-                
               />
             </div>
             <h2 className="radial-gradient-subtitle">Choose a size:</h2>
@@ -588,13 +588,11 @@ export default function Background() {
               <option value="Center Bottom">Center Bottom</option>
             </select>
           </div>
-          <div className="radial-gradient-div"
-            
-          >
-            <div className="radial-gradient"
+          <div className="radial-gradient-div">
+            <div
+              className="radial-gradient"
               style={{
                 backgroundImage: `radial-gradient(${radialSize} ${shape} at ${radialPosition}, ${radialOne} ${radialStartOne}% ${radialStopOne}%, ${radialTwo} ${radialStartTwo}% ${radialStopTwo}%, ${radialThree} ${radialStartThree}% ${radialStopThree}%)`,
-                
               }}
             ></div>
           </div>

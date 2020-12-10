@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import "./BoxModel.scss"
 
 export default function BoxModel(props) {
 

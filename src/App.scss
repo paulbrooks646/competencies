@@ -116,74 +116,7 @@ input:disabled {
   transform: translate(-200px)
 }
 
-@keyframes chase {
-  0% {
-    left: -300px;
-  }
-  25% {
-    left: -150px;
-    transform: rotate(0deg);
-    top: 70px;
-  }
-  50% {
-    left: 0px;
-    transform: rotate(360deg);
-    top: -50px;
-  }
-  75% {
-    left: 150px;
-    top: 100px;
-    transform: rotate(360deg);
-  }
-  100% {
-    left: 230px;
-    top: 90px;
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes run {
-  0% {
-    left: 150px;
-  }
-  25% {
-    left: 170px;
-  }
-  50% {
-    left: 190px;
-  }
-  75% {
-    left: 210px;
-    transform: rotate(0deg)
-  }
-  100% {
-    left: 230px;
-    transform: rotate(90deg);
-    top: 40px;
-  }
-}
 
-.wolf {
-  position: relative;
-  left: -300px;
-  top: 150px;
-  animation-name: chase;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-}
-
-.melvin {
-  position: relative;
-  left: 150px;
-  animation-name: run;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-}
 
 
