@@ -1,2 +1,123 @@
 @import "../mixins";
-@import "../variables"
+@import "../variables";
+
+.box-model-main {
+  position: relative;
+  top: 49px;
+
+  .box-model-introduction {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+    .box-model-explanation {
+      width: 50%;
+      @include flex;
+
+      .box-model-title {
+      }
+    }
+
+    .box-model-image {
+      width: 50%;
+    }
+  }
+
+  .box-model-practice {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+
+
+    .box-model-properties {
+      width: 40%;
+      height: 100%;
+      @include flex;
+      justify-content: flex-start;
+
+
+      .box-model-subtitle {
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+
+      .box-model-subtitle:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      .box-model-input-div {
+          display: flex;
+          margin-bottom: -3px;
+        .box-model-property-label {
+          color: $blue;
+          margin-right: 10px;
+          margin-top: 5px;
+        }
+
+        .box-model-select {
+            margin-bottom: 5px;
+        }
+        
+      }
+    }
+    .box-div {
+      @include flex;
+      justify-content: center;
+      width: 60%;
+
+      .box {
+        width: 300px;
+        height: 300px;
+        @include flex;
+        justify-content: center;
+        background-color: orange;
+      }
+    }
+  }
+
+  .box-model-card {
+    height: 500px;
+    width: 500px;
+    position: relative;
+    bottom: 650px;
+    background-color: white;
+    z-index: 2;
+    @include flex;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 5%;
+
+    .box-model-card-title {
+      font-size: 25px;
+    }
+
+    .box-model-card-descritpion {
+      font-size: 15px;
+    }
+
+    .box-model-card-button {
+      width: 100px;
+      height: 40px;
+      background-color: white;
+      color: $purple;
+      font-size: 20px;
+      border-radius: 5%;
+    }
+
+    .box-model-card-button:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    .box-model-card-closed {
+      display: none;
+    }
+  }
+}
+
+.box-model-card-closed {
+  display: none;
+}

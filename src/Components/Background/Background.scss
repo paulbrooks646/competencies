@@ -59,7 +59,7 @@
       .background-image-properties {
         @include flex;
         width: 50%;
-        justify-content: start;
+        justify-content: flex-start;
 
         .background-image-property {
           @include flex;
@@ -140,7 +140,7 @@
       .background-card-button {
         width: 100px;
         height: 40px;
-        background-colorf: white;
+        background-color: white;
         color: $purple;
         font-size: 20px;
         border-radius: 5%;
@@ -185,7 +185,6 @@
 
         .linear-gradient-conjunction {
           position: relative;
-
           color: $blue;
         }
       }
@@ -240,7 +239,6 @@
 
         .radial-gradient-conjunction {
           position: relative;
-
           color: $blue;
         }
       }
