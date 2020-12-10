@@ -482,7 +482,7 @@ export default function Background() {
       >
         <div className="radial-gradient-introduction">
           <h2 className="radial-gradient-title">Radial Gradient</h2>
-          <p style={{ width: "90%" }}>
+          <p>
             A radial gradient is an image consisting of a progressive transition
             between two or more colors from an origin. It can either be an
             ellipse or a circle. In addition to choosing which colors and how
@@ -490,120 +490,114 @@ export default function Background() {
             and stop and give it a size and position.
           </p>
         </div>
-        <div>
-          <h4>Choose a shape:</h4>
-          <label>Shape:</label>
-          <select value={shape} onChange={(e) => setShape(e.target.value)}>
-            <option value="ellipse">Ellipse</option>
-            <option value="circle">Circle</option>
-          </select>
-          <h4>Choose three colors:</h4>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color One:</label>
-            <input
-              placeholder="Enter color here"
-              onChange={(e) => setRadialOne(e.target.value)}
-            />
+        <div className="radial-gradient-main">
+          <div className="radial-gradient-properties">
+            <h2 className="radial-gradient-subtitle">Choose a shape:</h2>
+            <label className="radial-gradient-label">Shape:</label>
+            <select value={shape} onChange={(e) => setShape(e.target.value)}>
+              <option value="ellipse">Ellipse</option>
+              <option value="circle">Circle</option>
+            </select>
+            <h2 className="radial-gradient-subtitle">Choose three colors:</h2>
+            <div>
+              <label className="radial-gradient-label" >Color One:</label>
+              <input 
+                placeholder="Enter color here"
+                onChange={(e) => setRadialOne(e.target.value)}
+              />
+            </div>
+            <div>
+              <label className="radial-gradient-label" >Color Two:</label>
+              <input 
+                placeholder="Enter color here"
+                onChange={(e) => setRadialTwo(e.target.value)}
+              />
+            </div>
+            <div>
+              <label className="radial-gradient-label" >Color Three:</label>
+              <input 
+                placeholder="Enter color here"
+                onChange={(e) => setRadialThree(e.target.value)}
+              />
+            </div>
+            <h2 className="radial-gradient-subtitle">Give the colors start and stop points:</h2>
+            <div>
+              <label className="radial-gradient-label" >Color One:</label>
+              <input className="radial-gradient-input"
+                placeholder="Start %"
+                onChange={(e) => setRadialStartOne(e.target.value)}
+                
+              />
+              <input className="radial-gradient-input"
+                placeholder="Stop %"
+                onChange={(e) => setRadialStopOne(e.target.value)}
+                
+              />
+            </div>
+            <div>
+              <label className="radial-gradient-label" >Color Two:</label>
+              <input className="radial-gradient-input"
+                placeholder="Start %"
+                onChange={(e) => setRadialStartTwo(e.target.value)}
+                
+              />
+              <input className="radial-gradient-input"
+                placeholder="Stop %"
+                onChange={(e) => setRadialStopTwo(e.target.value)}
+                
+              />
+            </div>
+            <div>
+              <label className="radial-gradient-label" >Color Three:</label>
+              <input className="radial-gradient-input"
+                placeholder="Start %"
+                onChange={(e) => setRadialStartThree(e.target.value)}
+                
+              />
+              <input className="radial-gradient-input"
+                placeholder="Stop %"
+                onChange={(e) => setRadialStopThree(e.target.value)}
+                
+              />
+            </div>
+            <h2 className="radial-gradient-subtitle">Choose a size:</h2>
+            <label className="radial-gradient-label">Size:</label>
+            <select
+              value={radialSize}
+              onChange={(e) => setRadialSize(e.target.value)}
+            >
+              <option value="closest-side">Closest Side</option>
+              <option value="closest-corner">Closest Corner</option>
+              <option value="farthest-side">Farthest Side</option>
+              <option value="farthest-corner">Farthest Corner</option>
+            </select>
+            <h2 className="radial-gradient-subtitle">Choose a position:</h2>
+            <label className="radial-gradient-label">Position</label>
+            <select
+              value={radialPosition}
+              onChange={(e) => setRadialPosition(e.target.value)}
+            >
+              <option value="Left Top">Left Top</option>
+              <option value="Left Center">Left Center</option>
+              <option value="Left Bottom">Left Bottom</option>
+              <option value="Right Top">Right Top</option>
+              <option value="Right Center">Right Center</option>
+              <option value="Right Bottom">Right Bottom</option>
+              <option value="Center Top">Center Top</option>
+              <option value="Center Center">Center Center</option>
+              <option value="Center Bottom">Center Bottom</option>
+            </select>
           </div>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color Two:</label>
-            <input
-              placeholder="Enter color here"
-              onChange={(e) => setRadialTwo(e.target.value)}
-            />
-          </div>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color Three:</label>
-            <input
-              placeholder="Enter color here"
-              onChange={(e) => setRadialThree(e.target.value)}
-            />
-          </div>
-          <h4>Give the colors start and stop points:</h4>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color One:</label>
-            <input
-              placeholder="Start %"
-              onChange={(e) => setRadialStartOne(e.target.value)}
-              style={{ width: "50px", marginRight: "10px" }}
-            />
-            <input
-              placeholder="Stop %"
-              onChange={(e) => setRadialStopOne(e.target.value)}
-              style={{ width: "50px" }}
-            />
-          </div>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color Two:</label>
-            <input
-              placeholder="Start %"
-              onChange={(e) => setRadialStartTwo(e.target.value)}
-              style={{ width: "50px", marginRight: "10px" }}
-            />
-            <input
-              placeholder="Stop %"
-              onChange={(e) => setRadialStopTwo(e.target.value)}
-              style={{ width: "50px" }}
-            />
-          </div>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color Three:</label>
-            <input
-              placeholder="Start %"
-              onChange={(e) => setRadialStartThree(e.target.value)}
-              style={{ width: "50px", marginRight: "10px" }}
-            />
-            <input
-              placeholder="Stop %"
-              onChange={(e) => setRadialStopThree(e.target.value)}
-              style={{ width: "50px" }}
-            />
-          </div>
-          <h4 style={{ width: "90%" }}>Choose a size:</h4>
-          <label>Size:</label>
-          <select
-            value={radialSize}
-            onChange={(e) => setRadialSize(e.target.value)}
+          <div className="radial-gradient-div"
+            
           >
-            <option value="closest-side">Closest Side</option>
-            <option value="closest-corner">Closest Corner</option>
-            <option value="farthest-side">Farthest Side</option>
-            <option value="farthest-corner">Farthest Corner</option>
-          </select>
-          <h4 style={{ width: "90%" }}>Choose a position:</h4>
-          <label>Position</label>
-          <select
-            value={radialPosition}
-            onChange={(e) => setRadialPosition(e.target.value)}
-          >
-            <option value="Left Top">Left Top</option>
-            <option value="Left Center">Left Center</option>
-            <option value="Left Bottom">Left Bottom</option>
-            <option value="Right Top">Right Top</option>
-            <option value="Right Center">Right Center</option>
-            <option value="Right Bottom">Right Bottom</option>
-            <option value="Center Top">Center Top</option>
-            <option value="Center Center">Center Center</option>
-            <option value="Center Bottom">Center Bottom</option>
-          </select>
-        </div>
-        <div
-          style={{
-            width: "60%",
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              backgroundImage: `radial-gradient(${radialSize} ${shape} at ${radialPosition}, ${radialOne} ${radialStartOne}% ${radialStopOne}%, ${radialTwo} ${radialStartTwo}% ${radialStopTwo}%, ${radialThree} ${radialStartThree}% ${radialStopThree}%)`,
-              width: "70%",
-              height: "60%",
-              backgroundPosition: "center",
-            }}
-          ></div>
+            <div className="radial-gradient"
+              style={{
+                backgroundImage: `radial-gradient(${radialSize} ${shape} at ${radialPosition}, ${radialOne} ${radialStartOne}% ${radialStopOne}%, ${radialTwo} ${radialStartTwo}% ${radialStopTwo}%, ${radialThree} ${radialStartThree}% ${radialStopThree}%)`,
+                
+              }}
+            ></div>
+          </div>
         </div>
       </section>
     </div>

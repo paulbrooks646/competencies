@@ -158,6 +158,48 @@
         margin-bottom: -5px;
       }
     }
+
+    .radial-gradient-main {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+
+      .radial-gradient-properties {
+
+        .radial-gradient-subtitle {
+          font-size: 15px;
+        }
+
+        .radial-gradient-label {
+          color: $blue;
+          margin-right: 10px;
+        }
+
+        .radial-gradient-input {
+          width: 50px;
+          margin-right: 10px;
+        }
+
+        .radial-gradient-conjunction {
+          position: relative;
+
+          color: $blue;
+        }
+      }
+      .radial-gradient-div {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .radial-gradient {
+          width: 500px;
+          height: 500px;
+          background-position: center;
+        }
+      }
+    }
 }
 }
 
