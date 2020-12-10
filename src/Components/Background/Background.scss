@@ -87,6 +87,78 @@
       }
     }
   }
+
+  .linear-gradient-section {
+    @include flex;
+    border-top: solid;
+    width: 100%;
+
+    .linear-gradient-introduction {
+      width: 90%;
+      @include flex;
+      margin-top: -10px;
+
+      .linear-gradient-title {
+        margin-bottom: -5px;
+      }
+    }
+
+    .linear-gradient-main {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+
+      .linear-gradient-properties {
+        .linear-gradient-subtitle {
+          font-size: 15px;
+        }
+
+        .linear-gradient-label {
+          color: $blue;
+          margin-right: 10px;
+        }
+
+        .linear-gradient-input {
+          width: 50px;
+          margin-right: 10px;
+        }
+
+        .linear-gradient-conjunction {
+          position: relative;
+
+          color: $blue;
+        }
+      }
+      .linear-gradient-div {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .linear-gradient {
+          width: 500px;
+          height: 500px;
+          background-position: center;
+        }
+      }
+    }
+  }
+  .radial-gradient-section {
+    @include flex;
+    width: 100%;
+
+    .radial-gradient-introduction {
+      width: 90%;
+      @include flex;
+      margin-top: -10px;
+    
+
+      .radial-gradient-title {
+        margin-bottom: -5px;
+      }
+    }
+}
 }
 
 .background-property-button:hover {
@@ -98,15 +170,11 @@
   display: none;
 }
 
-.linear-gradient-section {
-}
-
 .linear-gradient-section-closed {
   display: none;
 }
 
-.radial-gradient-section {
-}
+
 
 .radial-gradient-section-closed {
   display: none;

@@ -278,7 +278,7 @@ export default function Background() {
             className="background-image"
             style={{
               backgroundImage:
-                'url("https://images.theconversation.com/files/220291/original/file-20180524-90281-1qovmkh.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop")',
+                'url("https://lh3.googleusercontent.com/proxy/LPvoZD1ltpysBQ813txWp2jzLzEsUXaF2tqdJKZRWCtk1qUmdDEcJ82dsECICQKLlEQt0NqOhg0d-MDREDzq1dBlpkBZ4LmqVZN_om3oCMJdw8bF")',
               backgroundRepeat: repeat,
               backgroundPosition: position,
               backgroundSize: size,
@@ -352,142 +352,125 @@ export default function Background() {
           </button>
         </div>
       </section>
+
       <section
         className={`${
           linearGradient
             ? "linear-gradient-section"
             : "linear-gradient-section-closed"
         }`}
-        // style={{
-        //   display: "flex",
-        //   marginBottom: "50px",
-        //   borderBottom: "solid 1px black",
-        //   width: "100%",
-        //   height: "850px",
-        // }}
       >
-        <div
-          style={{
-            width: "40%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <h2 style={{ color: "" }}>Linear Gradient</h2>
-          <p style={{ width: "90%" }}>
+        <div className="linear-gradient-introduction">
+          <h2 className="linear-gradient-title">Linear Gradient</h2>
+          <p>
             A linear gradient is an image consisting of a progressive transition
             between two or more colors along a straight line. In addition to
             choosing which colors and how many colors to use, you can specify
             where you want a color to stop and define a starting point with a
             direction or angle.
           </p>
-          <h4>Choose three colors:</h4>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color One:</label>
-            <input
-              placeholder="Enter color here"
-              onChange={(e) => setColorone(e.target.value)}
-            />
+          <div className="linear-gradient-main">
+            <div className="linear-gradient-properties">
+              <h2 className="linear-gradient-subtitle">Choose three colors:</h2>
+              <div>
+                <label className="linear-gradient-label">Color One:</label>
+                <input
+                  placeholder="Enter color here"
+                  onChange={(e) => setColorone(e.target.value)}
+                />
+              </div>
+              <div>
+                <label className="linear-gradient-label">Color Two:</label>
+                <input
+                  placeholder="Enter color here"
+                  onChange={(e) => setColortwo(e.target.value)}
+                />
+              </div>
+              <div>
+                <label className="linear-gradient-label">Color Three:</label>
+                <input
+                  placeholder="Enter color here"
+                  onChange={(e) => setColorthree(e.target.value)}
+                />
+              </div>
+              <h2 className="linear-gradient-subtitle">
+                Give the colors start and stop points:
+              </h2>
+              <div>
+                <label className="linear-gradient-label">Color One:</label>
+                <input
+                  className="linear-gradient-input"
+                  placeholder="Start %"
+                  onChange={(e) => setPercentone(e.target.value)}
+                />
+                <input
+                  className="linear-gradient-input"
+                  placeholder="Stop %"
+                  onChange={(e) => setEndone(e.target.value)}
+                />
+              </div>
+              <div>
+                <label className="linear-gradient-label">Color Two:</label>
+                <input
+                  className="linear-gradient-input"
+                  placeholder="Start %"
+                  onChange={(e) => setPercenttwo(e.target.value)}
+                />
+                <input
+                  className="linear-gradient-input"
+                  placeholder="Stop %"
+                  onChange={(e) => setEndtwo(e.target.value)}
+                />
+              </div>
+              <div>
+                <label className="linear-gradient-label">Color Three:</label>
+                <input
+                  className="linear-gradient-input"
+                  placeholder="Start %"
+                  onChange={(e) => setPercentthree(e.target.value)}
+                />
+                <input
+                  className="linear-gradient-input"
+                  placeholder="Stop %"
+                  onChange={(e) => setEndthree(e.target.value)}
+                />
+              </div>
+              <h2 className="linear-gradient-subtitle">
+                Choose a direction or angle. When typing an angle remember to
+                type 'deg' after your number.
+              </h2>
+              <label className="linear-gradient-label">Direction:</label>
+              <select
+                value={direction}
+                onChange={(e) => setDirection(e.target.value)}
+              >
+                <option value="To Top Right">To Top Right</option>
+                <option value="To Right">To Right</option>
+                <option value="To Bottom Right">To Bottom Right</option>
+                <option value="To Bottom">To Bottom</option>
+                <option value="To Bottom Left">To Bottom Left</option>
+                <option value="To Left">To Left</option>
+                <option value="To Top Left">To Top Left</option>
+                <option value="To Top">To Top</option>
+              </select>
+              <h4 className="linear-gradient-conjunction">Or</h4>
+              <div>
+                <label className="linear-gradient-label">Angle:</label>
+                <input
+                  placeholder="Enter angle here"
+                  onChange={(e) => setDirection(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="linear-gradient-div">
+              <div
+                className="linear-gradient"
+                style={{
+                  backgroundImage: `linear-gradient(${direction}, ${colorone} ${percentone}% ${endone}%, ${colortwo} ${percenttwo}% ${endtwo}%, ${colorthree} ${percentthree}% ${endthree}%)`,
+                }}
+              ></div>
+            </div>
           </div>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color Two:</label>
-            <input
-              placeholder="Enter color here"
-              onChange={(e) => setColortwo(e.target.value)}
-            />
-          </div>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color Three:</label>
-            <input
-              placeholder="Enter color here"
-              onChange={(e) => setColorthree(e.target.value)}
-            />
-          </div>
-          <h4>Give the colors start and stop points:</h4>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color One:</label>
-            <input
-              placeholder="Start %"
-              onChange={(e) => setPercentone(e.target.value)}
-              style={{ width: "50px", marginRight: "10px" }}
-            />
-            <input
-              placeholder="Stop %"
-              onChange={(e) => setEndone(e.target.value)}
-              style={{ width: "50px" }}
-            />
-          </div>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color Two:</label>
-            <input
-              placeholder="Start %"
-              onChange={(e) => setPercenttwo(e.target.value)}
-              style={{ width: "50px", marginRight: "10px" }}
-            />
-            <input
-              placeholder="Stop %"
-              onChange={(e) => setEndtwo(e.target.value)}
-              style={{ width: "50px" }}
-            />
-          </div>
-          <div>
-            <label style={{ marginRight: "10px" }}>Color Three:</label>
-            <input
-              placeholder="Start %"
-              onChange={(e) => setPercentthree(e.target.value)}
-              style={{ width: "50px", marginRight: "10px" }}
-            />
-            <input
-              placeholder="Stop %"
-              onChange={(e) => setEndthree(e.target.value)}
-              style={{ width: "50px" }}
-            />
-          </div>
-          <h4 style={{ width: "90%" }}>
-            Choose a direction or angle. When typing an angle remember to type
-            'deg' after your number.
-          </h4>
-          <label>Direction:</label>
-          <select
-            value={direction}
-            onChange={(e) => setDirection(e.target.value)}
-          >
-            <option value="To Top Right">To Top Right</option>
-            <option value="To Right">To Right</option>
-            <option value="To Bottom Right">To Bottom Right</option>
-            <option value="To Bottom">To Bottom</option>
-            <option value="To Bottom Left">To Bottom Left</option>
-            <option value="To Left">To Left</option>
-            <option value="To Top Left">To Top Left</option>
-            <option value="To Top">To Top</option>
-          </select>
-          <h4>Or</h4>
-          <div>
-            <label style={{ marginRight: "10px" }}>Angle:</label>
-            <input
-              placeholder="Enter angle here"
-              onChange={(e) => setDirection(e.target.value)}
-            />
-          </div>
-        </div>
-        <div
-          style={{
-            width: "60%",
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              backgroundImage: `linear-gradient(${direction}, ${colorone} ${percentone}% ${endone}%, ${colortwo} ${percenttwo}% ${endtwo}%, ${colorthree} ${percentthree}% ${endthree}%)`,
-              width: "70%",
-              height: "60%",
-              backgroundPosition: "center",
-            }}
-          ></div>
         </div>
       </section>
       <section
@@ -496,23 +479,9 @@ export default function Background() {
             ? "radial-gradient-section"
             : "radial-gradient-section-closed"
         }`}
-        // style={{
-        //   display: "flex",
-        //   marginBottom: "50px",
-        //   borderBottom: "solid 1px black",
-        //   width: "100%",
-        //   height: "950px",
-        // }}
       >
-        <div
-          style={{
-            width: "40%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <h2 style={{ color: "" }}>Radial Gradient</h2>
+        <div className="radial-gradient-introduction">
+          <h2 className="radial-gradient-title">Radial Gradient</h2>
           <p style={{ width: "90%" }}>
             A radial gradient is an image consisting of a progressive transition
             between two or more colors from an origin. It can either be an
@@ -520,6 +489,8 @@ export default function Background() {
             many colors to use, you can specify where you want a color to start
             and stop and give it a size and position.
           </p>
+        </div>
+        <div>
           <h4>Choose a shape:</h4>
           <label>Shape:</label>
           <select value={shape} onChange={(e) => setShape(e.target.value)}>
