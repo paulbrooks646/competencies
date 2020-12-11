@@ -1,0 +1,56 @@
+@import "../mixins";
+@import "../variables";
+
+.flexbox-main {
+  position: relative;
+  top: 30px;
+
+  .flexbox-introduction {
+    @include flex;
+    justify-content: center;
+    width: 100%;
+
+    .flexbox-title {
+      margin-bottom: -5px;
+    }
+
+    .flexbox-description {
+      width: 80%;
+    }
+  }
+
+  .flexbox-properties {
+    @include flex;
+    border: solid;
+
+    .flexbox-properties-introduction {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      top: 5px;
+      border: solid;
+
+      .flexbox-properties-description-div {
+        @include flex;
+        justify-content: center;
+        width: 40%;
+
+        .flexbox-property-subtitle {
+          font-size: 15px;
+        }
+
+        .flexbox-property-subtitle:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+      }
+      .flexbox-chart-div {
+        @include flex;
+        justify-content: center;
+        .flexbox-chart {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
