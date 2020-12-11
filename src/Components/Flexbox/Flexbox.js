@@ -9,27 +9,27 @@ export default function Flexbox(props) {
   const [flexDirectionOrange, setFlexDirectionOrange] = useState();
   const [justifyContentOrange, setJustifyContentOrange] = useState();
   const [alignItemsOrange, setAlignItemsOrange] = useState();
-    const [flexWrapOrange, setFlexWrapOrange] = useState();
-    const [directionCard, setDirectionCard] = useState(false)
-    const [wrapCard, setWrapCard] = useState(false)
-    const [contentCard, setContentCard] = useState(false)
-    const [itemsCard, setItemsCard] = useState(false)
+  const [flexWrapOrange, setFlexWrapOrange] = useState();
+  const [directionCard, setDirectionCard] = useState(false);
+  const [wrapCard, setWrapCard] = useState(false);
+  const [contentCard, setContentCard] = useState(false);
+  const [itemsCard, setItemsCard] = useState(false);
 
-    function toggleDirectionCard() {
-        setDirectionCard(!directionCard)
-    }
+  function toggleDirectionCard() {
+    setDirectionCard(!directionCard);
+  }
 
-    function toggleWrapCard() {
-        setWrapCard(!wrapCard)
-    }
+  function toggleWrapCard() {
+    setWrapCard(!wrapCard);
+  }
 
-    function toggleContentCard() {
-        setContentCard(!contentCard)
-    }
+  function toggleContentCard() {
+    setContentCard(!contentCard);
+  }
 
-    function toggleItemsCard() {
-        setItemsCard(!itemsCard)
-    }
+  function toggleItemsCard() {
+    setItemsCard(!itemsCard);
+  }
 
   return (
     <div className="flexbox-main">
@@ -83,34 +83,25 @@ export default function Flexbox(props) {
             />
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            width: "50%",
-            height: "1100px",
-          }}
-        >
-          <div>
-            <div>
-              <label>Gray Box Flex Direction</label>
+        <div className="flexbox-practice">
+          <div className="flex-inputs">
+            <div className="flex-input-div">
+              <label className="flex-label">Gray Box Flex Direction:</label>
               <select
                 value={flexDirectionGray}
                 onChange={(e) => setFlexDirectionGray(e.target.value)}
-                style={{ marginBottom: "10px" }}
               >
                 <option value="row">Row</option>
                 <option value="row-reverse">Row Reverse</option>
                 <option value="column">Column</option>
                 <option value="column-reverse">Column Reverse</option>
               </select>
-              <label>Gray Box justify Content</label>
+            </div>
+            <div className="flex-input-div">
+              <label className="flex-label">Gray Box Justify Content:</label>
               <select
                 value={justifyContentGray}
                 onChange={(e) => setJustifyContentGray(e.target.value)}
-                style={{ marginBottom: "10px" }}
               >
                 <option value="flex-start">Flex Start</option>
                 <option value="flex-end">Flex End</option>
@@ -119,102 +110,111 @@ export default function Flexbox(props) {
                 <option value="space-around">Space Around</option>
                 <option value="space-between">Space Between</option>
               </select>
-              <label>Gray Box Align Items</label>
+            </div>
+            <div className="flex-input-div">
+              <label className="flex-label">Gray Box Align Items:</label>
               <select
                 value={alignItemsGray}
                 onChange={(e) => setAlignItemsGray(e.target.value)}
-                style={{ marginBottom: "10px" }}
               >
                 <option value="flex-start">Flex Start</option>
                 <option value="flex-end">Flex End</option>
                 <option value="center">Center</option>
               </select>
-              <label>Gray Box Flex Wrap</label>
+            </div>
+            <div className="flex-input-div">
+              <label className="flex-label">Gray Box Flex Wrap:</label>
               <select
                 value={flexWrapGray}
                 onChange={(e) => setFlexWrapGray(e.target.value)}
-                style={{ marginBottom: "10px" }}
-              >
-                <option value="nowrap">No Wrap</option>
-                <option value="wrap">Wrap</option>
-                <option value="wrap-reverse">Wrap Reverse</option>
-              </select>
-              <label>Orange Box Flex Direction</label>
-              <select
-                value={flexDirectionOrange}
-                onChange={(e) => setFlexDirectionOrange(e.target.value)}
-                style={{ marginBottom: "10px" }}
-              >
-                <option value="row">Row</option>
-                <option value="row-reverse">Row Reverse</option>
-                <option value="column">Column</option>
-                <option value="column-reverse">Column Reverse</option>
-              </select>
-              <label>Orange Box justify Content</label>
-              <select
-                value={justifyContentOrange}
-                onChange={(e) => setJustifyContentOrange(e.target.value)}
-                style={{ marginBottom: "10px" }}
-              >
-                <option value="flex-start">Flex Start</option>
-                <option value="flex-end">Flex End</option>
-                <option value="Center">Center</option>
-                <option value="space-evenly">Space Evenly</option>
-                <option value="space-around">Space Around</option>
-                <option value="space-between">Space Between</option>
-              </select>
-              <label>Orange Box Align Items</label>
-              <select
-                value={alignItemsOrange}
-                onChange={(e) => setAlignItemsOrange(e.target.value)}
-                style={{ marginBottom: "10px" }}
-              >
-                <option value="flex-start">Flex Start</option>
-                <option value="flex-end">Flex End</option>
-                <option value="center">Center</option>
-              </select>
-              <label>Orange Box Flex Wrap</label>
-              <select
-                value={flexWrapOrange}
-                onChange={(e) => setFlexWrapOrange(e.target.value)}
-                style={{ marginBottom: "10px" }}
               >
                 <option value="nowrap">No Wrap</option>
                 <option value="wrap">Wrap</option>
                 <option value="wrap-reverse">Wrap Reverse</option>
               </select>
             </div>
+            <div className="flex-input-div">
+              <label className="flex-label">Orange Box Flex Direction:</label>
+              <select
+                value={flexDirectionOrange}
+                onChange={(e) => setFlexDirectionOrange(e.target.value)}
+              >
+                <option value="row">Row</option>
+                <option value="row-reverse">Row Reverse</option>
+                <option value="column">Column</option>
+                <option value="column-reverse">Column Reverse</option>
+              </select>
+            </div>
+            <div className="flex-input-div">
+              <label className="flex-label">Orange Box justify Content:</label>
+              <select
+                value={justifyContentOrange}
+                onChange={(e) => setJustifyContentOrange(e.target.value)}
+              >
+                <option value="flex-start">Flex Start</option>
+                <option value="flex-end">Flex End</option>
+                <option value="Center">Center</option>
+                <option value="space-evenly">Space Evenly</option>
+                <option value="space-around">Space Around</option>
+                <option value="space-between">Space Between</option>
+              </select>
+            </div>
+            <div className="flex-input-div">
+              <label className="flex-label">Orange Box Align Items:</label>
+              <select
+                value={alignItemsOrange}
+                onChange={(e) => setAlignItemsOrange(e.target.value)}
+              >
+                <option value="flex-start">Flex Start</option>
+                <option value="flex-end">Flex End</option>
+                <option value="center">Center</option>
+              </select>
+            </div>
+            <div className="flex-input-div">
+              <label className="flex-label">Orange Box Flex Wrap:</label>
+              <select
+                value={flexWrapOrange}
+                onChange={(e) => setFlexWrapOrange(e.target.value)}
+              >
+                <option value="nowrap">No Wrap</option>
+                <option value="wrap">Wrap</option>
+                <option value="wrap-reverse">Wrap Reverse</option>
+              </select>
+            </div>
+          </div>
+          <div className="flexbox-box-div">
             <div
-              className="medium"
+              className="flexbox-large-box"
               style={{
-                display: `flex`,
                 flexDirection: `${flexDirectionGray}`,
                 justifyContent: `${justifyContentGray}`,
                 alignItems: `${alignItemsGray}`,
                 flexWrap: `${flexWrapGray}`,
-                width: "100%",
-                height: "50%",
-                backgroundColor: "gray",
-                marginLeft: "5%",
-              }}
-            ></div>
-            <div
-              className="small"
-              style={{
-                display: `flex`,
-                backgroundColor: "orange",
-                justifyContent: `${justifyContentOrange}`,
-                flexDirection: `${flexDirectionOrange}`,
-                alignItems: `${alignItemsOrange}`,
-                flexWrap: `${flexWrapOrange}`,
               }}
             >
-              <div className="tiny" style={{ backgroundColor: "green" }}></div>
-              <div className="tiny" style={{ backgroundColor: "blue" }}></div>
-              <div className="tiny" style={{ backgroundColor: "yellow" }}></div>
+              <div
+                className="flexbox-medium-box"
+                style={{
+                    backgroundColor: "orange",
+                  justifyContent: `${justifyContentOrange}`,
+                  flexDirection: `${flexDirectionOrange}`,
+                  alignItems: `${alignItemsOrange}`,
+                  flexWrap: `${flexWrapOrange}`,
+                }}
+              >
+                <div
+                  className="flexbox-small-box"
+                  style={{ backgroundColor: "green" }}
+                ></div>
+                <div className="tiny" style={{ backgroundColor: "blue" }}></div>
+                <div
+                  className="tiny"
+                  style={{ backgroundColor: "yellow" }}
+                ></div>
+              </div>
+              <div className="small" style={{ backgroundColor: "red" }}></div>
+              <div className="small" style={{ backgroundColor: "black" }}></div>
             </div>
-            <div className="small" style={{ backgroundColor: "red" }}></div>
-            <div className="small" style={{ backgroundColor: "black" }}></div>
           </div>
         </div>
       </div>

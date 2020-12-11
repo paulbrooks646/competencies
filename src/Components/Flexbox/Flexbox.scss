@@ -21,14 +21,12 @@
 
   .flexbox-properties {
     @include flex;
-    border: solid;
 
     .flexbox-properties-introduction {
       display: flex;
       justify-content: space-evenly;
       position: relative;
       top: 5px;
-      border: solid;
 
       .flexbox-properties-description-div {
         @include flex;
@@ -47,9 +45,60 @@
       .flexbox-chart-div {
         @include flex;
         justify-content: center;
+
         .flexbox-chart {
           width: 90%;
         }
+      }
+    }
+
+    .flexbox-practice {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 10px;
+      width: 100%;
+
+      .flex-inputs {
+        @include flex;
+        width: 50%;
+        justify-content: space-evenly;
+
+        .flex-input-div {
+          display: flex;
+          align-items: center;
+
+          .flex-label {
+            color: $blue;
+            margin-right: 10px;
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+
+    .flexbox-box-div {
+      @include flex;
+      width: 50%;
+      justify-content: center;
+
+      .flexbox-large-box {
+          display: flex;
+          width: 200px;
+          height: 250px;
+          background-color: gray;;
+
+          .flexbox-medium-box {
+
+            display: flex;
+            height: 75px;
+            width: 75px;
+
+            .flexbox-small-box {
+                width: 30px;
+                height: 20px;
+            }
+          }
       }
     }
   }
