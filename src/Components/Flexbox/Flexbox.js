@@ -47,7 +47,8 @@ export default function Flexbox(props) {
             <h2>Flexbox</h2>
             <p>
               The flex container has access to the following properties. Click
-              on any of them for more details, then experiment to see how they effect the boxes below.
+              on any of them for more details, then experiment to see how they
+              effect the boxes below.
             </p>
             <h2
               className="flexbox-property-subtitle"
@@ -225,57 +226,60 @@ export default function Flexbox(props) {
             </div>
           </div>
         </div>
-      <div className={`${directionCard ? "flex-card" : "flex-card-closed"}`}>
-        <h2 className="flex-card-title">Flex Direction</h2>
-        <p className="flex-card-description">
-          The flex-direction property defines whether you want the children
-          elements to go left to right (row, this is the default), right to left
-          (row-reverse), top to bottom (column) or bottom to top
-          (column-reverse).
-        </p>
-        <button
-          className="flex-card-button"
-          onClick={() => toggleDirectionCard()}
-        >
-          CLOSE
-        </button>
-      </div>
-      <div className={`${wrapCard ? "flex-card" : "flex-card-closed"}`}>
-        <h2 className="flex-card-title">Flex Wrap</h2>
-        <p className="flex-card-description">
-          Flex-wrap determines whether the children will wrap to the next line
-          if the combined height or width are greater than the height or width
-          of the parent container.
-        </p>
-        <button className="flex-card-button" onClick={() => toggleWrapCard()}>
-          CLOSE
-        </button>
-      </div>
-      <div className={`${contentCard ? "flex-card" : "flex-card-closed"}`}>
-        <h2 className="flex-card-title">Justify Content</h2>
-        <p className="flex-card-description">
-          Justify-content is used to align the flex-items along the main axis.
-          (horizontally if the flex-direction is row, or vertically if the
-          flex-direction is column.
-        </p>
-        <button
-          className="flex-card-button"
-          onClick={() => toggleContentCard()}
-        >
-          CLOSE
-        </button>
-      </div>
-      <div className={`${itemsCard ? "flex-card" : "flex-card-closed"}`}>
-        <h2 className="flex-card-title">Align Items</h2>
-        <p className="flex-card-description">
-          Align items is used to align flex items on the cross axis. (vertically
-          if the fex-direction is row, or horizontally if the flex-direction is
-          column.
-        </p>
-        <button className="flex-card-button" onClick={() => toggleItemsCard()}>
-          CLOSE
-        </button>
-      </div>
+        <div className={`${directionCard ? "flex-card" : "flex-card-closed"}`}>
+          <h2 className="flex-card-title">Flex Direction</h2>
+          <p className="flex-card-description">
+            The flex-direction property defines whether you want the children
+            elements to go left to right (row, this is the default), right to
+            left (row-reverse), top to bottom (column) or bottom to top
+            (column-reverse).
+          </p>
+          <button
+            className="flex-card-button"
+            onClick={() => toggleDirectionCard()}
+          >
+            CLOSE
+          </button>
+        </div>
+        <div className={`${wrapCard ? "flex-card" : "flex-card-closed"}`}>
+          <h2 className="flex-card-title">Flex Wrap</h2>
+          <p className="flex-card-description">
+            Flex-wrap determines whether the children will wrap to the next line
+            if the combined height or width are greater than the height or width
+            of the parent container.
+          </p>
+          <button className="flex-card-button" onClick={() => toggleWrapCard()}>
+            CLOSE
+          </button>
+        </div>
+        <div className={`${contentCard ? "flex-card" : "flex-card-closed"}`}>
+          <h2 className="flex-card-title">Justify Content</h2>
+          <p className="flex-card-description">
+            Justify-content is used to align the flex-items along the main axis.
+            (horizontally if the flex-direction is row, or vertically if the
+            flex-direction is column.
+          </p>
+          <button
+            className="flex-card-button"
+            onClick={() => toggleContentCard()}
+          >
+            CLOSE
+          </button>
+        </div>
+        <div className={`${itemsCard ? "flex-card" : "flex-card-closed"}`}>
+          <h2 className="flex-card-title">Align Items</h2>
+          <p className="flex-card-description">
+            Align items is used to align flex items on the cross axis.
+            (vertically if the fex-direction is row, or horizontally if the
+            flex-direction is column.
+          </p>
+          <button
+            className="flex-card-button"
+            onClick={() => toggleItemsCard()}
+          >
+            CLOSE
+          </button>
+        </div>
       </div>
     </div>
   );

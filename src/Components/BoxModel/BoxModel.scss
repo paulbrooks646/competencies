@@ -4,6 +4,7 @@
 .box-model-main {
   position: relative;
   top: 49px;
+  @include flex;
 
   .box-model-introduction {
     display: flex;
@@ -112,12 +113,10 @@
       cursor: pointer;
     }
 
-    .box-model-card-closed {
-      display: none;
-    }
   }
+      .box-model-card-closed {
+        display: none;
+      }
 }
 
-.box-model-card-closed {
-  display: none;
-}
+

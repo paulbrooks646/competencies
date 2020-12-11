@@ -35,36 +35,39 @@ function Dashboard(props) {
           <Link to="/Color">
             <button className="dashboard-link">Color</button>
           </Link>
+          <Link to="/Display">
+            <button className="dashboard-link">Display</button>
+          </Link>
           <Link to="/Flexbox">
             <button className="dashboard-link">Flexbox</button>
           </Link>
-          <Link to="/FloatDisplay">
-            <button className="dashboard-link">Float/Display</button>
-          </Link>
         </div>
         <div className="dashboard-links-row">
+          <Link to="/Float">
+            <button className="dashboard-link">Float</button>
+          </Link>
           <Link to="/Font">
             <button className="dashboard-link">Font</button>
           </Link>
           <Link to="/Grid">
             <button className="dashboard-link">Grid</button>
           </Link>
+        </div>
+        <div className="dashboard-links-row">
           <Link to="/Position">
             <button className="dashboard-link">Position</button>
           </Link>
-        </div>
-        <div className="dashboard-links-row">
           <Link to="/Pseudo">
             <button className="dashboard-link">Pseudo</button>
           </Link>
           <Link to="/TextEffects">
             <button className="dashboard-link">Text Effects</button>
           </Link>
+        </div>
+        <div className="dashboard-links-row">
           <Link to="/Transform">
             <button className="dashboard-link">Transform</button>
           </Link>
-        </div>
-        <div className="dashboard-links-row">
           <Link to="Transition">
             <button className="dashboard-link">Transition</button>
           </Link>
