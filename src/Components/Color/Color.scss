@@ -37,17 +37,19 @@
   }
 
   .predefined-color-section {
+
+    border-top: solid;
+
     .predefined-introduction {
       display: flex;
       justify-content: space-evenly;
+      position: relative;
+      top: 5px;
 
       .predefined-description-div {
         @include flex;
         justify-content: center;
         width: 40%;
-
-        .predefined-description {
-        }
       }
       .predefined-color-chart-div {
         .predefined-color-chart {
@@ -57,23 +59,254 @@
     }
 
     .predefined-practice {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      top: 25px;
 
-        display: flex;
+      .predefined-properties {
+        @include flex;
+        width: 40%;
+        justify-content: center;
 
-
-        .predefined-properties {
-@include flex;
-width: 40%;
-justify-content: center;
+        .predefined-subtitle {
+          font-size: 15px;
         }
 
-        .predefined-example {
-
+        .predefined-input-div {
+          .predefined-label {
+            color: $blue;
+            margin-right: 10px;
+          }
         }
+      }
+
+      .predefined-example {
+        @include flex;
+        width: 60%;
+        justify-content: center;
+
+        .predefined-example-box {
+          height: 200px;
+          width: 200px;
+          border: solid 5px black;
+          @include flex;
+          justify-content: center;
+        }
+      }
     }
   }
 
   .predefined-color-section-closed {
+    display: none;
+  }
+
+  .hex-code-section {
+
+    border-top: solid
+    ;
+    .hex-code-introduction {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      top: 5px;
+
+      .hex-code-description-div {
+        @include flex;
+        justify-content: center;
+        width: 40%;
+
+      }
+      .hex-code-diagram-div {
+        @include flex;
+        justify-content: center;
+
+        .hex-code-diagram {
+          width: 90%;
+        }
+      }
+    }
+
+    .hex-code-practice {
+      display: flex;
+      justify-content: space-evenly;
+
+      .hex-code-properties {
+        @include flex;
+        width: 40%;
+        justify-content: center;
+
+        .hex-code-subtitle {
+          font-size: 15px;
+          width: 90%
+        }
+
+        .hex-code-input-div {
+          .hex-code-label {
+            color: $blue;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .hex-code-example {
+        @include flex;
+        width: 60%;
+        justify-content: center;
+
+        .hex-code-example-circle {
+          height: 300px;
+          width: 300px;
+          border: dotted 5px;
+          @include flex;
+          justify-content: center;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .hex-code-section-closed {
+    display: none;
+  }
+
+  .hsl-section {
+
+    border-top: solid;
+
+    .hsl-introduction {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      top: 5px;
+
+      .hsl-description-div {
+        @include flex;
+        justify-content: center;
+        width: 40%;
+
+      }
+      .hsl-diagram-div {
+        @include flex;
+        justify-content: center;
+
+        .hsl-diagram {
+          width: 90%;
+        }
+      }
+    }
+
+    .hsl-practice {
+      display: flex;
+      justify-content: space-evenly;
+
+      .hsl-properties {
+        @include flex;
+        width: 40%;
+        justify-content: center;
+
+        .hsl-subtitle {
+          font-size: 15px;
+          width: 90%
+        }
+
+        .hsl-input-div {
+          .hsl-label {
+            color: $blue;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .hsl-example {
+        @include flex;
+        width: 60%;
+        justify-content: center;
+
+        .hsl-example-rectangle {
+          height: 100px;
+          width: 200px;
+          border: dashed 5px;
+          @include flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .hsl-section-closed {
+    display: none;
+  }
+
+   .rgb-section {
+
+    border-top: solid;
+
+    .rgb-introduction {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      top: 5px;
+
+      .rgb-description-div {
+        @include flex;
+        justify-content: center;
+        width: 40%;
+
+      }
+      .rgb-diagram-div {
+        @include flex;
+        justify-content: center;
+
+        .rgb-diagram {
+          width: 90%;
+        }
+      }
+    }
+
+    .rgb-practice {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      top: 25px;
+
+      .rgb-properties {
+        @include flex;
+        width: 40%;
+        justify-content: center;
+
+        .rgb-subtitle {
+          font-size: 15px;
+          width: 90%
+        }
+
+        .rgb-input-div {
+          .rgb-label {
+            color: $blue;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .rgb-example {
+        @include flex;
+        width: 60%;
+        justify-content: center;
+
+
+        .rgb-example-oval {
+          height: 175px;
+          width: 100px;
+          border: double 10px;
+          @include flex;
+          justify-content: center;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .rgb-section-closed {
     display: none;
   }
 }

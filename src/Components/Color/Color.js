@@ -97,50 +97,41 @@ export default function Color() {
           </div>
         </div>
 
-        <div className="predefined-practice"
-        >
-          <div className="predefined-properties"
-          >
-            <h4 style={{ width: "90%" }}>
-              Give the following properties a predefined color value. Try
-              multiple values and see its affect on the square to the right.
-            </h4>
-            <label>Background-color:</label>
-            <input
-              placeholder="Type color here"
-              onChange={(e) => setPredefinedBackground(e.target.value)}
-            />
-            <label>Color:</label>
-            <input
-              placeholder="Type color here"
-              onChange={(e) => setPredefinedColor(e.target.value)}
-            />
-            <label>Border-color:</label>
-            <input
-              placeholder="Type color here"
-              onChange={(e) => setPredefinedBorder(e.target.value)}
-            />
+        <div className="predefined-practice">
+          <div className="predefined-properties">
+            <h2 className="predefined-subtitle">
+              Give the following properties a predefined color value.
+            </h2>
+            <div className="predefined-input-div">
+              <label className="predefined-label">Background-color:</label>
+              <input
+                placeholder="Type color here"
+                onChange={(e) => setPredefinedBackground(e.target.value)}
+              />
+            </div>
+            <div className="predefined-input-div">
+              <label className="predefined-label">Color:</label>
+              <input
+                placeholder="Type color here"
+                onChange={(e) => setPredefinedColor(e.target.value)}
+              />
+            </div>
+            <div className="predefined-input-div">
+              <label className="predefined-label">Border-color:</label>
+              <input
+                placeholder="Type color here"
+                onChange={(e) => setPredefinedBorder(e.target.value)}
+              />
+            </div>
           </div>
-          <div
-            style={{
-              width: "60%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className="predefined-example">
             <div
+              className="predefined-example-box"
               style={{
-                width: "300px",
-                height: "300px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
                 backgroundColor: predefinedBackground,
                 color: predefinedColor,
-                borderStyle: "solid",
+
                 borderColor: predefinedBorder,
-                borderWidth: "5px",
               }}
             >
               Predefined Color Practice
@@ -148,305 +139,208 @@ export default function Color() {
           </div>
         </div>
       </section>
-      <div style={{ display: "flex" }}>
-        <div
-          style={{
-            width: "40%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h2>Hex Codes</h2>
-          <p style={{ width: "90%" }}>
-            Hexadecimal color values use the following format: #RRGGBB. RR is
-            used for red, GG is used for green, and BB is used for blue. You
-            create a new color by altering the amount of these 3 colors. To do
-            this you use integers from 0 to 9 or A to F. O being the lowest and
-            F being the highest. For example, #0000FF would be blue because it
-            contains 0 red or green and the max amount of blue. #000000
-          </p>
-        </div>
-        <div
-          style={{
-            width: "60%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            style={{ width: "50%" }}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQq2SpcEjlOp2_ar6fCBpQEpd_TlfiQgx9GKw&usqp=CAU"
-          />
-        </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          borderBottom: "solid 1px black",
-          height: "400px",
-        }}
+      <section
+        className={`${
+          hexSection ? "hex-code-section" : "hex-code-section-closed"
+        }`}
       >
-        <div
-          style={{
-            width: "40%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h3 style={{ width: "90%" }}>
-            Give the following properties a color value using a hex code. Don't
-            for the #. Try multiple values and see its affect on the circle to
-            the right.
-          </h3>
-          <label>Background-color:</label>
-          <input
-            placeholder="Type hex code here"
-            onChange={(e) => setHexBackground(e.target.value)}
-          />
-          <label>Color:</label>
-          <input
-            placeholder="Type hex code here"
-            onChange={(e) => setHexColor(e.target.value)}
-          />
-          <label>Border-color:</label>
-          <input
-            placeholder="Type hex code here"
-            onChange={(e) => setHexBorder(e.target.value)}
-          />
-        </div>
-        <div
-          style={{
-            width: "60%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              width: "300px",
-              height: "300px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: hexBackground,
-              color: hexColor,
-              borderStyle: "dotted",
-              borderColor: hexBorder,
-              borderWidth: "5px",
-              borderRadius: "50%",
-            }}
-          >
-            Hex Code Color Practice
+        <div className="hex-code-introduction">
+          <div className="hex-code-description-div">
+            <h2>Hex Codes</h2>
+            <p>
+              Hexadecimal color values use the following format: #RRGGBB. RR is
+              used for red, GG is used for green, and BB is used for blue. You
+              create a new color by altering the amount of these 3 colors. To do
+              this you use integers from 0 to 9 or A to F. O being the lowest
+              and F being the highest. For example, #0000FF would be blue
+              because it contains 0 red or green and the max amount of blue.
+              #000000
+            </p>
+          </div>
+          <div className="hex-code-diagram-div">
+            <img
+              className="hex-code-diagram"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQq2SpcEjlOp2_ar6fCBpQEpd_TlfiQgx9GKw&usqp=CAU"
+              alt="hex code diagram"
+            />
           </div>
         </div>
-      </div>
-      <div style={{ display: "flex" }}>
-        <div
-          style={{
-            width: "40%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h2>HSL & HSLA</h2>
-          <p style={{ width: "90%" }}>
-            HSL & HSLA are ways to define a color by using their hue, saturation
-            and lightness. This is the syntax. HSL: hsl(hue, staturation,
-            lightness). HSLA: hlsa(hue, saturation, lightness, alpha). Hue
-            deifnes a degree on a color circle and so its value ranges from 0 to
-            360. 0 is red, 120 is green and 240 is blue. Saturation uses a
-            percentage between 0 and 100 where 0 is a shade of gray and 100 is
-            the full color. Lightness also uses a percentage between 0 and 100.
-            0 is black and as the percentage increases, the color gets lighter.
-            50% is normal and 100% is white. Alpha defines the opactity. It is
-            defined as a value between 0 and 1 where 0 is fully transparent and
-            1 is fully opaque.
-          </p>
-        </div>
-        <div
-          style={{
-            width: "60%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            style={{ width: "90%" }}
-            src="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2015/01/hsl-color-wheel.png"
-          />
-        </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          borderBottom: "solid 1px black",
-          height: "400px",
-        }}
-      >
-        <div
-          style={{
-            width: "40%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h3 style={{ width: "90%" }}>
-            Give the following properties an HSL or HSLA color value using the
-            syntax described above. Try multiple values and see its affect on
-            the rectangle to the right.
-          </h3>
-          <label>Background-color:</label>
-          <input
-            placeholder="Type color here"
-            onChange={(e) => setHslaBackground(e.target.value)}
-          />
-          <label>Color:</label>
-          <input
-            placeholder="Type color here"
-            onChange={(e) => setHslaColor(e.target.value)}
-          />
-          <label>Border-color:</label>
-          <input
-            placeholder="Type color here"
-            onChange={(e) => setHslaBorder(e.target.value)}
-          />
-        </div>
-        <div
-          style={{
-            width: "60%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              width: "400px",
-              height: "200px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: hslaBackground,
-              color: hslaColor,
-              borderStyle: "dashed",
-              borderColor: hslaBorder,
-              borderWidth: "5px",
-            }}
-          >
-            HSL & HSLA Color Practice
+        <div className="hex-code-practice">
+          <div className="hex-code-properties">
+            <h2 className="hex-code-subtitle">
+              Give the following properties a color value using hex codes. Don't
+              for the #.
+            </h2>
+            <div className="hex-code-input-div">
+              <label className="hex-code-label">Background-color:</label>
+              <input
+                placeholder="Type hex code here"
+                onChange={(e) => setHexBackground(e.target.value)}
+              />
+            </div>
+            <div className="hex-code-input-div">
+              <label className="hex-code-label">Color:</label>
+              <input
+                placeholder="Type hex code here"
+                onChange={(e) => setHexColor(e.target.value)}
+              />
+            </div>
+            <div className="hex-code-input-div">
+              <label className="hex-code-label">Border-color:</label>
+              <input
+                placeholder="Type hex code here"
+                onChange={(e) => setHexBorder(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="hex-code-example">
+            <div
+              className="hex-code-example-circle"
+              style={{
+                backgroundColor: hexBackground,
+                color: hexColor,
+                borderColor: hexBorder,
+              }}
+            >
+              Hex Code Color Practice
+            </div>
           </div>
         </div>
-      </div>
-      <div style={{ display: "flex" }}>
-        <div
-          style={{
-            width: "40%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h2>RGB & RGBA</h2>
-          <p style={{ width: "90%" }}>
-            In CSS a color can also be specified by its RGB or RGBA value. They
-            use the folowing syntax. RGB: rgb(red, green, blue). RGBA: rgba(red,
-            green, blue, alpha). Red is how much red the color contains, green
-            is how much green the color contains and blue is how much blue the
-            color contains. These values range from 0 to 255. Alpha is how
-            opaque the applied element is. It takes a value between 0 and 1. O
-            being transparent and 1 being opaque.
-          </p>
-        </div>
-        <div
-          style={{
-            width: "60%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            style={{ width: "50%" }}
-            src="https://teachengineering.org/content/spfun_/maker_challenges/spfun_rgbcolor_maker1_image1.png"
-          />
-        </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          borderBottom: "solid 1px black",
-          height: "400px",
-        }}
+      </section>
+      <section
+        className={`${hslSection ? "hsl-section" : "hsl-section-closed"}`}
       >
-        <div
-          style={{
-            width: "40%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h3 style={{ width: "90%" }}>
-            Give the following properties a RGB or RGBA color value using the
-            syntax described above. Try multiple values and see its affect on
-            the oval to the right.
-          </h3>
-          <label>Background-color:</label>
-          <input
-            placeholder="Type RGB or RGBA here"
-            onChange={(e) => setRgbaBackground(e.target.value)}
-          />
-          <label>Color:</label>
-          <input
-            placeholder="Type RGB or RGBA here"
-            onChange={(e) => setRgbaColor(e.target.value)}
-          />
-          <label>Border-color:</label>
-          <input
-            placeholder="Type RGB or RGBA here"
-            onChange={(e) => setRgbaBorder(e.target.value)}
-          />
-        </div>
-        <div
-          style={{
-            width: "60%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              width: "175px",
-              height: "350px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: rgbaBackground,
-              color: rgbaColor,
-              borderStyle: "double",
-              borderColor: rgbaBorder,
-              borderWidth: "10px",
-              borderRadius: "50%",
-            }}
-          >
-            RGB & RGBA Color Practice
+        <div className="hsl-introduction">
+          <div className="hsl-description-div">
+            <h2>HSL & HSLA</h2>
+            <p style={{ width: "90%" }}>
+              HSL & HSLA define colors by using their hue, saturation and
+              lightness. The syntax is HSL: hsl(hue, staturation, lightness) or
+              HSLA: hlsa(hue, saturation, lightness, alpha). Hue deifnes a
+              degree on a color circle. its value ranges from 0 to 360. 0 is
+              red, 120 is green and 240 is blue. Saturation uses a percentage
+              between 0 and 100 where 0 is a shade of gray and 100 is the full
+              color. Lightness also uses a percentage between 0 and 100. 0 is
+              black, as the percentage increases, the color gets lighter. 50% is
+              normal and 100% is white. Alpha defines the opactity. Its value is
+              between 0 and 1 where 0 is transparent and 1 is opaque.
+            </p>
+          </div>
+          <div className="hsl-diagram-div">
+            <img
+              className="hsl-diagram"
+              src="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2015/01/hsl-color-wheel.png"
+              alt="hsl diagram"
+            />
           </div>
         </div>
-      </div>
+        <div className="hsl-practice">
+          <div className="hsl-properties">
+            <h2 className="hsl-subtitle">
+              Give rectangle's properties an HSL or HSLA value.
+            </h2>
+            <div className="hsl-input-div">
+              <label className="hsl-label">Background-color:</label>
+              <input
+                placeholder="Type color here"
+                onChange={(e) => setHslaBackground(e.target.value)}
+              />
+            </div>
+            <div className="hsl-input-div">
+              <label className="hsl-label">Color:</label>
+              <input
+                placeholder="Type color here"
+                onChange={(e) => setHslaColor(e.target.value)}
+              />
+            </div>
+            <div className="hsl-input-div">
+              <label className="hsl-label">Border-color:</label>
+              <input
+                placeholder="Type color here"
+                onChange={(e) => setHslaBorder(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="hsl-example">
+            <div
+              className="hsl-example-rectangle"
+              style={{
+                backgroundColor: hslaBackground,
+                color: hslaColor,
+                borderColor: hslaBorder,
+              }}
+            >
+              HSL & HSLA Color Practice
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className={`${rgbSection ? "rgb-section" : "rgb-section-closed"}`}
+      >
+        <div className="rgb-introduction">
+          <div className="rgb-description-div">
+            <h2>RGB & RGBA</h2>
+            <p style={{ width: "90%" }}>
+              In CSS a color can also be defined by its RGB or RGBA value. The
+              syntac is RGB: rgb(red, green, blue). RGBA: rgba(red, green, blue,
+              alpha). Red is how much red the color contains, green is how much
+              green the color contains and blue is how much blue the color
+              contains. These values range from 0 to 255. Alpha is how opaque
+              the applied element is. It takes a value between 0 and 1. O being
+              transparent and 1 being opaque.
+            </p>
+          </div>
+          <div className="rgb-diagram-div">
+            <img
+              className="rgb-diagram"
+              src="https://teachengineering.org/content/spfun_/maker_challenges/spfun_rgbcolor_maker1_image1.png"
+              alt="RGB diagram"
+            />
+          </div>
+        </div>
+        <div className="rgb-practice">
+          <div className="rgb-properties">
+            <h2 className="rgb-subtitle">
+              Give the oval's properties a RGB or RGBA color value.
+            </h2>
+            <div className="rgb-input-div">
+              <label className="rgb-label">Background-color:</label>
+              <input
+                placeholder="Type color here"
+                onChange={(e) => setRgbaBackground(e.target.value)}
+              />
+            </div>
+            <div className="rgb-input-div">
+              <label className="rgb-label">Color:</label>
+              <input
+                placeholder="Type color here"
+                onChange={(e) => setRgbaColor(e.target.value)}
+              />
+            </div>
+            <div className="rgb-input-div">
+              <label className="rgb-label">Border-color:</label>
+              <input
+                placeholder="Type color here"
+                onChange={(e) => setRgbaBorder(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="rgb-example">
+            <div
+              className="rgb-example-oval"
+              style={{
+                backgroundColor: rgbaBackground,
+                color: rgbaColor,
+                borderColor: rgbaBorder,
+              }}
+            >
+              RGB & RGBA Color Practice
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
