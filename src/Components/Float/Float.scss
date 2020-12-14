@@ -1,2 +1,50 @@
 @import "../mixins";
 @import "../variables";
+
+.float-main {
+  @include flex;
+  height: 100vh;
+  overflow: hidden;
+
+  .float-introduction {
+    position: relative;
+    top: 75px;
+    @include flex;
+  }
+
+  .float-practice {
+    position: relative;
+    top: 200px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .float-property {
+      width: 40%;
+      height: 100%;
+      @include flex;
+      justify-content: space-evenly;
+
+      .float-input-div {
+        .float-label {
+          color: $blue;
+          margin-right: 10px;
+        }
+      }
+    }
+    .float-practice-example {
+
+        width: 40%;
+
+        .float-practice-image {
+            width: 150px;
+            height: 150px;
+        }
+        .float-practice-description {
+            color: $purple;
+margin-left: 20px;
+        }
+    }
+  }
+}
