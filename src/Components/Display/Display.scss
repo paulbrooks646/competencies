@@ -1,53 +1,63 @@
 @import "../variables";
 @import "../mixins";
 
-
 .display-main {
-     position: relative;
-    top: 50px;
-     @include flex;
-     height: 100vh;
+  @include flex;
+  height: 100vh;
+  overflow: hidden;
 
-     overflow: hidden;
+  .display-introduction {
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 100px;
 
+    .display-description-div {
+      width: 50%;
+      @include flex;
+    }
 
-     .display-introduction {
-        display: flex;
-        width: 100%;
+    .display-value-div {
+      width: 50%;
 
-        .display-description-div {
-         width: 50%;
-         @include flex;
-     }
+      .display-value:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .display-practice-div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    position: relative;
+    top: 200px;
 
-     .display-value-div {
-         width: 50%;
-            .display-value {
+    .display-practice-properties {
+        width: 50%;
+        
 
-            }
+         .display-label {
+            color: $blue;
+        margin-right: 10px;
+        }
+    }
 
-            .display-value:hover {
-                cursor: pointer;
-                transform: scale(1.1);
-            }
-     }
+    .display-practice-example {
+        width: 50%;
 
-
+        .display-practice-span {
+            margin-right: 10px;
+            padding: 10px;
+        }
 
     }
-         .display-practice-div {
-            display: flex;
-    
-            .display-practice-properties {
-               
-            }
-         }
+  }
 
-     
- .display-card {
-
-    width: 500px;
-    height: 500px;
+  .display-card {
+    width: 350px;
+    height: 350px;
     position: relative;
     bottom: 125px;
     z-index: 2;
@@ -57,30 +67,30 @@
     box-shadow: 2px 2px 2px 2px black;
     border-radius: 5%;
 
-     .display-card-title {
-font-size: 25px;
-     }
+    .display-card-title {
+      font-size: 25px;
+    }
 
-     .display-card-description {
-font-size: 15px;
-     }
+    .display-card-description {
+      font-size: 15px;
+    }
 
-     .display-card-button {
- width: 100px;
+    .display-card-button {
+      width: 100px;
       height: 40px;
       background-color: white;
       color: $purple;
       font-size: 20px;
       border-radius: 5%;
-     }
+    }
 
-     .display-card-button:hover {
-         cursor: pointer;
-         transform: scale(1.1);
-     }
- }
+    .display-card-button:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
 
- .display-card-closed {
-     display: none;
- }
+  .display-card-closed {
+    display: none;
+  }
 }

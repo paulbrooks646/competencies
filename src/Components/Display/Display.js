@@ -72,73 +72,119 @@ export default function Display() {
         </div>
       </div>
       <div className="display-practice-div">
-        <div className="display-practice-properties">
-          <label style={{}}>Span 2 Display:</label>
-          <select
-            value={display}
-            onChange={(e) => setDisplay(e.target.value)}
-          >
+              <div className="display-practice-properties">
+                  <h2>Give Span 2 different display values and see what happens.</h2>
+          <label className="display-label">Display:</label>
+          <select value={display} onChange={(e) => setDisplay(e.target.value)}>
             <option value="inline">Inline</option>
             <option value="block">Block</option>
             <option value="contents">Contents</option>
-                      <option value="inline-block">Inline Block</option>
-                      <option value="table">Table</option>
+            <option value="inline-block">Inline Block</option>
+            <option value="table">Table</option>
             <option value="none">None</option>
           </select>
         </div>
 
-          <div>
-            <span style={{ marginRight: "10px" }}>Span 1</span>
-            <span
-              style={{
+        <div className="display-practice-example">
+          <span className="display-practice-span">Span 1</span>
+          <span className="display-practice-span"
+            style={{
                 display: `${display}`,
-                backgroundColor: "red",
-                border: "solid 1px black",
-                marginRight: "10px",
-              }}
-            >
-              Span 2
-            </span>
-            <span>Span 3</span>
-          </div>
-          <p style={{ position: "relative", top: "20%" }}>
-            Look what happens when you give Span 2 different display values.
-          </p>
-
-          </div>
-          <div className={`${inlineCard ? "display-card" : "display-card-closed"}`}>
-              <h2 className="display-card-title">Inline</h2>
-              <p className="display-card-description"></p>
-              <button className="display-card-button" onClick={() => toggleInlineCard()}>CLOSE</button></div>
-          <div className={`${blockCard ? "display-card" : "display-card-closed"}`}>
-              <h2 className="display-card-title">Block</h2>
-              <p className="display-card-description"></p>
-              <button className="display-card-button" onClick={() => toggleBlockCard()}>CLOSE</button></div><div className={`${contentsCard ? "display-card" : "display-card-closed"}`}>
-              <h2 className="display-card-title">Contents</h2>
-              <p className="display-card-description"></p>
-              <button className="display-card-button" onClick={() => toggleContentsCard()}>CLOSE</button></div><div className={`${inlineBlockCard ? "display-card" : "display-card-closed"}`}>
-              <h2 className="display-card-title">Inline Block</h2>
-              <p className="display-card-description"></p>
-              <button className="display-card-button" onClick={() => toggleInlineBlockCard()}>CLOSE</button></div><div className={`${tableCard ? "display-card" : "display-card-closed"}`}>
-              <h2 className="display-card-title">Table</h2>
-              <p className="display-card-description"></p>
-              <button className="display-card-button" onClick={() => toggleTableCard()}>CLOSE</button></div><div className={`${noneCard ? "display-card" : "display-card-closed"}`}>
-              <h2 className="display-card-title">None</h2>
-              <p className="display-card-description"></p>
-              <button className="display-card-button" onClick={() => toggleNoneCard()}>CLOSE</button></div>
-      <p>
-        of ourThe potential display values are Flex, Inline, Inline Block,
-        Block, Contents, and none. For more information on Flex, please visit
-        our page. The inline value displays the element inline and negates all
-        height and width properties. The block value displays the element as a
-        block element, it will start on a new line and take up the entire width.
-        The contents value makes the container disappear displaying only the
-        contents inside. It moves any children element a level up in the DOM.
-        Inline-block is displayed like an inline element but is able to receive
-        height and width values. Display none removes the element along with its
-        children. The Flex and Grid values will be explained in their own
-        section.
-      </p>
+                border: "solid"
+            }}
+          >
+            Span 2
+          </span>
+          <span className="display-practice-span">Span 3</span>
+        </div>
+      </div>
+      <div className={`${inlineCard ? "display-card" : "display-card-closed"}`}>
+        <h2 className="display-card-title">Inline</h2>
+        <p className="display-card-description">
+          The element generates one or more inline element boxes that do not
+          generate line breaks before or after themselves. In normal flow, the
+          next element will be on the same line if there is space.
+        </p>
+        <button
+          className="display-card-button"
+          onClick={() => toggleInlineCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div className={`${blockCard ? "display-card" : "display-card-closed"}`}>
+        <h2 className="display-card-title">Block</h2>
+        <p className="display-card-description">
+          The element generates a block element box, generating line breaks both
+          before and after the element when in the normal flow.
+        </p>
+        <button
+          className="display-card-button"
+          onClick={() => toggleBlockCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div
+        className={`${contentsCard ? "display-card" : "display-card-closed"}`}
+      >
+        <h2 className="display-card-title">Contents</h2>
+        <p className="display-card-description">
+          These elements don't produce a specific box by themselves. They are
+          replaced by their pseudo-box and their child boxes.
+        </p>
+        <button
+          className="display-card-button"
+          onClick={() => toggleContentsCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div
+        className={`${
+          inlineBlockCard ? "display-card" : "display-card-closed"
+        }`}
+      >
+        <h2 className="display-card-title">Inline Block</h2>
+        <p className="display-card-description">
+          The element generates a block element box that will be flowed with
+          surrounding content as if it were a single inline box (behaving much
+          like a replaced element would).
+        </p>
+        <button
+          className="display-card-button"
+          onClick={() => toggleInlineBlockCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div className={`${tableCard ? "display-card" : "display-card-closed"}`}>
+        <h2 className="display-card-title">Table</h2>
+        <p className="display-card-description">
+          These elements behave like HTML table elements. It defines a
+          block-level box.
+        </p>
+        <button
+          className="display-card-button"
+          onClick={() => toggleTableCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div className={`${noneCard ? "display-card" : "display-card-closed"}`}>
+        <h2 className="display-card-title">None</h2>
+        <p className="display-card-description">
+          Turns off the display of an element so that it has no effect on layout
+          (the document is rendered as though the element did not exist). All
+          descendant elements also have their display turned off.
+        </p>
+        <button
+          className="display-card-button"
+          onClick={() => toggleNoneCard()}
+        >
+          CLOSE
+        </button>
+      </div>
     </div>
   );
 }
