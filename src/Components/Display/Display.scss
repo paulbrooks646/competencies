@@ -1,2 +1,86 @@
 @import "../variables";
 @import "../mixins";
+
+
+.display-main {
+     position: relative;
+    top: 50px;
+     @include flex;
+     height: 100vh;
+
+     overflow: hidden;
+
+
+     .display-introduction {
+        display: flex;
+        width: 100%;
+
+        .display-description-div {
+         width: 50%;
+         @include flex;
+     }
+
+     .display-value-div {
+         width: 50%;
+            .display-value {
+
+            }
+
+            .display-value:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+     }
+
+
+
+    }
+         .display-practice-div {
+            display: flex;
+    
+            .display-practice-properties {
+               
+            }
+         }
+
+     
+ .display-card {
+
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom: 125px;
+    z-index: 2;
+    background-color: white;
+    @include flex;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 5%;
+
+     .display-card-title {
+font-size: 25px;
+     }
+
+     .display-card-description {
+font-size: 15px;
+     }
+
+     .display-card-button {
+ width: 100px;
+      height: 40px;
+      background-color: white;
+      color: $purple;
+      font-size: 20px;
+      border-radius: 5%;
+     }
+
+     .display-card-button:hover {
+         cursor: pointer;
+         transform: scale(1.1);
+     }
+ }
+
+ .display-card-closed {
+     display: none;
+ }
+}

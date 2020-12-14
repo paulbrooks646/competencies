@@ -28,28 +28,10 @@ p {
   width: 90%;
 }
 
-.flex {
-  @include flex;
-}
 .App {
   text-align: center;
   background-color: #f8f8ff;
   overflow: hidden;
-}
-
-.hundred {
-  @include flex;
-  width: 100%;
-}
-
-.fifty {
-  @include flex;
-  width: 50%;
-}
-
-.forty {
-  @include flex;
-  width: 40%;
 }
 
 label {
@@ -58,11 +40,6 @@ label {
 
 input {
   margin-bottom: 10px;
-}
-
-.large {
-  width: 1000px;
-  height: 1000px;
 }
 
 .pseudo:hover {
