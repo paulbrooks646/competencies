@@ -5,7 +5,7 @@ import BoxModel from "./Components/BoxModel/BoxModel";
 import Float from "./Components/Float/Float";
 import Display from "./Components/Display/Display"
 import Flexbox from "./Components/Flexbox/Flexbox";
-import Grid from "./Components/Grid";
+import Grid from "./Components/Grid/Grid";
 import Color from "./Components/Color/Color";
 import Font from "./Components/Font/Font";
 import Background from "./Components/Background/Background";
