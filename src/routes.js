@@ -7,7 +7,7 @@ import Display from "./Components/Display/Display"
 import Flexbox from "./Components/Flexbox/Flexbox";
 import Grid from "./Components/Grid";
 import Color from "./Components/Color/Color";
-import Font from "./Components/Font";
+import Font from "./Components/Font/Font";
 import Background from "./Components/Background/Background";
 import Position from "./Components/Position";
 import Animation from "./Components/Animation/Animation";

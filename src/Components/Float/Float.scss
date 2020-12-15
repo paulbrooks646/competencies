@@ -34,17 +34,16 @@
       }
     }
     .float-practice-example {
+      width: 40%;
 
-        width: 40%;
-
-        .float-practice-image {
-            width: 150px;
-            height: 150px;
-        }
-        .float-practice-description {
-            color: $purple;
-margin-left: 20px;
-        }
+      .float-practice-image {
+        width: 150px;
+        height: 150px;
+      }
+      .float-practice-description {
+        color: $purple;
+        margin-left: 20px;
+      }
     }
   }
 }

@@ -1,0 +1,49 @@
+@import "../variables";
+@import "../mixins";
+
+.font-main {
+    height: 100vh;
+    // overflow: hidden;
+    @include flex;
+
+    .font-introduction {
+        position: relative;
+        top: 30px;
+        @include flex;
+    }
+
+    .font-practice {
+        display: flex;
+        position: relative;
+        top: 100px;
+        width: 100%;
+        justify-content: space-evenly;
+
+        .font-properties {
+width: 50%;
+@include flex;
+            .font-input-div {
+
+                display: flex;
+                margin-bottom: 20px;
+                .font-label {
+color: $blue;
+          margin-right: 10px;
+                }
+
+                .font-input {
+                }
+
+                .font-select {
+
+                }
+            }
+        }
+
+        .font-example {
+            @include flex;
+            justify-content: center;
+
+        }
+    }
+}
