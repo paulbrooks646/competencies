@@ -2,48 +2,92 @@
 @import "../mixins";
 
 .font-main {
-    height: 100vh;
-    // overflow: hidden;
+  height: 100vh;
+  // overflow: hidden;
+  @include flex;
+
+  .font-introduction {
+    position: relative;
+    top: 30px;
     @include flex;
+  }
 
-    .font-introduction {
-        position: relative;
-        top: 30px;
-        @include flex;
-    }
+  .font-practice {
+    display: flex;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    justify-content: space-evenly;
 
-    .font-practice {
+    .font-properties {
+      width: 50%;
+      @include flex;
+
+      .font-input-div {
         display: flex;
-        position: relative;
-        top: 100px;
-        width: 100%;
-        justify-content: space-evenly;
+        margin-bottom: 20px;
 
-        .font-properties {
-width: 50%;
-@include flex;
-            .font-input-div {
-
-                display: flex;
-                margin-bottom: 20px;
-                .font-label {
-color: $blue;
+        .font-label {
+          color: $blue;
           margin-right: 10px;
-                }
-
-                .font-input {
-                }
-
-                .font-select {
-
-                }
-            }
         }
 
-        .font-example {
-            @include flex;
-            justify-content: center;
+        .font-label:hover {
+            transform: scale(1.1);
 
+            cursor: pointer;
         }
+
+        .font-input {
+        }
+
+        .font-select {
+        }
+      }
     }
+
+    .font-example {
+      @include flex;
+      justify-content: center;
+    }
+  }
+
+  .font-card {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    bottom: 200px;
+    z-index: 2;
+    background-color: white;
+    @include flex;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 5%;
+
+    .font-card-title {
+      font-size: 25px;
+    }
+
+    .font-card-description {
+      font-size: 15px;
+    }
+
+    .font-card-button {
+      width: 100px;
+      height: 40px;
+      background-color: white;
+      color: $purple;
+      font-size: 20px;
+      border-radius: 5%;
+    }
+
+    .font-card-button:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+
+  .font-card-closed {
+    display: none;
+  }
 }
