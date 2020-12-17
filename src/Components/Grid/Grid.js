@@ -24,85 +24,33 @@ export default function Grid() {
   const [fiveGridRowStart, setFiveGridRowStart] = useState(2);
   const [fiveGridColumnEnd, setFiveGridColumnEnd] = useState(3);
   const [fiveGridRowEnd, setFiveGridRowEnd] = useState(3);
+  const [gridColumnGapCard, setGridColumnGapCard] = useState(false)
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-evenly",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          width: "100%",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            width: "40%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <h2>Grid</h2>
-          <p style={{ width: "90%" }}>
-            Display: Grid, offers a grid based layout system, with rows and
-            columns, which like flexbox, makes it easer to design webpages
-            without using floats or positioning. A grid element consists of a
-            parent element with one or more child elements. The vertical lines
-            of grid items are called columns and the horizontal lines of grid
-            items are called rows. The spaces between each row and column are
-            called gaps. Grid-column-gap sets the gap between columns and
-            grid-row-gap sets the gap between rows. Grid gap can be used to set
-            both at once. The lines between columns are called column lines and
-            the lines between rows are called row-lines. You can define where a
-            grid items starts and ends using grid-column-start, grid-column-end,
-            grid-row-start, and grid-row-end. Grid-template-rows and
-            grid-template-columns let you define how many rows and columns there
-            are and their height and width. For out example the grid will be
-            three columns and five rows and contain 5 items.
+    <div className="grid-main">
+      <div className="grid-introduction">
+        <div className="grid-description-div">
+          <h1>Grid</h1>
+          <p>
+            Display: Grid, is a grid based layout with rows and columns. A grid
+            element is a parent element with one or more children. The vertical
+            lines are called columns and the horizontal lines are called rows.
+            The spaces between are called gaps. Click on any of the properties
+            in the pracitce below for more information.
           </p>
         </div>
-        <div style={{ width: "60%" }}>
-          <img
-            style={{ width: "450px" }}
+        <div className="grid-diagram-div">
+          <img className="grid-diagram"
             src="https://www.w3schools.com/css/grid_lines.png"
           />
         </div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          width: "100%",
-          marginTop: "30px",
-          alignItems: "center",
-        }}
+      <div className="grid-practice-div"
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "space-evenly",
-            height: "100%",
-            width: "40%",
-            justifyContent: "space-evenly",
-          }}
+        <div className="grid-properties"
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              marginRight: "10px",
-            }}
-          >
+          
             <label>Grid Column Gap</label>
             <input
               onChange={(e) => setGridColumnGap(e.target.value)}
@@ -201,7 +149,7 @@ export default function Grid() {
               <option value="5">5</option>
               <option value="6">6</option>
             </select>
-          </div>
+          
           <div
             style={{
               display: "flex",
@@ -428,6 +376,15 @@ export default function Grid() {
           </div>
         </div>
       </div>
+      <p>
+        Grid-column-gap sets the gap between columns and grid-row-gap sets the
+        gap between rows. The lines between columns are called column lines and
+        the lines between rows are called row-lines. You can define where a grid
+        items starts and ends using grid-column-start, grid-column-end,
+        grid-row-start, and grid-row-end. Grid-template-rows and
+        grid-template-columns let you define how many rows and columns there are
+        and their height and width.
+      </p>
     </div>
   );
 }

@@ -1,2 +1,63 @@
 @import "../mixins";
 @import "../variables";
+
+.grid-main {
+    overflow: hidden;
+    @include flex;
+
+    .grid-introduction {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: center;
+        position: relative;
+        top: 60px;
+
+        .grid-description-div {
+            width: 50%;
+            @include flex;
+        }
+
+        .grid-diagram-div {
+            width: 60%;
+
+            .grid-diagram {
+            width: 300px;
+            }
+        }
+    }
+
+    .grid-practice-div {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: center;
+        position: relative;
+        top: 50px;
+
+        .grid-properties {
+
+            .grid-input-div {
+
+                .grid-label {
+
+                }
+
+                .grid-label:hover {
+
+                }
+
+                .grid-input {
+
+                }
+
+                .grid-select {
+                    
+                }
+            }
+            
+        }
+
+    }
+
+}
