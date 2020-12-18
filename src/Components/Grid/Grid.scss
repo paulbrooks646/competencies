@@ -2,62 +2,98 @@
 @import "../variables";
 
 .grid-main {
-    overflow: hidden;
-    @include flex;
+  overflow: hidden;
+  @include flex;
 
-    .grid-introduction {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        align-items: center;
-        position: relative;
-        top: 60px;
+  .grid-introduction {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    top: 60px;
 
-        .grid-description-div {
-            width: 50%;
-            @include flex;
-        }
-
-        .grid-diagram-div {
-            width: 60%;
-
-            .grid-diagram {
-            width: 300px;
-            }
-        }
+    .grid-description-div {
+      width: 50%;
+      @include flex;
     }
 
-    .grid-practice-div {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        align-items: center;
-        position: relative;
-        top: 50px;
+    .grid-diagram-div {
+      width: 60%;
 
-        .grid-properties {
+      .grid-diagram {
+        width: 275px;
+      }
+    }
+  }
 
-            .grid-input-div {
+  .grid-practice-div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    top: 50px;
 
-                .grid-label {
+    .grid-properties {
+      width: 50%;
+      @include flex;
 
-                }
+      .grid-box-group {
+          display: flex;
+          width: 100%;
+          justify-content: space-evenly;
 
-                .grid-label:hover {
 
-                }
+      .grid-box {
+        @include flex;
 
-                .grid-input {
-
-                }
-
-                .grid-select {
-                    
-                }
-            }
-            
+        .grid-subtitle {
+          margin-bottom: 0px;
         }
 
+        .grid-input-div {
+          display: flex;
+          .grid-label {
+            color: $blue;
+            margin-right: 10px;
+          }
+
+          .grid-label:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+
+          .grid-select {
+          }
+        }
+      }
     }
 
+      .grid-input-div {
+        display: flex;
+
+        .grid-label {
+          color: $blue;
+          margin-right: 10px;
+        }
+
+        .grid-label:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+
+        .grid-input {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    .grid-practice {
+      border: solid;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
