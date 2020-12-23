@@ -489,8 +489,10 @@ export default function Grid() {
               gridTemplateRows: "repeat(5, 100px",
               gridColumnGap: `${gridColumnGap}px`,
               gridRowGap: `${gridRowGap}px`,
-              height: "100%",
-              width: "55%",
+              height: "50%",
+              width: "100%",
+              border: "solid"
+
             }}
           >
             <div
