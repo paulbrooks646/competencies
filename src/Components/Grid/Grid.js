@@ -479,7 +479,7 @@ export default function Grid() {
                 </select>
               </div>
             </div>
-          </div>
+        </div>
         </div>
         <div className="grid-practice">
           <div
