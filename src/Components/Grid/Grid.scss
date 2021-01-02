@@ -99,6 +99,13 @@
       position: relative;
       top: 30px;
 
+      .grid-practice-box {
+        @include flex;
+        justify-content: center;
+        border: solid 1px black;
+
+      }
+
     }
   }
 }
