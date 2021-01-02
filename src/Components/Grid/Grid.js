@@ -549,8 +549,22 @@ export default function Grid() {
           </div>
         </div>
       </div>
+      <div
+        className={`${gridColumnGapCard ? "grid-card" : "grid-card-closed"}`}
+      >
+        <h2 className="grid-card-title">Grid Column Gap</h2>
+        <p className="grid-card-description">
+          Grid-column-gap sets the gap between columns in a grid.
+        </p>
+        <button
+          className="grid-card-button"
+          onClick={() => toggleGridColumnGapCard()}
+        >
+          CLOSE
+        </button>
+      </div>
       {/* <p>
-        Grid-column-gap sets the gap between columns and grid-row-gap sets the
+         and grid-row-gap sets the
         gap between rows. The lines between columns are called column lines and
         the lines between rows are called row-lines. You can define where a grid
         items starts and ends using grid-column-start, grid-column-end,
