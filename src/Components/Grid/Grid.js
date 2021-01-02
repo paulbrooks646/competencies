@@ -127,7 +127,7 @@ export default function Grid() {
               <div className="grid-input-div">
                 <label
                   className="grid-label"
-                  onClick={() => toggleGridColumnEndCard}
+                  onClick={() => toggleGridColumnEndCard()}
                 >
                   Grid Column End:
                 </label>
@@ -219,7 +219,7 @@ export default function Grid() {
               <div className="grid-input-div">
                 <label
                   className="grid-label"
-                  onClick={() => gridRowStartCard()}
+                  onClick={() => toggleGridRowStartCard()}
                 >
                   Grid Row Start:
                 </label>
@@ -238,7 +238,7 @@ export default function Grid() {
               <div className="grid-input-div">
                 <label
                   className="grid-label"
-                  onClick={() => toggleGridRowEndCard}
+                  onClick={() => toggleGridRowEndCard()}
                 >
                   Grid Row End:
                 </label>
@@ -337,7 +337,7 @@ export default function Grid() {
               <div className="grid-input-div">
                 <label
                   className="grid-label"
-                  onClick={() => toggleGridColumnStartCard}
+                  onClick={() => toggleGridColumnStartCard()}
                 >
                   Grid Column Start:
                 </label>
@@ -596,12 +596,39 @@ export default function Grid() {
       <div className={`${gridRowEndCard ? "grid-card" : "grid-card-closed"}`}>
         <h2 className="grid-card-title">Grid Row End</h2>
         <p className="grid-card-description">
-          Gird Row End defines at the end of which row a grid item
-          ends.
+          Gird Row End defines at the end of which row a grid item ends.
         </p>
         <button
           className="grid-card-button"
           onClick={() => toggleGridRowEndCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div
+        className={`${gridColumnEndCard ? "grid-card" : "grid-card-closed"}`}
+      >
+        <h2 className="grid-card-title">Grid Column End</h2>
+        <p className="grid-card-description">
+          Gird Column End defines at the end of which column a grid item ends.
+        </p>
+        <button
+          className="grid-card-button"
+          onClick={() => toggleGridColumnEndCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div
+        className={`${gridColumnStartCard ? "grid-card" : "grid-card-closed"}`}
+      >
+        <h2 className="grid-card-title">Grid Column Start</h2>
+        <p className="grid-card-description">
+          Gird Column Start defines at the beginning of which column a grid item starts.
+        </p>
+        <button
+          className="grid-card-button"
+          onClick={() => toggleGridColumnStartCard()}
         >
           CLOSE
         </button>
