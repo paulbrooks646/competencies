@@ -41,39 +41,37 @@
       @include flex;
       position: relative;
       top: -15px;
-      
 
       .grid-box-group {
-          display: flex;
-          width: 100%;
-          justify-content: space-evenly;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
 
+        .grid-box {
+          @include flex;
 
-      .grid-box {
-        @include flex;
-
-        .grid-subtitle {
-          margin-bottom: 0px;
-        }
-
-        .grid-input-div {
-          display: flex;
-
-          .grid-label {
-            color: $blue;
-            margin-right: 10px;
+          .grid-subtitle {
+            margin-bottom: 0px;
           }
 
-          .grid-label:hover {
-            transform: scale(1.1);
-            cursor: pointer;
-          }
+          .grid-input-div {
+            display: flex;
 
-          .grid-select {
+            .grid-label {
+              color: $blue;
+              margin-right: 10px;
+            }
+
+            .grid-label:hover {
+              transform: scale(1.1);
+              cursor: pointer;
+            }
+
+            .grid-select {
+            }
           }
         }
       }
-    }
 
       .grid-input-div {
         display: flex;
@@ -90,7 +88,6 @@
 
         .grid-input {
           margin-bottom: 0px;
-
         }
       }
     }
@@ -103,9 +100,7 @@
         @include flex;
         justify-content: center;
         border: solid 1px black;
-
       }
-
     }
   }
 

@@ -624,7 +624,8 @@ export default function Grid() {
       >
         <h2 className="grid-card-title">Grid Column Start</h2>
         <p className="grid-card-description">
-          Gird Column Start defines at the beginning of which column a grid item starts.
+          Gird Column Start defines at the beginning of which column a grid item
+          starts.
         </p>
         <button
           className="grid-card-button"
@@ -633,13 +634,6 @@ export default function Grid() {
           CLOSE
         </button>
       </div>
-      {/* <p>
-        You can define where a grid
-        items starts and ends using grid-column-start, grid-column-end,
-        grid-row-start, and grid-row-end. Grid-template-rows and
-        grid-template-columns let you define how many rows and columns there are
-        and their height and width.
-      </p> */}
     </div>
   );
 }
