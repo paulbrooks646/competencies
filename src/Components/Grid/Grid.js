@@ -557,7 +557,7 @@ export default function Grid() {
       >
         <h2 className="grid-card-title">Grid Column Gap</h2>
         <p className="grid-card-description">
-          Grid-column-gap sets the gap between columns in a grid.
+          Grid-column-gap sets the gap between columns in a grid. The space between columns is called a column-line.
         </p>
         <button
           className="grid-card-button"
@@ -569,7 +569,7 @@ export default function Grid() {
       <div className={`${gridRowGapCard ? "grid-card" : "grid-card-closed"}`}>
         <h2 className="grid-card-title">Grid Row Gap</h2>
         <p className="grid-card-description">
-          Grid-row-gap sets the gap between rows in a grid.
+          Grid-row-gap sets the gap between rows in a grid. The space between rows is called a row-line.
         </p>
         <button
           className="grid-card-button"
@@ -578,22 +578,20 @@ export default function Grid() {
           CLOSE
         </button>
       </div>
-      <div className={`${gridRowGapCard ? "grid-card" : "grid-card-closed"}`}>
-        <h2 className="grid-card-title">Grid Row Gap</h2>
-        <p className="grid-card-description">
-          Grid-row-gap sets the gap between rows in a grid.
+      <div className={`${gridRowStartCard ? "grid-card" : "grid-card-closed"}`}>
+        <h2 className="grid-card-title">Grid Row Start</h2>
+        <p className="grid-card-description">Gird Row Start defines at the beginning of which row a grid item starts.
+
         </p>
         <button
           className="grid-card-button"
-          onClick={() => toggleGridRowGapCard()}
+          onClick={() => toggleGridRowStartCard()}
         >
           CLOSE
         </button>
       </div>
       {/* <p>
-         and grid-row-gap sets the
-        gap between rows. The lines between columns are called column lines and
-        the lines between rows are called row-lines. You can define where a grid
+        You can define where a grid
         items starts and ends using grid-column-start, grid-column-end,
         grid-row-start, and grid-row-end. Grid-template-rows and
         grid-template-columns let you define how many rows and columns there are
