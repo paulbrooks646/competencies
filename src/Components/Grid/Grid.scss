@@ -33,11 +33,14 @@
     width: 100%;
     align-items: center;
     position: relative;
+    height: 100%;
     top: 50px;
 
     .grid-properties {
       width: 50%;
       @include flex;
+      position: relative;
+      top: -40px;
       
 
       .grid-box-group {
@@ -55,6 +58,7 @@
 
         .grid-input-div {
           display: flex;
+
           .grid-label {
             color: $blue;
             margin-right: 10px;
@@ -91,7 +95,6 @@
       }
     }
     .grid-practice {
-      border: 2px solid black;
       width: 50%;
       display: flex;
       justify-content: center;

@@ -479,92 +479,88 @@ export default function Grid() {
                 </select>
               </div>
             </div>
+          </div>
         </div>
-        </div>
-        <div className="grid-practice">
+
+        <div
+          className="grid-practice"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 100px)",
+            gridTemplateRows: "repeat(5, 100px",
+            gridColumnGap: `${gridColumnGap}px`,
+            gridRowGap: `${gridRowGap}px`,
+          }}
+        >
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 100px)",
-              gridTemplateRows: "repeat(5, 100px",
-              gridColumnGap: `${gridColumnGap}px`,
-              gridRowGap: `${gridRowGap}px`,
-              height: "10%",
-              width: "100%",
-              border: "solid"
-
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gridColumnStart: `${oneGridColumnStart}`,
+              gridColumnEnd: `${oneGridColumnEnd}`,
+              gridRowStart: `${oneGridRowStart}`,
+              gridRowEnd: `${oneGridRowEnd}`,
+              border: "solid 1px black",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gridColumnStart: `${oneGridColumnStart}`,
-                gridColumnEnd: `${oneGridColumnEnd}`,
-                gridRowStart: `${oneGridRowStart}`,
-                gridRowEnd: `${oneGridRowEnd}`,
-                border: "solid 1px black",
-              }}
-            >
-              1
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gridColumnStart: `${twoGridColumnStart}`,
-                gridColumnEnd: `${twoGridColumnEnd}`,
-                gridRowStart: `${twoGridRowStart}`,
-                gridRowEnd: `${twoGridRowEnd}`,
-                border: "solid 1px black",
-              }}
-            >
-              2
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gridColumnStart: `${threeGridColumnStart}`,
-                gridColumnEnd: `${threeGridColumnEnd}`,
-                gridRowStart: `${threeGridRowStart}`,
-                gridRowEnd: `${threeGridRowEnd}`,
-                border: "solid 1px black",
-              }}
-            >
-              3
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gridColumnStart: `${fourGridColumnStart}`,
-                gridColumnEnd: `${fourGridColumnEnd}`,
-                gridRowStart: `${fourGridRowStart}`,
-                gridRowEnd: `${fourGridRowEnd}`,
-                border: "solid 1px black",
-              }}
-            >
-              4
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gridColumnStart: `${fiveGridColumnStart}`,
-                gridColumnEnd: `${fiveGridColumnEnd}`,
-                gridRowStart: `${fiveGridRowStart}`,
-                gridRowEnd: `${fiveGridRowEnd}`,
-                border: "solid 1px black",
-              }}
-            >
-              5
-            </div>
+            1
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gridColumnStart: `${twoGridColumnStart}`,
+              gridColumnEnd: `${twoGridColumnEnd}`,
+              gridRowStart: `${twoGridRowStart}`,
+              gridRowEnd: `${twoGridRowEnd}`,
+              border: "solid 1px black",
+            }}
+          >
+            2
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gridColumnStart: `${threeGridColumnStart}`,
+              gridColumnEnd: `${threeGridColumnEnd}`,
+              gridRowStart: `${threeGridRowStart}`,
+              gridRowEnd: `${threeGridRowEnd}`,
+              border: "solid 1px black",
+            }}
+          >
+            3
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gridColumnStart: `${fourGridColumnStart}`,
+              gridColumnEnd: `${fourGridColumnEnd}`,
+              gridRowStart: `${fourGridRowStart}`,
+              gridRowEnd: `${fourGridRowEnd}`,
+              border: "solid 1px black",
+            }}
+          >
+            4
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gridColumnStart: `${fiveGridColumnStart}`,
+              gridColumnEnd: `${fiveGridColumnEnd}`,
+              gridRowStart: `${fiveGridRowStart}`,
+              gridRowEnd: `${fiveGridRowEnd}`,
+              border: "solid 1px black",
+            }}
+          >
+            5
           </div>
         </div>
       </div>
