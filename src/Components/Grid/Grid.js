@@ -557,7 +557,8 @@ export default function Grid() {
       >
         <h2 className="grid-card-title">Grid Column Gap</h2>
         <p className="grid-card-description">
-          Grid-column-gap sets the gap between columns in a grid. The space between columns is called a column-line.
+          Grid-column-gap sets the gap between columns in a grid. The space
+          between columns is called a column-line.
         </p>
         <button
           className="grid-card-button"
@@ -569,7 +570,8 @@ export default function Grid() {
       <div className={`${gridRowGapCard ? "grid-card" : "grid-card-closed"}`}>
         <h2 className="grid-card-title">Grid Row Gap</h2>
         <p className="grid-card-description">
-          Grid-row-gap sets the gap between rows in a grid. The space between rows is called a row-line.
+          Grid-row-gap sets the gap between rows in a grid. The space between
+          rows is called a row-line.
         </p>
         <button
           className="grid-card-button"
@@ -580,12 +582,26 @@ export default function Grid() {
       </div>
       <div className={`${gridRowStartCard ? "grid-card" : "grid-card-closed"}`}>
         <h2 className="grid-card-title">Grid Row Start</h2>
-        <p className="grid-card-description">Gird Row Start defines at the beginning of which row a grid item starts.
-
+        <p className="grid-card-description">
+          Gird Row Start defines at the beginning of which row a grid item
+          starts.
         </p>
         <button
           className="grid-card-button"
           onClick={() => toggleGridRowStartCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div className={`${gridRowEndCard ? "grid-card" : "grid-card-closed"}`}>
+        <h2 className="grid-card-title">Grid Row End</h2>
+        <p className="grid-card-description">
+          Gird Row End defines at the end of which row a grid item
+          ends.
+        </p>
+        <button
+          className="grid-card-button"
+          onClick={() => toggleGridRowEndCard()}
         >
           CLOSE
         </button>
