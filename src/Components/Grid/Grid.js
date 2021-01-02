@@ -92,7 +92,10 @@ export default function Grid() {
             />
           </div>
           <div className="grid-input-div">
-            <label className="grid-label" onClick={() => toggleGridRowGapCard}>
+            <label
+              className="grid-label"
+              onClick={() => toggleGridRowGapCard()}
+            >
               Grid Row Gap:
             </label>
             <input
@@ -559,6 +562,30 @@ export default function Grid() {
         <button
           className="grid-card-button"
           onClick={() => toggleGridColumnGapCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div className={`${gridRowGapCard ? "grid-card" : "grid-card-closed"}`}>
+        <h2 className="grid-card-title">Grid Row Gap</h2>
+        <p className="grid-card-description">
+          Grid-row-gap sets the gap between rows in a grid.
+        </p>
+        <button
+          className="grid-card-button"
+          onClick={() => toggleGridRowGapCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div className={`${gridRowGapCard ? "grid-card" : "grid-card-closed"}`}>
+        <h2 className="grid-card-title">Grid Row Gap</h2>
+        <p className="grid-card-description">
+          Grid-row-gap sets the gap between rows in a grid.
+        </p>
+        <button
+          className="grid-card-button"
+          onClick={() => toggleGridRowGapCard()}
         >
           CLOSE
         </button>
