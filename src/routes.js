@@ -9,7 +9,7 @@ import Grid from "./Components/Grid/Grid";
 import Color from "./Components/Color/Color";
 import Font from "./Components/Font/Font";
 import Background from "./Components/Background/Background";
-import Position from "./Components/Position";
+import Position from "./Components/Position/Position";
 import Animation from "./Components/Animation/Animation";
 import Pseudo from "./Components/Pseudo";
 import TextEffects from "./Components/TextEffects";

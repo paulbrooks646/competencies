@@ -28,7 +28,7 @@ export default function Position() {
     const [zFour, setZFour] = useState(0)
 
     return (
-        <div>
+        <div className="position-main">
             <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             <h1>Position</h1>
             <p style={{width: '80%'}}>The position property specifies the method of positioning used for an element. There are five different poistion values: Static, Relative, Fixed, Absolute and Sticky. Once an element has a position assigned (unless that position is static) it gains access to the Top, Right, Bottom and Left positioning properties. You can use different measurements for the properties including percentage of parent element, for today's purposes we will be using pixels. Static positioning is the default for all elements and is always positioned according to the normal flow of the page. If elements overlap whichever one has a higher z-index appears on top, if elements have the same z-index whichever one comes later in the code will appear on top. You can assign an element a z-index by using the z-index property. </p>
