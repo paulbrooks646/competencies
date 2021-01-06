@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import "./Position.scss"
 
 export default function Position() {
 
