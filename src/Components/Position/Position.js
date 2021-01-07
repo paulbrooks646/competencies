@@ -9,6 +9,12 @@ export default function Position() {
     const [bottomOne, setBottomOne] = useState('0px')
     const [leftOne, setLeftOne] = useState('0px')
     const [zOne, setZOne] = useState(0)
+    const [relativeCard, setRelativeCard] = useState()
+    const [fixedCard, setFixedCard] = useState()
+    const [absoluteCard, setAbsoluteCard] = useState()
+    const [stickyCard, setStickyCard] = useState()
+    const [staticCard, setStaticCard] = useState()
+    
 
     return (
         <div className="position-main">
