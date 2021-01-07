@@ -27,7 +27,9 @@ export default function Position() {
         setAbsoluteCard(!absoluteCard)
     }
 
-    
+    function toggleStickyCard() {
+        setStickyCard(!stickyCard)
+    }
 
 
 
