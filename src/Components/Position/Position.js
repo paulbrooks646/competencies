@@ -14,7 +14,11 @@ export default function Position() {
     const [absoluteCard, setAbsoluteCard] = useState()
     const [stickyCard, setStickyCard] = useState()
     const [staticCard, setStaticCard] = useState()
-    
+
+    function toggleRelativeCard() {
+        setRelativeCard(!relativeCard)
+    }
+
 
     return (
         <div className="position-main">
