@@ -31,7 +31,11 @@ export default function Position() {
         setStickyCard(!stickyCard)
     }
 
-
+    function toggleStaticCard() {
+    setStaticCard(!staticCard)
+    }
+    
+    
 
     return (
         <div className="position-main">
