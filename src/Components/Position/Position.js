@@ -19,6 +19,12 @@ export default function Position() {
         setRelativeCard(!relativeCard)
     }
 
+    function toggleFixedCard() {
+        setFixedCard(!fixedCard)
+    }
+
+    
+
 
     return (
         <div className="position-main">
