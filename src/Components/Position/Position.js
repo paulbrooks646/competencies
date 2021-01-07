@@ -23,7 +23,12 @@ export default function Position() {
         setFixedCard(!fixedCard)
     }
 
+    function toggleAbsoluteCard() {
+        setAbsoluteCard(!absoluteCard)
+    }
+
     
+
 
 
     return (
