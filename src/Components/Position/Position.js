@@ -36,8 +36,7 @@ export default function Position() {
 
   return (
     <div className="position-main">
-      <div className="position-introduction"
-      >
+      <div className="position-introduction">
         <h1 className="position-title">Position</h1>
         <p className="position-description">
           The position property specifies the method of positioning used for an
@@ -55,20 +54,11 @@ export default function Position() {
           property.{" "}
         </p>
       </div>
-      <div className="position-practice-div"
-        
-      >
-        <div className="position-practice"
-          
-        >
+      <div className="position-practice-div">
+        <div className="position-practice">
           <div
+            className="position-practice-box"
             style={{
-              backgroundColor: "orange",
-              width: "75px",
-              height: "75px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
               position: boxOne,
               top: `${topOne}px`,
               right: `${rightOne}px`,

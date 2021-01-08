@@ -21,6 +21,14 @@
             border: solid 2px black;
             height: 100px;
             justify-content: space-evenly;
+
+            .position-practice-box {
+                background-color: orange;
+                width: 75px;
+                height: 75px;
+                @include flex;
+                justify-content: center;
+            }
         }
     }
 }
