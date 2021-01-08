@@ -36,16 +36,10 @@ export default function Position() {
 
   return (
     <div className="position-main">
-      <div
-        style={{
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+      <div className="position-introduction"
       >
-        <h1>Position</h1>
-        <p style={{ width: "80%" }}>
+        <h1 className="position-title">Position</h1>
+        <p className="position-description">
           The position property specifies the method of positioning used for an
           element. There are five different poistion values: Static, Relative,
           Fixed, Absolute and Sticky. Once an element has a position assigned
@@ -61,23 +55,11 @@ export default function Position() {
           property.{" "}
         </p>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+      <div className="position-practice-div"
+        
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            width: "90%",
-            position: "relative",
-            border: "dashed 2px black",
-            height: "100px",
-          }}
+        <div className="position-practice"
+          
         >
           <div
             style={{

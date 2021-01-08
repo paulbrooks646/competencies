@@ -5,4 +5,22 @@
 .position-main {
     position: relative;
     top: 50px;
+
+    .position-introduction {
+        @include flex;
+        width: 100%;
+    }
+
+    .position-practice-div {
+        @include flex;
+
+        .position-practice {
+            @include flex;
+            width: 90%;
+            position: relative;
+            border: solid 2px black;
+            height: 100px;
+            justify-content: space-evenly;
+        }
+    }
 }
