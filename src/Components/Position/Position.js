@@ -70,7 +70,7 @@ export default function Position() {
             Box 1
           </div>
         </div>
-        <div style={{ width: "100%", display: "flex", marginBottom: "20px" }}>
+        <div className="position-properties" style={{ width: "100%", display: "flex", marginBottom: "20px" }}>
           <div
             style={{
               width: "50%",
