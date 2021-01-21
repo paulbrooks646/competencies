@@ -36,6 +36,7 @@
                 margin-bottom: 20px;
                 border: solid 2px blue;
                 padding: 20px;
+                @include flex;
             }
         }
     }
