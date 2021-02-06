@@ -3,11 +3,12 @@ const express = require("express")
 const massive = require("massive")
 const session = require("express-session")
 const userController = require("./userController.js")
-const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
+const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env
+const path = require("path")
 
 const app = express()
 
-app.use(express.static(`${__dirname}/../build`))
+
 
 app.use(express.json())
 
@@ -22,6 +23,12 @@ app.post('/api/register', userController.register)
 app.post('/api/login', userController.login)
 app.delete('/api/logout', userController.logout)
 app.get('/api/user', userController.getUser)
+
+app.use(express.static(__dirname + "/../build"));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build/index.html"));
+});
 
 massive({
     connectionString: CONNECTION_STRING,
