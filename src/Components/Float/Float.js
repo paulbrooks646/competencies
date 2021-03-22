@@ -31,6 +31,7 @@ export default function Float() {
         <div className="float-practice-example">
           <img
             className="float-practice-image"
+            alt="feather"
             src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/floating-feather-don-farrall.jpg"
             style={{ float: `${float}` }}
           />

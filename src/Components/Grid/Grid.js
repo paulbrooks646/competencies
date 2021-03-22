@@ -72,6 +72,7 @@ export default function Grid() {
           <img
             className="grid-diagram"
             src="https://www.w3schools.com/css/grid_lines.png"
+            alt="grid"
           />
         </div>
       </div>

@@ -71,8 +71,7 @@ export default function Position() {
           </div>
         </div>
         <div className="position-properties">
-          <div
-          >
+          <div>
             <h2>Relative</h2>
             <p style={{ width: "90%" }}>
               When an element has relative positioining, using the Top, Right,
@@ -199,6 +198,106 @@ export default function Position() {
             </p>
           </div>
         </div>
+      </div>
+      <div
+        className={`${staticCard ? "position-card" : "position-card-closed"}`}
+      >
+        <h2 className="background-card-title">Background Size</h2>
+        <p className="background-card-description">
+          The default value for background-size is auto which displays its
+          original size. The length and percentage values both take in two
+          parameters, the first being width and the second being height. They
+          set a speicfic length and width to the image. Cover resize the image
+          to cover the container even if it has to stretch or cut of a little
+          bit of the image. Contain resizes the image to make sure it is fully
+          visible
+        </p>
+        <button
+          className="background-card-button"
+          onClick={() => toggleSizeCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div
+        className={`${stickyCard ? "position-card" : "position-card-closed"}`}
+      >
+        <h2 className="background-card-title">Background Size</h2>
+        <p className="background-card-description">
+          The default value for background-size is auto which displays its
+          original size. The length and percentage values both take in two
+          parameters, the first being width and the second being height. They
+          set a speicfic length and width to the image. Cover resize the image
+          to cover the container even if it has to stretch or cut of a little
+          bit of the image. Contain resizes the image to make sure it is fully
+          visible
+        </p>
+        <button
+          className="background-card-button"
+          onClick={() => toggleSizeCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div
+        className={`${fixedCard ? "position-card" : "position-card-closed"}`}
+      >
+        <h2 className="background-card-title">Background Size</h2>
+        <p className="background-card-description">
+          The default value for background-size is auto which displays its
+          original size. The length and percentage values both take in two
+          parameters, the first being width and the second being height. They
+          set a speicfic length and width to the image. Cover resize the image
+          to cover the container even if it has to stretch or cut of a little
+          bit of the image. Contain resizes the image to make sure it is fully
+          visible
+        </p>
+        <button
+          className="background-card-button"
+          onClick={() => toggleSizeCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div
+        className={`${absoluteCard ? "position-card" : "position-card-closed"}`}
+      >
+        <h2 className="background-card-title">Background Size</h2>
+        <p className="background-card-description">
+          The default value for background-size is auto which displays its
+          original size. The length and percentage values both take in two
+          parameters, the first being width and the second being height. They
+          set a speicfic length and width to the image. Cover resize the image
+          to cover the container even if it has to stretch or cut of a little
+          bit of the image. Contain resizes the image to make sure it is fully
+          visible
+        </p>
+        <button
+          className="background-card-button"
+          onClick={() => toggleSizeCard()}
+        >
+          CLOSE
+        </button>
+      </div>
+      <div
+        className={`${sizeCard ? "background-card" : "background-card-closed"}`}
+      >
+        <h2 className="background-card-title">Background Size</h2>
+        <p className="background-card-description">
+          The default value for background-size is auto which displays its
+          original size. The length and percentage values both take in two
+          parameters, the first being width and the second being height. They
+          set a speicfic length and width to the image. Cover resize the image
+          to cover the container even if it has to stretch or cut of a little
+          bit of the image. Contain resizes the image to make sure it is fully
+          visible
+        </p>
+        <button
+          className="background-card-button"
+          onClick={() => toggleSizeCard()}
+        >
+          CLOSE
+        </button>
       </div>
     </div>
   );
