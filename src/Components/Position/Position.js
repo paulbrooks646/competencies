@@ -51,7 +51,7 @@ export default function Position() {
           whichever one has a higher z-index appears on top, if elements have
           the same z-index whichever one comes later in the code will appear on
           top. You can assign an element a z-index by using the z-index
-          property.{" "}
+          property.
         </p>
       </div>
       <div className="position-practice-div">
@@ -72,13 +72,6 @@ export default function Position() {
         </div>
         <div className="position-properties">
           <div
-            style={{
-              width: "50%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
           >
             <h2>Relative</h2>
             <p style={{ width: "90%" }}>
