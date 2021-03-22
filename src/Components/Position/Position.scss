@@ -37,4 +37,37 @@
             }
         }
     }
+
+    .position-card {
+      height: 500px;
+      width: 500px;
+      position: relative;
+      bottom: 650px;
+      background-color: white;
+      z-index: 2;
+      @include flex;
+      justify-content: space-evenly;
+      box-shadow: 2px 2px 2px 2px black;
+      border-radius: 5%;
+
+      .position-card-title {
+        font-size: 25px;
+      }
+
+      .position-card-descritption {
+        font-size: 15px;
+      }
+
+      .position-card-button {
+        width: 100px;
+        height: 40px;
+        background-color: white;
+        color: $purple;
+        font-size: 20px;
+        border-radius: 5%;
+      }
+    }
+  .position-card-closed {
+      display: none;
+  }
 }

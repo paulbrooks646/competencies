@@ -202,8 +202,8 @@ export default function Position() {
       <div
         className={`${staticCard ? "position-card" : "position-card-closed"}`}
       >
-        <h2 className="background-card-title">Background Size</h2>
-        <p className="background-card-description">
+        <h2 className="position-card-title">Background Size</h2>
+        <p className="position-card-description">
           The default value for background-size is auto which displays its
           original size. The length and percentage values both take in two
           parameters, the first being width and the second being height. They
@@ -213,8 +213,8 @@ export default function Position() {
           visible
         </p>
         <button
-          className="background-card-button"
-          onClick={() => toggleSizeCard()}
+          className="position-card-button"
+          onClick={() => toggleStaticCard()}
         >
           CLOSE
         </button>
@@ -222,8 +222,8 @@ export default function Position() {
       <div
         className={`${stickyCard ? "position-card" : "position-card-closed"}`}
       >
-        <h2 className="background-card-title">Background Size</h2>
-        <p className="background-card-description">
+        <h2 className="position-card-title">Background Size</h2>
+        <p className="position-card-description">
           The default value for background-size is auto which displays its
           original size. The length and percentage values both take in two
           parameters, the first being width and the second being height. They
@@ -233,8 +233,8 @@ export default function Position() {
           visible
         </p>
         <button
-          className="background-card-button"
-          onClick={() => toggleSizeCard()}
+          className="position-card-button"
+          onClick={() => toggleStickyCard()}
         >
           CLOSE
         </button>
@@ -242,8 +242,8 @@ export default function Position() {
       <div
         className={`${fixedCard ? "position-card" : "position-card-closed"}`}
       >
-        <h2 className="background-card-title">Background Size</h2>
-        <p className="background-card-description">
+        <h2 className="position-card-title">Background Size</h2>
+        <p className="position-card-description">
           The default value for background-size is auto which displays its
           original size. The length and percentage values both take in two
           parameters, the first being width and the second being height. They
@@ -253,8 +253,8 @@ export default function Position() {
           visible
         </p>
         <button
-          className="background-card-button"
-          onClick={() => toggleSizeCard()}
+          className="position-card-button"
+          onClick={() => toggleFixedCard()}
         >
           CLOSE
         </button>
@@ -262,8 +262,8 @@ export default function Position() {
       <div
         className={`${absoluteCard ? "position-card" : "position-card-closed"}`}
       >
-        <h2 className="background-card-title">Background Size</h2>
-        <p className="background-card-description">
+        <h2 className="position-card-title">Background Size</h2>
+        <p className="position-card-description">
           The default value for background-size is auto which displays its
           original size. The length and percentage values both take in two
           parameters, the first being width and the second being height. They
@@ -273,17 +273,17 @@ export default function Position() {
           visible
         </p>
         <button
-          className="background-card-button"
-          onClick={() => toggleSizeCard()}
+          className="position-card-button"
+          onClick={() => toggleAbsoluteCard()}
         >
           CLOSE
         </button>
       </div>
       <div
-        className={`${sizeCard ? "background-card" : "background-card-closed"}`}
+        className={`${relativeCard ? "position-card" : "position-card-closed"}`}
       >
-        <h2 className="background-card-title">Background Size</h2>
-        <p className="background-card-description">
+        <h2 className="position-card-title">Background Size</h2>
+        <p className="position-card-description">
           The default value for background-size is auto which displays its
           original size. The length and percentage values both take in two
           parameters, the first being width and the second being height. They
@@ -293,8 +293,8 @@ export default function Position() {
           visible
         </p>
         <button
-          className="background-card-button"
-          onClick={() => toggleSizeCard()}
+          className="position-card-button"
+          onClick={() => toggleRelativeCard()}
         >
           CLOSE
         </button>
