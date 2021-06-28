@@ -72,7 +72,7 @@ export default function Position() {
         </div>
         <div className="position-properties">
           <div>
-            <h2>Relative</h2>
+            <h2 onClick={toggleRelativeCard}>Relative</h2>
             <p style={{ width: "90%" }}>
               When an element has relative positioining, using the Top, Right,
               Bottom and Left properties will adjust it from where it would
